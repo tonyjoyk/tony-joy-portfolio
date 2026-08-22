@@ -26,9 +26,12 @@ Deploy by uploading this folder to any static host.
 | `index.html` | The page |
 | `style.css` | Layout, typography, image crops |
 | `index.md` | Plain-text content mirror |
+| `images/tony-joy.jpg` | Intro portrait |
+| `images/simple-app.png`, `dhis2-app.png`, `hearts360-dashboard.png` | Work thumbnails |
+| `images/vizchitra-conference-thumbnail.png`, `dhis2-conference-thumbnail.png`, `user-testing-thumbnail.png` | Talk thumbnails |
+| `images/footer-illustrated-image-transparent.png` | Footer illustration |
 | `images/illustrations/help-*.svg` | Ways I can help icons (draw-on animation) |
-| `images/footer-illustrated-image.png` | Footer illustration |
-| `images/*.png`, `images/tony-joy.jpg` | Section photography and thumbnails |
+| `docs/reference/` | Archived design mockups (not loaded by site) |
 
 ---
 
@@ -58,7 +61,7 @@ Single content column, max 880px, centered with 32px viewport gutters.
 | Talk: VizChitra | `images/vizchitra-conference-thumbnail.png` | 16:9 | `cover`, `28% center` |
 | Talk: DHIS2 | `images/dhis2-conference-thumbnail.png` | 16:9 | `cover`, `center 38%` |
 | Talk: User testing | `images/user-testing-thumbnail.png` | 16:9 | `cover`, `72% center` |
-| Footer | `images/footer-illustrated-image.png` | centered ~520px | — |
+| Footer | `images/footer-illustrated-image-transparent.png` | centered ~520px | — |
 | Side projects ×3 | *(missing)* | text-only rows | — |
 
 Crop overrides live in `style.css` under `.media-frame--*` modifiers.
