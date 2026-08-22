@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Phone wireframe + pen — prototyping -->
+  <g stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- phone frame as open continuous outline -->
+    <path d="M40 20h32c5 0 8 3 8 8v64c0 5-3 8-8 8H40c-5 0-8-3-8-8V28c0-5 3-8 8-8z"/>
+    <!-- notch -->
+    <path d="M52 26h12"/>
+    <!-- header rule -->
+    <path d="M42 36h28"/>
+    <!-- content block -->
+    <path d="M42 44h28"/>
+    <path d="M70 44v16"/>
+    <path d="M70 60H42"/>
+    <path d="M42 60V44"/>
+    <!-- two columns -->
+    <path d="M42 68h12"/>
+    <path d="M54 68v20"/>
+    <path d="M54 88H42"/>
+    <path d="M42 88V68"/>
+    <path d="M60 68h12"/>
+    <path d="M72 68v20"/>
+    <path d="M72 88H60"/>
+    <path d="M60 88V68"/>
+    <!-- pen body -->
+    <path d="M82 70c10 10 20 22 28 34"/>
+    <!-- pen tip -->
+    <path d="M110 104l6 6"/>
+    <!-- pen top nub -->
+    <path d="M82 70c-3-4-2-7 2-8"/>
+  </g>
+</svg>

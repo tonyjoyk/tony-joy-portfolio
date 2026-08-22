@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- User testing: observer + clipboard watching seated user on device -->
+  <g stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- ground -->
+    <path d="M10 104c30-3 58 2 88-1 10 0 16 1 22 3"/>
+    <!-- observer standing left -->
+    <circle cx="30" cy="34" r="8"/>
+    <path d="M30 43c-1 12 0 24 2 34"/>
+    <path d="M32 77c-8 10-12 18-14 24"/>
+    <path d="M32 77c8 10 12 18 16 24"/>
+    <!-- clipboard -->
+    <path d="M40 46h20"/>
+    <path d="M60 46v28"/>
+    <path d="M60 74H40"/>
+    <path d="M40 74V46"/>
+    <path d="M46 44h8"/>
+    <path d="M44 54h12"/>
+    <path d="M44 60h10"/>
+    <path d="M44 66h8"/>
+    <!-- arm to clipboard -->
+    <path d="M32 52c6 2 10 4 14 6"/>
+    <!-- participant seated right -->
+    <circle cx="88" cy="46" r="8"/>
+    <path d="M88 55c2 10 0 18-2 26"/>
+    <path d="M86 81c12 2 22 4 28 2"/>
+    <path d="M84 84c-6 8-8 12-8 16"/>
+    <!-- device -->
+    <path d="M74 66h24"/>
+    <path d="M98 66v14"/>
+    <path d="M98 80H74"/>
+    <path d="M74 80V66"/>
+    <!-- arms holding sides of device -->
+    <path d="M86 58c-8 8-12 12-12 14"/>
+    <path d="M90 58c8 8 10 12 10 14"/>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Side-view microscope: base, pillar, arm, tube, stage -->
+  <g stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 104h88"/>
+    <path d="M28 104v-10h28v10"/>
+    <path d="M36 94c-4-28-2-48 8-64"/>
+    <path d="M44 32c8-18 28-24 44-14"/>
+    <path d="M84 22v38"/>
+    <path d="M84 22l-8-14"/>
+    <path d="M72 8h10"/>
+    <path d="M78 60h12"/>
+    <path d="M80 60v12"/>
+    <path d="M84 60v14"/>
+    <path d="M88 60v12"/>
+    <path d="M52 78h52"/>
+    <path d="M60 78v16"/>
+    <path d="M96 78v12"/>
+    <circle cx="40" cy="58" r="8"/>
+    <circle cx="40" cy="74" r="5"/>
+    <path d="M52 78h-8"/>
+  </g>
+</svg>

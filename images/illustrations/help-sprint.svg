@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Design sprint: clock + open-path lightning -->
+  <g stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- clock face -->
+    <circle cx="46" cy="58" r="30"/>
+    <!-- hands -->
+    <path d="M46 58l-6-16"/>
+    <path d="M46 58l18 6"/>
+    <!-- ticks -->
+    <path d="M46 32v5"/>
+    <path d="M46 79v5"/>
+    <path d="M20 58h5"/>
+    <path d="M67 58h5"/>
+    <!-- lightning bolt as open zigzag (draw-on friendly) -->
+    <path d="M92 22l-16 28h14L74 98"/>
+  </g>
+</svg>
