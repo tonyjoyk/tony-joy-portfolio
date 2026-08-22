@@ -6,7 +6,15 @@ Open via a local server (help icons use `fetch` for SVG injection). Fonts load f
 
 ---
 
-## How to view
+## Live site
+
+https://tonyjoyk.github.io/tony-joy-portfolio/
+
+Deployed via GitHub Pages from `main`. Updates automatically on push.
+
+---
+
+## How to view locally
 
 ```bash
 cd portfolio
@@ -14,8 +22,6 @@ python3 -m http.server 8080
 ```
 
 Open http://localhost:8080. Do not use `file://` — help icon SVGs use `fetch`.
-
-Deploy by uploading this folder to any static host.
 
 ---
 
