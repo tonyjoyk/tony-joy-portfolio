@@ -304,8 +304,8 @@ a.link-ext:focus-visible .link-ext__arrow {
   color: inherit;
 }
 
-.talk-card:hover .talk-card__caption,
-.talk-card:focus-visible .talk-card__caption {
+a.talk-card:hover .talk-card__caption,
+a.talk-card:focus-visible .talk-card__caption {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.15em;
@@ -322,6 +322,18 @@ a.link-ext:focus-visible .link-ext__arrow {
   line-height: 1.45;
   margin-top: var(--s-2);
   text-decoration: none;
+}
+
+.talk-card__status {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.talk-card--pending .media-frame--talk::before {
+  display: none;
 }
 
 .talk-card__play {
@@ -448,70 +460,59 @@ a.link-ext:focus-visible .link-ext__arrow {
   margin-left: 0.35em;
 }
 
-/* ---------- Draw SVG (help icons) ---------- */
-.draw-svg {
-  line-height: 0;
-}
-
-.draw-svg svg {
-  width: 100%;
-  height: auto;
+/* ---------- Help icons (inline SVG, drawn by the script) ---------- */
+.help-grid__icon {
   display: block;
-  overflow: visible;
-}
-
-.draw-svg svg [stroke] {
-  stroke: var(--text);
-}
-
-.draw-svg--help {
   width: 44px;
-  max-width: 44px;
+  height: 44px;
+  overflow: visible;
+  color: var(--text);
 }
 
-.draw-svg--missing {
-  aspect-ratio: 1;
-  background: var(--placeholder);
-}
-
-/* ---------- Footer ---------- */
+/* ---------- Footer landscape ---------- */
+/* The figures keep their ratio inside the content width. The ground line
+   paths run far past the viewBox; the band clips them at the viewport edges. */
 .footer-band {
-  margin-top: var(--s-7);
-  padding: 0 var(--s-4) var(--s-5);
+  margin-top: var(--s-5);
+  padding-bottom: var(--s-5);
+  overflow: hidden;
 }
 
-.footer-band__inner {
-  width: min(var(--content-max), 100% - 2 * var(--s-4));
-  max-width: var(--content-max);
-  margin-inline: auto;
-  text-align: center;
-}
-
-.footer-band__art {
-  width: min(520px, 100%);
+.landscape {
+  display: block;
+  width: min(var(--content-max), 100%);
   height: auto;
-  display: inline-block;
+  margin-inline: auto;
+  overflow: visible;
+  color: var(--text);
 }
 
-/* ---------- Reveal motion ---------- */
-.reveal {
+/* ---------- Reveal motion (only when the script will run) ---------- */
+.js-motion .reveal {
   opacity: 0;
   transform: translateY(12px);
   transition: opacity 480ms ease, transform 480ms ease;
 }
 
-.reveal.is-visible {
+.js-motion .reveal.is-visible {
   opacity: 1;
   transform: none;
 }
 
+/* Footer: wipe open from the centre to both edges. */
+.js-motion .reveal--wipe {
+  opacity: 1;
+  transform: none;
+  clip-path: inset(0 50% 0 50%);
+  transition: clip-path 1600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.js-motion .reveal--wipe.is-visible {
+  clip-path: inset(0 0 0 0);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
   a { transition: none; }
   a.link-ext .link-ext__arrow { transition: none; }
   .talk-card__play::before { transition: none; }
@@ -583,7 +584,7 @@ a.link-ext:focus-visible .link-ext__arrow {
   }
 
   .footer-band {
-    margin-top: var(--s-6);
+    margin-top: var(--s-4);
     padding-bottom: var(--s-4);
   }
 }
@@ -593,5 +594,15 @@ a.link-ext:focus-visible .link-ext__arrow {
   .work-row__url a,
   .side-row__url a {
     padding: 2px 0;
+  }
+
+  /* One link per line, so the separator never sits alone at a line end. */
+  .side-row__url a {
+    display: block;
+    width: fit-content;
+  }
+
+  .side-row__url-sep {
+    display: none;
   }
 }

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
   <!-- Three people converging to shared center — alignment -->
-  <g stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <g stroke="#111111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
     <!-- center meeting point -->
     <circle cx="60" cy="60" r="7"/>
     <!-- top person -->

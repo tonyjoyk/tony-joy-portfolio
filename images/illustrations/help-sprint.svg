@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
   <!-- Design sprint: clock + open-path lightning -->
-  <g stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <g stroke="#111111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
     <!-- clock face -->
     <circle cx="46" cy="58" r="30"/>
     <!-- hands -->

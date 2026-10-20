@@ -2,3 +2,7 @@
 *.code-workspace
 .env
 .env.*
+
+# BMAD tooling (local only, keep out of the public Pages site)
+_bmad/
+.claude/
