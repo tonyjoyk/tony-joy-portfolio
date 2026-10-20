@@ -55,6 +55,6 @@ I tried to capture how a memory feels, and how that feeling changes with time.
 ## Ways I can help
 
 - **Running design sprints** — Facilitate 5-day sprints with health experts, designers and engineers to go from a problem statement to a prototype tested with real users.
-- **User testing** — Test prototypes with end users, remotely or in the field, to collect feedback for product improvements.
 - **Prototyping ideas** — Build realistic prototypes quickly with Figma, ProtoPie and AI tools, so they feel real to end users.
+- **User testing** — Test prototypes with end users, remotely or in the field, to collect feedback for product improvements.
 - **Aligning teams** — Bring product, design, engineering, support and funders together to agree on a product roadmap and launch on time.
