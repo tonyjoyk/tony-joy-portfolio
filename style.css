@@ -6,6 +6,7 @@
   --text: #1A1A1A;
   --muted: #737373;
   --hairline: #E5E5E5;
+  --underline: #C4C4C4;
   --placeholder: #EDE9E3;
 
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -29,7 +30,10 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--s-4);
+}
 
 body {
   font-family: var(--font-sans);
@@ -51,16 +55,22 @@ img {
 }
 
 /* ---------- Links ---------- */
+/* One hover for every link: the underline darkens from grey to text colour. */
 a {
   color: inherit;
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  text-underline-offset: 0.15em;
-  transition: color 150ms ease;
+  text-underline-offset: 0.2em;
+  text-decoration-color: var(--underline);
+  transition: text-decoration-color 150ms ease, color 150ms ease;
 }
-a:hover,
+a:hover {
+  text-decoration-color: currentColor;
+}
 a:focus-visible {
-  color: var(--muted);
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
 a.link-ext .link-ext__arrow {
@@ -71,7 +81,7 @@ a.link-ext .link-ext__arrow {
 }
 a.link-ext:hover .link-ext__arrow,
 a.link-ext:focus-visible .link-ext__arrow {
-  transform: translateX(2px);
+  transform: translate(2px, -1px);
 }
 
 /* ---------- Page shell ---------- */
@@ -79,11 +89,11 @@ a.link-ext:focus-visible .link-ext__arrow {
   width: min(var(--content-max), 100% - 2 * var(--s-4));
   max-width: var(--content-max);
   margin-inline: auto;
-  padding: var(--s-7) 0 var(--s-6);
+  padding: var(--s-4) 0 var(--s-5);
 }
 
 .block + .block {
-  margin-top: var(--s-8);
+  margin-top: var(--s-7);
 }
 
 .block__heading {
@@ -97,7 +107,76 @@ a.link-ext:focus-visible .link-ext__arrow {
   margin-bottom: var(--s-4);
 }
 
-/* ---------- Media frames ---------- */
+/* Mono metadata line: role · scale · place, event names, repo status. */
+.meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* ---------- Top bar ---------- */
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-1) var(--s-3);
+  margin-bottom: var(--s-6);
+}
+
+.topbar__name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+
+.topbar__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-1) var(--s-3);
+  font-size: 0.875rem;
+}
+
+.topbar__links a {
+  color: var(--muted);
+  text-decoration-color: transparent;
+}
+
+.topbar__links a:hover,
+.topbar__links a:focus-visible {
+  color: var(--text);
+  text-decoration-color: currentColor;
+}
+
+.topbar__gap {
+  padding-left: var(--s-3);
+  border-left: 1px solid var(--hairline);
+}
+
+.topbar__break {
+  display: none;
+}
+
+/* ---------- Introduction ---------- */
+.intro__lede {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  max-width: 18em;
+}
+
+.intro__bio {
+  margin-top: var(--s-3);
+  max-width: var(--measure);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* ---------- Media frames (work images) ---------- */
 .media-frame {
   position: relative;
   overflow: hidden;
@@ -112,24 +191,10 @@ a.link-ext:focus-visible .link-ext__arrow {
   object-fit: cover;
 }
 
-.media-frame--portrait {
-  width: 160px;
-  height: 160px;
-}
-
-.media-frame--portrait .media-frame__img {
-  object-position: center 18%;
-}
-
 .media-frame--work {
   width: var(--media);
   aspect-ratio: 4 / 3;
   margin-left: auto;
-}
-
-.media-frame--work-contain .media-frame__img {
-  object-fit: contain;
-  background: #111;
 }
 
 .media-frame--simple .media-frame__img {
@@ -140,86 +205,17 @@ a.link-ext:focus-visible .link-ext__arrow {
   object-position: 58% 42%;
 }
 
+.media-frame--callhub {
+  background: #fff;
+}
+
+/* Transparent PNG laptop: show it whole on a light grey. */
+.media-frame--hearts360 {
+  background: #EEEEED;
+}
+
 .media-frame--hearts360 .media-frame__img {
   object-fit: contain;
-  background: #111;
-}
-
-.media-frame--talk {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: #2a2a2a;
-}
-
-.media-frame--talk .media-frame__img {
-  position: relative;
-  z-index: 0;
-}
-
-.media-frame--talk::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: 1;
-  transition: background 180ms ease;
-  pointer-events: none;
-}
-
-.talk-card:hover .media-frame--talk::before,
-.talk-card:focus-visible .media-frame--talk::before {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.media-frame--vizchitra .media-frame__img {
-  object-position: 28% center;
-}
-
-.media-frame--dhis2-talk .media-frame__img {
-  object-position: center 38%;
-}
-
-.media-frame--user-testing .media-frame__img {
-  object-position: 72% center;
-}
-
-/* ---------- Introduction ---------- */
-.intro {
-  display: grid;
-  grid-template-columns: 160px minmax(0, 1fr);
-  gap: var(--s-5);
-  align-items: start;
-}
-
-.intro__name {
-  font-size: 2.75rem;
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-  transform: translateY(-0.09em);
-  margin-bottom: var(--s-2);
-}
-
-.intro__meta {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-.intro__bio {
-  grid-column: 1 / -1;
-  margin-top: var(--s-5);
-  max-width: var(--measure);
-  display: flex;
-  flex-direction: column;
-  gap: 0.85em;
-}
-
-.intro__bio p {
-  font-size: 1.0625rem;
-  line-height: 1.6;
 }
 
 /* ---------- Work rows ---------- */
@@ -228,7 +224,7 @@ a.link-ext:focus-visible .link-ext__arrow {
   grid-template-columns: minmax(0, 1fr) var(--media);
   gap: var(--gap);
   align-items: start;
-  padding: var(--s-5) 0;
+  padding: 36px 0;
   border-top: 1px solid var(--hairline);
 }
 
@@ -242,7 +238,7 @@ a.link-ext:focus-visible .link-ext__arrow {
 }
 
 .work-row--text-only {
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, var(--measure));
 }
 
 .work-row__title {
@@ -250,169 +246,91 @@ a.link-ext:focus-visible .link-ext__arrow {
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.2;
-  margin-bottom: 6px;
+  margin-bottom: var(--s-1);
 }
 
-.work-row__url {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--muted);
-  margin-bottom: var(--s-2);
+.work-row__title a {
+  text-decoration-color: transparent;
 }
 
-.work-row__url a {
-  color: var(--muted);
-}
-
-.work-row__meta {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--muted);
-  margin-bottom: 14px;
-  line-height: 1.5;
+.work-row__title a:hover {
+  text-decoration-color: currentColor;
 }
 
 .work-row__desc {
+  margin-top: 14px;
   font-size: 1.0625rem;
   line-height: 1.6;
-  margin-bottom: var(--s-2);
 }
 
-.work-row__highlight {
-  font-size: 0.875rem;
-  line-height: 1.45;
-  color: var(--muted);
+/* ---------- Media list (Talks, Side projects) ---------- */
+.media-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 720px;
 }
 
-/* ---------- Talks grid ---------- */
-.talks-grid {
+.media-list__item {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--s-4);
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: var(--s-3);
+  align-items: start;
 }
 
-.talk-card {
+.media-list__thumb {
   display: block;
-  color: inherit;
-  text-decoration: none;
-}
-
-.talk-card:hover,
-.talk-card:focus-visible {
-  color: inherit;
-}
-
-a.talk-card:hover .talk-card__caption,
-a.talk-card:focus-visible .talk-card__caption {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.15em;
-}
-
-.talk-card:focus-visible {
-  outline: 2px solid var(--text);
-  outline-offset: 4px;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
   border-radius: var(--radius);
+  background: var(--placeholder);
 }
 
-.talk-card__caption {
-  font-size: 0.875rem;
-  line-height: 1.45;
-  margin-top: var(--s-2);
-  text-decoration: none;
+.media-list__thumb--talk {
+  aspect-ratio: 16 / 9;
 }
 
-.talk-card__status {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--muted);
-  margin-top: 4px;
-}
-
-.talk-card--pending .media-frame--talk::before {
-  display: none;
-}
-
-.talk-card__play {
+/* Hairline inside the frame, so pale images keep an edge. */
+.media-list__thumb::after {
+  content: "";
   position: absolute;
   inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
   pointer-events: none;
 }
 
-.talk-card__play::before {
-  content: "";
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.92);
-  transition: transform 180ms ease;
+.media-list__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 300ms ease;
 }
 
-.talk-card__play::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 8px 0 8px 13px;
-  border-color: transparent transparent transparent var(--text);
-  margin-left: 3px;
-}
-
-.talk-card:hover .talk-card__play::before,
-.talk-card:focus-visible .talk-card__play::before {
-  transform: scale(1.04);
-}
-
-/* ---------- Side projects ---------- */
-.side-row {
-  padding: var(--s-5) 0;
-  border-top: 1px solid var(--hairline);
-  max-width: var(--measure);
-}
-
-.side-row:first-of-type {
-  border-top: none;
-  padding-top: 0;
-}
-
-.side-row:last-of-type {
-  padding-bottom: 0;
-}
-
-.side-row__title {
-  font-size: 1.25rem;
+.media-list__title {
+  font-size: 1.0625rem;
   font-weight: 600;
   letter-spacing: -0.015em;
-  margin-bottom: 4px;
+  line-height: 1.35;
 }
 
-.side-row__url {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--muted);
-  margin-bottom: 10px;
-  line-height: 1.5;
+.media-list__text .meta {
+  margin-top: 2px;
 }
 
-.side-row__url a { color: var(--muted); }
-
-.side-row__url-sep {
-  margin: 0 0.35em;
-  color: var(--hairline);
-}
-
-.side-row__desc {
-  font-size: 1.0625rem;
+.media-list__desc {
+  margin-top: 4px;
+  font-size: 0.9375rem;
   line-height: 1.55;
+}
+
+.media-list__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px var(--s-2);
+  margin-top: 6px;
+  font-size: 0.875rem;
 }
 
 /* ---------- Ways I can help ---------- */
@@ -420,7 +338,7 @@ a.talk-card:focus-visible .talk-card__caption {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--s-4) var(--s-5);
-  max-width: var(--measure);
+  max-width: 720px;
 }
 
 .help-grid__item {
@@ -431,6 +349,10 @@ a.talk-card:focus-visible .talk-card__caption {
 
 .help-grid__icon {
   flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  margin-top: -1px;
+  color: var(--text);
 }
 
 .help-grid__text {
@@ -441,39 +363,21 @@ a.talk-card:focus-visible .talk-card__caption {
   font-size: 1.0625rem;
   font-weight: 600;
   letter-spacing: -0.015em;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .help-grid__desc {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   line-height: 1.55;
   color: var(--muted);
-}
-
-/* ---------- Contact ---------- */
-.contact {
-  font-size: 1.0625rem;
-  font-weight: 500;
-}
-
-.contact a {
-  margin-left: 0.35em;
-}
-
-/* ---------- Help icons (inline SVG, drawn by the script) ---------- */
-.help-grid__icon {
-  display: block;
-  width: 44px;
-  height: 44px;
-  overflow: visible;
-  color: var(--text);
 }
 
 /* ---------- Footer landscape ---------- */
 /* The figures keep their ratio inside the content width. The ground line
    paths run far past the viewBox; the band clips them at the viewport edges. */
 .footer-band {
-  margin-top: var(--s-5);
+  margin-top: var(--s-4);
+  padding-top: var(--s-2);  /* room for the frisbee to float inside the clip */
   padding-bottom: var(--s-5);
   overflow: hidden;
 }
@@ -487,11 +391,16 @@ a.talk-card:focus-visible .talk-card__caption {
   color: var(--text);
 }
 
-/* ---------- Reveal motion (only when the script will run) ---------- */
+.landscape__frisbee {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* ---------- Motion (only when the script will run) ---------- */
 .js-motion .reveal {
   opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 480ms ease, transform 480ms ease;
+  transform: translateY(8px);
+  transition: opacity 400ms ease, transform 400ms ease;
 }
 
 .js-motion .reveal.is-visible {
@@ -499,7 +408,7 @@ a.talk-card:focus-visible .talk-card__caption {
   transform: none;
 }
 
-/* Footer: wipe open from the centre to both edges. */
+/* Footer: wipe open from the centre to both edges, then the frisbee floats once. */
 .js-motion .reveal--wipe {
   opacity: 1;
   transform: none;
@@ -511,12 +420,27 @@ a.talk-card:focus-visible .talk-card__caption {
   clip-path: inset(0 0 0 0);
 }
 
+.js-motion .reveal--wipe.is-visible .landscape__frisbee {
+  animation: frisbee-float 1800ms ease-in-out 1400ms 1;
+}
+
+@keyframes frisbee-float {
+  0%, 100% { transform: none; }
+  45% { transform: translate(48px, -36px) rotate(-8deg); }  /* SVG units: about 13 × 10 px on a desktop screen */
+}
+
+@media (hover: hover) {
+  .media-list__item:hover .media-list__thumb img {
+    transform: scale(1.03);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  a { transition: none; }
-  a.link-ext .link-ext__arrow { transition: none; }
-  .talk-card__play::before { transition: none; }
-  .media-frame--talk::before { transition: none; }
+  a,
+  a.link-ext .link-ext__arrow,
+  .media-list__thumb img { transition: none; }
+  .media-list__item:hover .media-list__thumb img { transform: none; }
 }
 
 /* ---------- Tablet ---------- */
@@ -525,36 +449,45 @@ a.talk-card:focus-visible .talk-card__caption {
     --media: 220px;
     --gap: var(--s-4);
   }
-
-  .block + .block {
-    margin-top: var(--s-7);
-  }
 }
 
 /* ---------- Mobile ---------- */
 @media (max-width: 720px) {
   .page {
-    padding-top: var(--s-5);
+    padding-top: var(--s-3);
   }
 
-  .intro {
-    grid-template-columns: 1fr;
-    gap: var(--s-3);
+  .topbar {
+    flex-direction: column;
+    margin-bottom: var(--s-6);
   }
 
-  .intro__photo.media-frame--portrait {
-    width: 120px;
-    height: 120px;
+  .topbar__links {
+    gap: var(--s-1) var(--s-2);
   }
 
-  .intro__name {
-    font-size: 2.25rem;
-    transform: none;
-    margin-bottom: var(--s-2);
+  /* Two rows on phones: sections, then contact links. */
+  .topbar__break {
+    display: block;
+    flex-basis: 100%;
+    height: 0;
+  }
+
+  .topbar__gap {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .intro__lede {
+    font-size: 1.625rem;
   }
 
   .intro__bio {
-    margin-top: var(--s-3);
+    font-size: 1.0625rem;
+  }
+
+  .block + .block {
+    margin-top: var(--s-6);
   }
 
   .work-row {
@@ -569,13 +502,9 @@ a.talk-card:focus-visible .talk-card__caption {
     margin-left: 0;
   }
 
-  .talks-grid {
-    grid-template-columns: 1fr;
-    gap: var(--s-3);
-  }
-
-  .side-row {
-    padding: var(--s-4) 0;
+  .media-list__item {
+    grid-template-columns: 112px minmax(0, 1fr);
+    gap: var(--s-2);
   }
 
   .help-grid {
@@ -586,23 +515,5 @@ a.talk-card:focus-visible .talk-card__caption {
   .footer-band {
     margin-top: var(--s-4);
     padding-bottom: var(--s-4);
-  }
-}
-
-@media (max-width: 480px) {
-  .contact a,
-  .work-row__url a,
-  .side-row__url a {
-    padding: 2px 0;
-  }
-
-  /* One link per line, so the separator never sits alone at a line end. */
-  .side-row__url a {
-    display: block;
-    width: fit-content;
-  }
-
-  .side-row__url-sep {
-    display: none;
   }
 }

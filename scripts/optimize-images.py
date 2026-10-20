@@ -1,5 +1,6 @@
 """One-time image optimizer. Resizes each source image to 2x its display width and saves WebP.
 
+Source files are the original PNGs (in git history before commit 05aacb7).
 Run from the repo root:  python3 scripts/optimize-images.py
 """
 from pathlib import Path
@@ -8,13 +9,12 @@ from PIL import Image
 QUALITY = 78
 # source file -> target width in px (2x the largest CSS width)
 TARGETS = {
-    "tony-joy.jpg": 320,
     "simple-app.png": 560,
     "dhis2-app.png": 560,
     "hearts360-dashboard.png": 560,
-    "vizchitra-conference-thumbnail.png": 880,
-    "dhis2-conference-thumbnail.png": 880,
-    "user-testing-thumbnail.png": 880,
+    "vizchitra-conference-thumbnail.png": 320,
+    "dhis2-conference-thumbnail.png": 320,
+    "user-testing-thumbnail.png": 320,
 }
 
 images = Path("images")

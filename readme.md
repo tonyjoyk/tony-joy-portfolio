@@ -31,19 +31,21 @@ Open http://localhost:8080.
 
 | Path | Role |
 |---|---|
-| `index.html` | The page |
-| `style.css` | Layout, typography, image crops |
+| `index.html` | The page (icons and footer landscape are inline SVG) |
+| `style.css` | Layout, typography, motion |
 | `index.md` | Plain-text content mirror |
-| `images/tony-joy.webp` | Intro portrait |
-| `images/simple-app.webp`, `dhis2-app.webp`, `hearts360-dashboard.webp` | Work thumbnails |
-| `images/vizchitra-conference-thumbnail.webp`, `dhis2-conference-thumbnail.webp`, `user-testing-thumbnail.webp` | Talk thumbnails |
 | `favicon.svg` | Tab icon (TJ monogram) |
+| `images/simple-app.webp`, `dhis2-app.webp`, `hearts360-dashboard.webp` | Work images |
+| `images/*-thumbnail.webp` | Talk thumbnails |
+| `images/walking-for-nothing.webp`, `medicine-tracker.webp` | Side project thumbnails (captured from the live sites) |
+| `images/design-together.webp`, `memorymoments.webp` | Side project thumbnails (captured from local runs of the private repos) |
+| `images/footer-landscape.svg` | Footer landscape source (the frisbee is its own group, so it can float) |
 | `images/og-image.jpg` | Social preview image (600×600) |
-| `images/footer-landscape.svg` | Footer landscape (source; inlined in `index.html`) |
-| `images/illustrations/help-*.svg` | Help icon sources (inlined in `index.html`) |
 | `scripts/optimize-images.py` | Resizes images to 2x display width, saves WebP |
-| `scripts/build-footer-svg.py` | Traces the footer drawing and adds the full-width ground line |
+| `scripts/build-footer-svg.py` | Traces the footer drawing, adds the full-width ground line, splits out the frisbee |
+| `docs/planning/` | BMAD docs: round 1 at the top level, round 2 in `round-2/` |
 | `docs/reference/` | Archived design mockups (not loaded by site) |
+
 
 ---
 
@@ -65,37 +67,20 @@ Single content column, max 880px, centered with 32px viewport gutters.
 
 | Section | File | Frame | Crop / fit |
 |---|---|---|---|
-| Intro portrait | `images/tony-joy.webp` | 160×160 square | `cover`, face at `center 18%` |
 | Work: Simple | `images/simple-app.webp` | 280×210 (4:3) | `cover`, `42% 38%` |
 | Work: DHIS2 | `images/dhis2-app.webp` | 280×210 (4:3) | `cover`, `58% 42%` |
 | Work: HEARTS360 | `images/hearts360-dashboard.webp` | 280×210 (4:3) | `contain`, dark `#111` bg |
-| Work: CallHub | *(missing)* | text-only row | — |
-| Talk: VizChitra | `images/vizchitra-conference-thumbnail.webp` | 16:9 | `cover`, `28% center` |
-| Talk: DHIS2 | `images/dhis2-conference-thumbnail.webp` | 16:9 | `cover`, `center 38%` |
-| Talk: User testing | `images/user-testing-thumbnail.webp` | 16:9 | `cover`, `72% center` |
-| Footer | inline SVG | figures max 880px, ground line full width | — |
-| Side projects ×3 | *(missing)* | text-only rows | — |
-
-Crop overrides live in `style.css` under `.media-frame--*` modifiers.
+| Work: CallHub | `images/callhub-app.webp` | 280×210 (4:3) | `cover`, white bg |
+| Talks | `images/*-thumbnail.webp` | 160×90 (16:9) | `cover`, `object-position` inline per item |
+| Side projects | `images/walking-for-nothing.webp` etc. | 160×120 (4:3) | `cover` |
 
 ---
 
-## Missing assets
+## Adding a talk or side project
 
-| Asset | Notes |
-|---|---|
-| CallHub work image | Row is text-only until added |
-| Side project images | Rows are text-only until added |
-| Talk video URLs | Cards show "Video coming soon" until a URL exists |
+Copy an existing `<li class="media-list__item">` in Talks or Side projects. Use the thumbnail `<a>` for the main link (it carries `tabindex="-1"` and `aria-hidden`, because the text link below is the accessible one). A private item uses a `<div>` for the thumbnail and `<span class="meta">Private repo</span>` in place of links.
 
----
-
-## Talk videos
-
-Talk cards are plain `<div class="talk-card talk-card--pending">` until a video exists. To wire a video:
-
-1. Change the `div` to `<a class="talk-card" href="VIDEO_URL">` (drop `talk-card--pending`).
-2. Add `<span class="talk-card__play" aria-hidden="true"></span>` inside the figure and remove the `talk-card__status` line.
+The VizChitra talk video is private: keep it as "Video on request" (mailto). Do not add its URL to this public repo.
 
 ---
 

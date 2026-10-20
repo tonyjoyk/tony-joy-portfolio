@@ -41,9 +41,40 @@ with tempfile.TemporaryDirectory() as tmp:
         check=True, capture_output=True, text=True,
     ).stdout
 
-group = re.search(r"(<g transform=.*?</g>)", traced, re.S).group(1)
-group = group.replace('fill="#000000"', 'fill="currentColor"')
-group = re.sub(r"\s+", " ", group)
+FRISBEE = (1000, 500, 1240, h)  # art-unit box (potrace's flipped y) that holds only the frisbee
+NUM = r"-?\d+(?:\.\d+)?"
+
+transform = re.search(r'<g transform="([^"]*)"', traced).group(1)
+d = " ".join(re.findall(r'<path d="([^"]*)"', traced, re.S))
+d = re.sub(r"\s+", " ", d)
+
+def subpaths(d):
+    """Split potrace path data into subpaths with absolute starts and rough bounding boxes."""
+    prev = (0.0, 0.0)
+    for s in re.findall(r"[Mm][^Mm]*", d):
+        body_at = next(i for i, c in enumerate(s[1:], 1) if c.isalpha())
+        x, y = (float(n) for n in re.findall(NUM, s[1:body_at])[:2])
+        if s[0] == "m":
+            x, y = prev[0] + x, prev[1] + y
+        xs, ys, cx, cy = [x], [y], x, y
+        for cmd, args in re.findall(r"([clCL])([^clCLzZ]*)", s):
+            v = [float(n) for n in re.findall(NUM, args)]
+            step = 6 if cmd in "cC" else 2
+            for k in range(0, len(v) - step + 1, step):
+                ex, ey = v[k + step - 2], v[k + step - 1]
+                cx, cy = (cx + ex, cy + ey) if cmd.islower() else (ex, ey)
+                xs.append(cx); ys.append(cy)
+        prev = (x, y)
+        yield (min(xs), min(ys), max(xs), max(ys)), f"M{x:g} {y:g}{s[body_at:].rstrip()}"
+
+def inside(b, box):
+    return b[0] >= box[0] and b[1] >= box[1] and b[2] <= box[2] and b[3] <= box[3]
+
+parts = list(subpaths(d))
+art = " ".join(s for b, s in parts if not inside(b, FRISBEE))
+frisbee = " ".join(s for b, s in parts if inside(b, FRISBEE))
+group = (f'<g transform="{transform}" fill="currentColor"><path d="{art}"/></g>\n'
+         f'  <g class="landscape__frisbee"><g transform="{transform}" fill="currentColor"><path d="{frisbee}"/></g></g>')
 
 def extension(x0, y0, direction):
     # A few soft swells near the art, then a long flat run to the edge.

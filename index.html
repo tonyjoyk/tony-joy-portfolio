@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,20 +33,24 @@
 <body>
   <div class="page">
 
+    <!-- Top bar -->
+    <nav class="topbar" aria-label="Main">
+      <a class="topbar__name" href="#top">Tony Joy</a>
+      <ul class="topbar__links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#talks">Talks</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li class="topbar__break" aria-hidden="true"></li>
+        <li class="topbar__gap"><a href="mailto:tonykokkad@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/tony-joy/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/tonyjoyk" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </nav>
+
     <!-- Introduction -->
     <header class="intro block">
-      <figure class="intro__photo media-frame media-frame--portrait">
-        <img class="media-frame__img" src="images/tony-joy.webp" alt="Tony Joy" width="160" height="160" loading="eager" fetchpriority="high">
-      </figure>
-      <div class="intro__heading">
-        <h1 class="intro__name">Tony Joy</h1>
-        <p class="intro__meta">Product designer · Kerala, India</p>
-      </div>
-      <div class="intro__bio">
-        <p>Hey, I'm Tony. I'm a product designer from Kerala, India.</p>
-        <p>I lead design at <a href="https://resolvetosavelives.org" target="_blank" rel="noopener">Resolve to Save Lives</a>, a public health nonprofit where I design tools and services for healthcare staff.</p>
-        <p>Most of these tools run in busy clinics, on shared phones with slow internet, with about five minutes for each patient. I like to design for those limits.</p>
-      </div>
+      <h1 class="intro__lede">Hey, I'm Tony, a product designer from Kerala, India.</h1>
+      <p class="intro__bio">I lead design at <a href="https://resolvetosavelives.org" target="_blank" rel="noopener">Resolve to Save Lives</a>, a public health nonprofit where I design tools and services for healthcare staff.</p>
     </header>
 
     <!-- Work -->
@@ -55,11 +59,9 @@
 
       <article class="work-row reveal">
         <div class="work-row__text">
-          <h3 class="work-row__title">Simple</h3>
-          <p class="work-row__url"><a class="link-ext" href="https://simple.org" target="_blank" rel="noopener">simple.org<span class="link-ext__arrow" aria-hidden="true">↗</span></a></p>
-          <p class="work-row__meta">Design lead · 5 million patients · 5 countries</p>
-          <p class="work-row__desc">Simple is an app that healthcare staff use to treat hypertension and diabetes. Clinics in India, Bangladesh, Ethiopia, Sri Lanka and Myanmar use it every day.</p>
-          <p class="work-row__highlight">Current focus: statins to lower the risk of heart attack and stroke.</p>
+          <h3 class="work-row__title"><a class="link-ext" href="https://simple.org" target="_blank" rel="noopener">Simple<span class="link-ext__arrow" aria-hidden="true">↗</span></a></h3>
+          <p class="meta">Design lead · Almost 7 million patients · 5 countries</p>
+          <p class="work-row__desc">I lead design for Simple, a free, open-source app that healthcare staff use to treat hypertension and diabetes. It manages almost 7 million patients in India, Bangladesh, Ethiopia, Sri Lanka and Myanmar.</p>
         </div>
         <figure class="media-frame media-frame--work media-frame--simple">
           <img class="media-frame__img" src="images/simple-app.webp" alt="A member of healthcare staff using the Simple app" width="280" height="210" loading="lazy">
@@ -68,11 +70,9 @@
 
       <article class="work-row reveal">
         <div class="work-row__text">
-          <h3 class="work-row__title">DHIS2 Android app</h3>
-          <p class="work-row__url"><a class="link-ext" href="https://dhis2.org" target="_blank" rel="noopener">dhis2.org<span class="link-ext__arrow" aria-hidden="true">↗</span></a></p>
-          <p class="work-row__meta">Design lead · 500,000+ healthcare staff · 60+ countries</p>
-          <p class="work-row__desc">DHIS2 is a health information system used in more than 60 countries. With RTSL and the University of Oslo, I redesigned patient registration in its Android app, from 12 screens down to 4.</p>
-          <p class="work-row__highlight">Current focus: hypertension and diabetes care in Nigeria.</p>
+          <h3 class="work-row__title"><a class="link-ext" href="https://dhis2.org" target="_blank" rel="noopener">DHIS2 Android app<span class="link-ext__arrow" aria-hidden="true">↗</span></a></h3>
+          <p class="meta">Design lead · 500,000+ healthcare staff · 60+ countries</p>
+          <p class="work-row__desc">I led the redesign of the DHIS2 Android app’s core components, used for programmes like hypertension, TB, malaria and HIV. I also designed the hypertension and diabetes module currently used in Nigeria to manage 60,000+ patients. Registration time for new patients dropped from 12 to 4 minutes, and follow-up from 4 minutes to 20 seconds.</p>
         </div>
         <figure class="media-frame media-frame--work media-frame--dhis2">
           <img class="media-frame__img" src="images/dhis2-app.webp" alt="A member of healthcare staff using the DHIS2 Android app" width="280" height="210" loading="lazy">
@@ -81,208 +81,153 @@
 
       <article class="work-row reveal">
         <div class="work-row__text">
-          <h3 class="work-row__title">HEARTS360 Dashboard</h3>
-          <p class="work-row__url"><a class="link-ext" href="https://hearts360.org" target="_blank" rel="noopener">hearts360.org<span class="link-ext__arrow" aria-hidden="true">↗</span></a></p>
-          <p class="work-row__meta">Product and design lead · 1.5 million patients monitored in Indonesia</p>
-          <p class="work-row__desc">HEARTS360 is an open-source dashboard toolkit for heart health programmes, built on Grafana. Indonesia and the Philippines are now scaling it to national level.</p>
+          <h3 class="work-row__title"><a class="link-ext" href="https://hearts360.org" target="_blank" rel="noopener">HEARTS360 Dashboard<span class="link-ext__arrow" aria-hidden="true">↗</span></a></h3>
+          <p class="meta">Product and design lead · Indonesia · Philippines</p>
+          <p class="work-row__desc">I lead product and design for HEARTS360, a free, open-source dashboard for hypertension and diabetes programmes. Any EHR system that collects this data can use it to show WHO indicators in less than 2 days. It now monitors 1.5 million patients in Indonesia and is being scaled up nationally in the Philippines.</p>
         </div>
-        <figure class="media-frame media-frame--work media-frame--work-contain media-frame--hearts360">
+        <figure class="media-frame media-frame--work media-frame--hearts360">
           <img class="media-frame__img" src="images/hearts360-dashboard.webp" alt="HEARTS360 dashboard on a laptop" width="280" height="210" loading="lazy">
         </figure>
       </article>
 
-      <article class="work-row work-row--text-only reveal">
+      <article class="work-row reveal">
         <div class="work-row__text">
-          <h3 class="work-row__title">CallHub voter mobilisation</h3>
-          <p class="work-row__url"><a class="link-ext" href="https://callhub.io" target="_blank" rel="noopener">callhub.io<span class="link-ext__arrow" aria-hidden="true">↗</span></a></p>
-          <p class="work-row__meta">Design lead</p>
-          <p class="work-row__desc">CallHub helps campaigns reach voters and volunteers. I led design for its mobilisation apps on Android and iOS. Our users were volunteers in the field, often with no training, little time, and a lot of noise around them.</p>
+          <h3 class="work-row__title"><a class="link-ext" href="https://callhub.io" target="_blank" rel="noopener">CallHub voter mobilisation<span class="link-ext__arrow" aria-hidden="true">↗</span></a></h3>
+          <p class="meta">Design lead</p>
+          <p class="work-row__desc">I led design for CallHub’s volunteer app on Android and iOS. Campaigns, unions and nonprofits use it to call and message voters and supporters. Many volunteers had no training and little time, so the app had to be easy to use on the first try.</p>
         </div>
+        <figure class="media-frame media-frame--work media-frame--callhub">
+          <img class="media-frame__img" src="images/callhub-app.webp" alt="Three screens from the CallHub volunteer app: campaign list, getting started, and call script" width="280" height="210" loading="lazy">
+        </figure>
       </article>
     </section>
 
-    <!-- Talks: cards become links when video URLs exist (swap div for a href) -->
+    <!-- Talks -->
     <section class="block" id="talks">
       <h2 class="block__heading">Talks</h2>
 
-      <div class="talks-grid">
-        <div class="talk-card talk-card--pending reveal">
-          <figure class="media-frame media-frame--talk media-frame--vizchitra">
-            <img class="media-frame__img" src="images/vizchitra-conference-thumbnail.webp" alt="Tony Joy speaking at the VizChitra conference" width="400" height="225" loading="lazy">
-          </figure>
-          <p class="talk-card__caption">Building dashboards for hypertension and diabetes care. VizChitra.</p>
-          <p class="talk-card__status">Video coming soon</p>
-        </div>
-
-        <div class="talk-card talk-card--pending reveal">
-          <figure class="media-frame media-frame--talk media-frame--dhis2-talk">
-            <img class="media-frame__img" src="images/dhis2-conference-thumbnail.webp" alt="Tony Joy speaking at the DHIS2 conference" width="400" height="225" loading="lazy">
-          </figure>
-          <p class="talk-card__caption">Designing health programmes around their users. DHIS2 conference.</p>
-          <p class="talk-card__status">Video coming soon</p>
-        </div>
-
-        <div class="talk-card talk-card--pending reveal">
-          <figure class="media-frame media-frame--talk media-frame--user-testing">
-            <img class="media-frame__img" src="images/user-testing-thumbnail.webp" alt="A user testing session in the field for a digital health tool" width="400" height="225" loading="lazy">
-          </figure>
-          <p class="talk-card__caption">Fast and simple user testing for digital health tools.</p>
-          <p class="talk-card__status">Video coming soon</p>
-        </div>
-      </div>
+      <ul class="media-list">
+        <li class="media-list__item reveal">
+          <div class="media-list__thumb media-list__thumb--talk">
+            <img src="images/vizchitra-conference-thumbnail.webp" alt="" width="160" height="90" loading="lazy" style="object-position: 28% center">
+          </div>
+          <div class="media-list__text">
+            <h3 class="media-list__title">Building dashboards for hypertension and diabetes care</h3>
+            <p class="meta">VizChitra conference</p>
+            <p class="media-list__links"><a class="link-ext" href="mailto:tonykokkad@gmail.com?subject=VizChitra%20talk%20video">Video on request<span class="link-ext__arrow" aria-hidden="true">→</span></a></p>
+          </div>
+        </li>
+        <li class="media-list__item reveal">
+          <a class="media-list__thumb media-list__thumb--talk" href="https://www.youtube.com/watch?v=209jCclCpE0&amp;t=8m40s" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="images/dhis2-conference-thumbnail.webp" alt="" width="160" height="90" loading="lazy" style="object-position: center 38%">
+          </a>
+          <div class="media-list__text">
+            <h3 class="media-list__title">Designing health programmes around end users</h3>
+            <p class="meta">DHIS2 conference</p>
+            <p class="media-list__links"><a class="link-ext" href="https://www.youtube.com/watch?v=209jCclCpE0&amp;t=8m40s" target="_blank" rel="noopener">Watch from 8:40<span class="link-ext__arrow" aria-hidden="true">↗</span></a></p>
+          </div>
+        </li>
+        <li class="media-list__item reveal">
+          <a class="media-list__thumb media-list__thumb--talk" href="https://www.youtube.com/watch?v=s0QYzP6Xr6w" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="images/user-testing-thumbnail.webp" alt="" width="160" height="90" loading="lazy" style="object-position: 72% center">
+          </a>
+          <div class="media-list__text">
+            <h3 class="media-list__title">Fast and simple user testing for digital health tools</h3>
+            <p class="meta">Talk</p>
+            <p class="media-list__links"><a class="link-ext" href="https://www.youtube.com/watch?v=s0QYzP6Xr6w" target="_blank" rel="noopener">Watch<span class="link-ext__arrow" aria-hidden="true">↗</span></a></p>
+          </div>
+        </li>
+      </ul>
     </section>
 
     <!-- Side projects -->
     <section class="block" id="projects">
       <h2 class="block__heading">Side projects</h2>
 
-      <article class="side-row reveal">
-        <h3 class="side-row__title">Walking for Nothing</h3>
-        <p class="side-row__url">
-          <a class="link-ext" href="https://tonyjoyk.github.io/walking-for-nothing/" target="_blank" rel="noopener">tonyjoyk.github.io/walking-for-nothing<span class="link-ext__arrow" aria-hidden="true">↗</span></a>
-          <span class="side-row__url-sep">·</span>
-          <a class="link-ext" href="https://github.com/tonyjoyk/walking-for-nothing" target="_blank" rel="noopener">GitHub<span class="link-ext__arrow" aria-hidden="true">↗</span></a>
-        </p>
-        <p class="side-row__desc">A man walks through a field in Kerala. He never stops. His German Shepherd, Juhu, joins him now and then, and the weather changes. I drew all of it in code with p5.js, with no image files.</p>
-      </article>
-
-      <article class="side-row reveal">
-        <h3 class="side-row__title">Design Together</h3>
-        <p class="side-row__url">Private repo</p>
-        <p class="side-row__desc">You write a brief. The tool pushes back, lists its assumptions, and asks questions. When the thinking is clear, it draws two lo-fi wireframes for the same screen. I made it to test if friction makes design with AI better.</p>
-      </article>
-
-      <article class="side-row reveal">
-        <h3 class="side-row__title">Medicine Tracker</h3>
-        <p class="side-row__url">
-          <a class="link-ext" href="https://medicine-tracker-lyart.vercel.app/" target="_blank" rel="noopener">medicine-tracker-lyart.vercel.app<span class="link-ext__arrow" aria-hidden="true">↗</span></a>
-          <span class="side-row__url-sep">·</span>
-          <a class="link-ext" href="https://github.com/tonyjoyk/medicine-tracker" target="_blank" rel="noopener">GitHub<span class="link-ext__arrow" aria-hidden="true">↗</span></a>
-        </p>
-        <p class="side-row__desc">I made it for my mom, to help her track her medicines.</p>
-      </article>
-
-      <article class="side-row reveal">
-        <h3 class="side-row__title">MemoryMoments</h3>
-        <p class="side-row__url">Private repo</p>
-        <p class="side-row__desc">I tried to capture how a memory feels, and how that feeling changes with time.</p>
-      </article>
-    </section>
-
-    <!-- Ways I can help. Icon sources: images/illustrations/help-*.svg -->
-    <section class="block" id="help">
-      <h2 class="block__heading">Ways I can help</h2>
-
-      <ul class="help-grid">
-        <li class="help-grid__item reveal">
-          <svg class="help-grid__icon draw-svg" viewBox="0 0 120 120" fill="none" aria-hidden="true" focusable="false">
-            <g stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="46" cy="58" r="30"/>
-              <path d="M46 58l-6-16"/>
-              <path d="M46 58l18 6"/>
-              <path d="M46 32v5"/>
-              <path d="M46 79v5"/>
-              <path d="M20 58h5"/>
-              <path d="M67 58h5"/>
-              <path d="M92 22l-16 28h14L74 98"/>
-            </g>
-          </svg>
-          <div class="help-grid__text">
-            <h3 class="help-grid__title">Running design sprints</h3>
-            <p class="help-grid__desc">In one week, we go from an unclear problem to something you can test with users.</p>
+      <ul class="media-list">
+        <li class="media-list__item reveal">
+          <a class="media-list__thumb" href="https://tonyjoyk.github.io/walking-for-nothing/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="images/walking-for-nothing.webp" alt="" width="160" height="120" loading="lazy">
+          </a>
+          <div class="media-list__text">
+            <h3 class="media-list__title">Walking for Nothing</h3>
+            <p class="media-list__desc">A man walks through a field in Kerala, forever, and the weather changes around him. I drew all of it in code with p5.js.</p>
+            <p class="media-list__links">
+              <a class="link-ext" href="https://tonyjoyk.github.io/walking-for-nothing/" target="_blank" rel="noopener">Live<span class="link-ext__arrow" aria-hidden="true">↗</span></a>
+              <a class="link-ext" href="https://github.com/tonyjoyk/walking-for-nothing" target="_blank" rel="noopener">GitHub<span class="link-ext__arrow" aria-hidden="true">↗</span></a>
+            </p>
           </div>
         </li>
-        <li class="help-grid__item reveal">
-          <svg class="help-grid__icon draw-svg" viewBox="0 0 120 120" fill="none" aria-hidden="true" focusable="false">
-            <g stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 104c30-3 58 2 88-1 10 0 16 1 22 3"/>
-              <circle cx="30" cy="34" r="8"/>
-              <path d="M30 43c-1 12 0 24 2 34"/>
-              <path d="M32 77c-8 10-12 18-14 24"/>
-              <path d="M32 77c8 10 12 18 16 24"/>
-              <path d="M40 46h20"/>
-              <path d="M60 46v28"/>
-              <path d="M60 74H40"/>
-              <path d="M40 74V46"/>
-              <path d="M46 44h8"/>
-              <path d="M44 54h12"/>
-              <path d="M44 60h10"/>
-              <path d="M44 66h8"/>
-              <path d="M32 52c6 2 10 4 14 6"/>
-              <circle cx="88" cy="46" r="8"/>
-              <path d="M88 55c2 10 0 18-2 26"/>
-              <path d="M86 81c12 2 22 4 28 2"/>
-              <path d="M84 84c-6 8-8 12-8 16"/>
-              <path d="M74 66h24"/>
-              <path d="M98 66v14"/>
-              <path d="M98 80H74"/>
-              <path d="M74 80V66"/>
-              <path d="M86 58c-8 8-12 12-12 14"/>
-              <path d="M90 58c8 8 10 12 10 14"/>
-            </g>
-          </svg>
-          <div class="help-grid__text">
-            <h3 class="help-grid__title">User testing</h3>
-            <p class="help-grid__desc">Five sessions, one week, and a clear list of what to fix.</p>
+        <li class="media-list__item reveal">
+          <div class="media-list__thumb">
+            <img src="images/design-together.webp" alt="" width="160" height="120" loading="lazy">
+          </div>
+          <div class="media-list__text">
+            <h3 class="media-list__title">Design Together</h3>
+            <p class="media-list__desc">A design tool that questions your brief before it draws two wireframe directions. I made it to test if friction makes design with AI better.</p>
+            <p class="media-list__links"><span class="meta">Private repo</span></p>
           </div>
         </li>
-        <li class="help-grid__item reveal">
-          <svg class="help-grid__icon draw-svg" viewBox="0 0 120 120" fill="none" aria-hidden="true" focusable="false">
-            <g stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M40 20h32c5 0 8 3 8 8v64c0 5-3 8-8 8H40c-5 0-8-3-8-8V28c0-5 3-8 8-8z"/>
-              <path d="M52 26h12"/>
-              <path d="M42 36h28"/>
-              <path d="M42 44h28"/>
-              <path d="M70 44v16"/>
-              <path d="M70 60H42"/>
-              <path d="M42 60V44"/>
-              <path d="M42 68h12"/>
-              <path d="M54 68v20"/>
-              <path d="M54 88H42"/>
-              <path d="M42 88V68"/>
-              <path d="M60 68h12"/>
-              <path d="M72 68v20"/>
-              <path d="M72 88H60"/>
-              <path d="M60 88V68"/>
-              <path d="M82 70c10 10 20 22 28 34"/>
-              <path d="M110 104l6 6"/>
-              <path d="M82 70c-3-4-2-7 2-8"/>
-            </g>
-          </svg>
-          <div class="help-grid__text">
-            <h3 class="help-grid__title">Prototyping ideas</h3>
-            <p class="help-grid__desc">A clickable prototype that you can show to real people, not a slide deck.</p>
+        <li class="media-list__item reveal">
+          <a class="media-list__thumb" href="https://medicine-tracker-lyart.vercel.app/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="images/medicine-tracker.webp" alt="" width="160" height="120" loading="lazy">
+          </a>
+          <div class="media-list__text">
+            <h3 class="media-list__title">Medicine Tracker</h3>
+            <p class="media-list__desc">I made it for my mom, to help her track her medicines.</p>
+            <p class="media-list__links">
+              <a class="link-ext" href="https://medicine-tracker-lyart.vercel.app/" target="_blank" rel="noopener">Live<span class="link-ext__arrow" aria-hidden="true">↗</span></a>
+              <a class="link-ext" href="https://github.com/tonyjoyk/medicine-tracker" target="_blank" rel="noopener">GitHub<span class="link-ext__arrow" aria-hidden="true">↗</span></a>
+            </p>
           </div>
         </li>
-        <li class="help-grid__item reveal">
-          <svg class="help-grid__icon draw-svg" viewBox="0 0 120 120" fill="none" aria-hidden="true" focusable="false">
-            <g stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="60" cy="60" r="7"/>
-              <circle cx="60" cy="16" r="8"/>
-              <path d="M52 22c3 5 6 7 8 7s5-2 8-7"/>
-              <path d="M60 30v22"/>
-              <circle cx="18" cy="98" r="8"/>
-              <path d="M14 104c4 5 7 6 10 6s6-2 8-6"/>
-              <path d="M26 90l22-20"/>
-              <circle cx="102" cy="98" r="8"/>
-              <path d="M94 104c4 5 7 6 10 6s6-2 8-6"/>
-              <path d="M94 90l-22-20"/>
-            </g>
-          </svg>
-          <div class="help-grid__text">
-            <h3 class="help-grid__title">Aligning teams</h3>
-            <p class="help-grid__desc">Product, design and engineering agree on what to build before they build it.</p>
+        <li class="media-list__item reveal">
+          <div class="media-list__thumb">
+            <img src="images/memorymoments.webp" alt="" width="160" height="120" loading="lazy">
+          </div>
+          <div class="media-list__text">
+            <h3 class="media-list__title">MemoryMoments</h3>
+            <p class="media-list__desc">I tried to capture how a memory feels, and how that feeling changes with time.</p>
+            <p class="media-list__links"><span class="meta">Private repo</span></p>
           </div>
         </li>
       </ul>
     </section>
 
-    <!-- Contact -->
-    <section class="block block--contact" id="contact">
-      <p class="contact reveal">
-        Say hi:
-        <a class="link-ext" href="mailto:tonykokkad@gmail.com">tonykokkad@gmail.com<span class="link-ext__arrow" aria-hidden="true">→</span></a>
-      </p>
+    <!-- Ways I can help. Icons: Phosphor Light (MIT), @phosphor-icons/core 2.1.1 -->
+    <section class="block" id="help">
+      <h2 class="block__heading">Ways I can help</h2>
+
+      <ul class="help-grid">
+        <li class="help-grid__item reveal">
+          <svg class="help-grid__icon" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M128,42a94,94,0,1,0,94,94A94.11,94.11,0,0,0,128,42Zm0,176a82,82,0,1,1,82-82A82.1,82.1,0,0,1,128,218ZM172.24,91.76a6,6,0,0,1,0,8.48l-40,40a6,6,0,1,1-8.48-8.48l40-40A6,6,0,0,1,172.24,91.76ZM98,16a6,6,0,0,1,6-6h48a6,6,0,0,1,0,12H104A6,6,0,0,1,98,16Z"/></svg>
+          <div class="help-grid__text">
+            <h3 class="help-grid__title">Running design sprints</h3>
+            <p class="help-grid__desc">Facilitate 5-day sprints with health experts, designers and engineers to go from a problem statement to a prototype tested with real users.</p>
+          </div>
+        </li>
+        <li class="help-grid__item reveal">
+          <svg class="help-grid__icon" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M245.48,125.57c-.34-.78-8.66-19.23-27.24-37.81C201,70.54,171.38,50,128,50S55,70.54,37.76,87.76c-18.58,18.58-26.9,37-27.24,37.81a6,6,0,0,0,0,4.88c.34.77,8.66,19.22,27.24,37.8C55,185.47,84.62,206,128,206s73-20.53,90.24-37.75c18.58-18.58,26.9-37,27.24-37.8A6,6,0,0,0,245.48,125.57ZM128,194c-31.38,0-58.78-11.42-81.45-33.93A134.77,134.77,0,0,1,22.69,128,134.56,134.56,0,0,1,46.55,95.94C69.22,73.42,96.62,62,128,62s58.78,11.42,81.45,33.94A134.56,134.56,0,0,1,233.31,128C226.94,140.21,195,194,128,194Zm0-112a46,46,0,1,0,46,46A46.06,46.06,0,0,0,128,82Zm0,80a34,34,0,1,1,34-34A34,34,0,0,1,128,162Z"/></svg>
+          <div class="help-grid__text">
+            <h3 class="help-grid__title">User testing</h3>
+            <p class="help-grid__desc">Test prototypes with end users, remotely or in the field, to collect feedback for product improvements.</p>
+          </div>
+        </li>
+        <li class="help-grid__item reveal">
+          <svg class="help-grid__icon" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M90,24V16a6,6,0,0,1,12,0v8a6,6,0,0,1-12,0ZM16,102h8a6,6,0,0,0,0-12H16a6,6,0,0,0,0,12ZM125.32,37.37a6,6,0,0,0,8.05-2.69l8-16a6,6,0,0,0-10.74-5.37l-8,16A6,6,0,0,0,125.32,37.37Zm-96,85.26-16,8a6,6,0,0,0,5.36,10.74l16-8a6,6,0,1,0-5.36-10.74ZM217.9,185.41a14,14,0,0,1,0,19.8L205.21,217.9a14,14,0,0,1-19.8,0L134.1,166.59a2,2,0,0,0-3.21.54l-17.75,46.24a2.44,2.44,0,0,0-.1.24A13.85,13.85,0,0,1,100.26,222c-.23,0-.45,0-.68,0A13.85,13.85,0,0,1,87,212.38L34.7,52.3A14,14,0,0,1,52.3,34.7L212.38,87A14,14,0,0,1,213.61,113l-.24.09-46.25,17.76a2,2,0,0,0-.53,3.21Zm-8.49,8.49L158.1,142.59h0a14,14,0,0,1,4.32-22.74l.24-.1L208.91,102a2,2,0,0,0-.26-3.61L48.58,46.11a2.33,2.33,0,0,0-.65-.11,2,2,0,0,0-1.82,2.58L98.38,208.65a1.84,1.84,0,0,0,1.77,1.35,1.81,1.81,0,0,0,1.84-1.09l17.76-46.25.1-.24a14,14,0,0,1,22.74-4.32l51.31,51.31a2,2,0,0,0,2.83,0l12.68-12.68A2,2,0,0,0,209.41,193.9Z"/></svg>
+          <div class="help-grid__text">
+            <h3 class="help-grid__title">Prototyping ideas</h3>
+            <p class="help-grid__desc">Build realistic prototypes quickly with Figma, ProtoPie and AI tools, so they feel real to end users.</p>
+          </div>
+        </li>
+        <li class="help-grid__item reveal">
+          <svg class="help-grid__icon" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M146,104V64a6,6,0,0,1,12,0V89.51l45.76-45.75a6,6,0,0,1,8.48,8.48L166.48,98H192a6,6,0,0,1,0,12H152A6,6,0,0,1,146,104Zm-42,42H64a6,6,0,0,0,0,12H89.52L43.76,203.76a6,6,0,1,0,8.48,8.48L98,166.48V192a6,6,0,0,0,12,0V152A6,6,0,0,0,104,146Zm62.48,12H192a6,6,0,0,0,0-12H152a6,6,0,0,0-6,6v40a6,6,0,0,0,12,0V166.48l45.76,45.76a6,6,0,0,0,8.48-8.48ZM104,58a6,6,0,0,0-6,6V89.51L52.24,43.76a6,6,0,0,0-8.48,8.48L89.52,98H64a6,6,0,0,0,0,12h40a6,6,0,0,0,6-6V64A6,6,0,0,0,104,58Z"/></svg>
+          <div class="help-grid__text">
+            <h3 class="help-grid__title">Aligning teams</h3>
+            <p class="help-grid__desc">Bring product, design, engineering, support and funders together to agree on a product roadmap and launch on time.</p>
+          </div>
+        </li>
+      </ul>
     </section>
 
   </div>
@@ -294,7 +239,8 @@
         <path d="M1 517.5 C-129 517.5 -129 499.5 -259 499.5 C-469 499.5 -469 531.5 -679 531.5 C-939 531.5 -939 507.5 -1199 507.5 C-1549 507.5 -1549 523.5 -1899 523.5 L-7999 523.5"/>
         <path d="M3270 524.0 C3400 524.0 3400 506.0 3530 506.0 C3740 506.0 3740 538.0 3950 538.0 C4210 538.0 4210 514.0 4470 514.0 C4820 514.0 4820 530.0 5170 530.0 L11270 530.0"/>
       </g>
-      <g transform="translate(0.000000,612.000000) scale(1.000000,-1.000000)" fill="currentColor" stroke="none"> <path d="M1154 611 c-58 -6 -121 -36 -120 -56 1 -6 4 -7 20 -7 45 0 131 33 136 51 2 10 -14 15 -36 12z m29 -6 c4 -2 4 -6 -1 -11 -5 -5 -7 -5 -4 0 4 5 4 7 0 10 l-3 3 2 0 c2 0 4 -1 6 -2z m-10 -1 c5 -2 6 -4 4 -8 -5 -8 -35 -23 -63 -32 -64 -18 -84 -6 -32 20 18 9 40 16 67 21 7 1 21 1 24 -1z m-86 -14 c-1 -1 -5 -3 -9 -5 -25 -13 -35 -24 -26 -30 2 -1 5 -2 7 -2 4 0 6 -2 3 -3 -10 -2 -25 2 -25 6 0 8 26 27 47 34 3 1 5 1 3 0z M2572 579 c-8 -4 -13 -12 -13 -20 0 -1 -1 -3 -3 -5 -7 -8 -8 -16 -3 -19 3 -1 8 1 8 4 0 1 0 1 -2 0 -3 -3 -6 -2 -6 2 0 4 4 11 6 11 3 -1 8 -13 5 -14 -1 -1 -1 -3 0 -3 3 0 4 7 2 12 -3 7 -3 7 6 9 6 1 13 4 13 6 0 1 0 1 -5 -1 -5 -2 -15 -4 -16 -3 -1 0 -1 6 0 9 6 11 21 14 30 6 3 -4 5 -5 8 -5 5 0 5 -2 1 -3 -5 -1 -7 -7 -4 -13 1 -3 1 -4 -2 -9 -4 -8 -4 -8 -10 -8 -5 0 -6 -1 -6 -4 0 -3 0 -4 -6 -1 -9 3 -21 1 -29 -5 -7 -4 -7 -4 -7 2 0 7 -8 14 -17 14 -7 0 -16 -9 -17 -16 0 -3 -1 -5 -4 -10 -21 -26 -17 -50 9 -49 7 0 7 0 2 -6 -7 -10 -9 -16 -9 -26 1 -7 0 -9 -1 -12 -1 -2 -3 -8 -5 -14 -2 -6 -4 -12 -4 -13 -1 -4 -1 -6 0 -4 1 1 11 27 11 29 0 0 1 2 2 3 2 2 2 3 1 7 -2 9 1 20 9 32 4 5 3 7 -5 7 -23 0 -27 18 -9 45 4 6 5 6 12 2 6 -3 7 -3 13 -3 4 0 7 0 7 0 1 0 -2 -7 -5 -14 -6 -13 -7 -16 -5 -16 1 0 9 17 9 18 0 2 7 15 9 17 9 8 17 10 23 7 3 -1 7 -2 9 -2 8 0 14 -6 20 -17 1 -4 5 -8 5 -7 0 1 -6 15 -8 18 0 1 -3 4 -5 5 -2 2 -3 3 -3 4 1 2 1 3 1 4 0 0 1 1 3 1 5 0 8 2 11 7 1 3 3 7 3 8 1 2 2 3 1 5 -2 7 -1 10 3 12 9 4 8 10 -1 8 -5 0 -5 0 -8 3 -5 8 -14 9 -24 5z m-41 -45 c9 -7 6 -18 -5 -18 -6 0 -17 6 -17 10 0 8 15 14 22 8z m42 -6 c1 -2 1 -2 -1 -2 -3 0 -6 1 -6 2 0 2 4 1 7 0z M1017 572 c-25 -7 -45 -14 -62 -20 -38 -15 -92 -45 -82 -45 1 0 7 3 13 7 12 7 32 18 44 23 3 1 10 4 14 6 22 10 50 21 78 29 1 0 2 2 0 2 0 0 -3 -1 -5 -2z M2569 504 c-2 -5 0 -10 6 -16 l4 -5 -3 -5 c-5 -7 -11 -21 -12 -27 -1 -3 -2 -6 -2 -7 -1 -2 2 -6 20 -19 18 -14 19 -15 19 -20 0 -3 -6 -24 -12 -39 -8 -24 -7 -29 10 -31 12 -1 5 -6 -12 -8 -22 -1 -23 0 -16 13 4 8 5 14 5 28 0 11 0 13 3 20 5 11 3 13 -20 19 -8 2 -14 4 -15 5 -1 0 -2 1 -3 1 -1 0 -2 1 -2 2 0 1 3 2 4 0 1 -2 2 -1 2 1 0 2 -4 4 -7 2 -4 -2 -6 -5 -4 -7 1 -2 2 -1 -16 -24 -5 -6 -10 -10 -12 -12 -6 -3 -8 -5 -11 -10 -1 -3 -7 -11 -12 -18 -17 -21 -18 -29 -4 -32 6 -1 6 -1 6 -3 -1 -1 -14 -3 -16 -3 -1 1 -6 1 -9 2 -14 2 -14 5 -2 18 4 5 7 12 11 22 4 13 6 17 14 26 10 10 10 11 2 4 -11 -9 -13 -13 -22 -35 -3 -10 -4 -11 -10 -18 -11 -11 -9 -20 5 -20 1 0 3 0 3 -1 0 -2 -5 -2 -13 -2 -11 2 -24 -3 -31 -12 -1 -2 -4 -5 -7 -6 -2 -2 -7 -6 -10 -9 -5 -4 -6 -5 -13 -6 -10 -1 -15 -5 -20 -12 -1 -3 -4 -6 -5 -7 -21 -20 -27 -27 -27 -32 0 -2 0 -3 -3 -3 -2 -1 -5 -3 -7 -5 -2 -2 -4 -3 -7 -3 -8 0 -23 -9 -67 -40 -9 -7 -23 -17 -30 -21 -6 -4 -12 -8 -12 -8 0 -1 1 0 3 1 2 1 3 2 4 2 1 0 15 9 74 48 22 14 27 16 35 13 7 -3 19 -2 19 2 0 3 -2 3 -4 2 -4 -4 -13 -3 -13 0 0 3 5 6 9 6 2 -1 7 -1 11 -2 9 -1 16 -1 17 1 0 1 -1 1 -15 3 -15 1 -15 4 1 19 15 14 15 14 19 13 5 -1 19 -1 20 1 0 0 -4 1 -10 2 -12 1 -12 1 -9 6 6 9 18 13 28 9 7 -2 8 -3 8 0 0 0 -2 2 -3 3 -5 2 -5 2 4 9 4 4 10 9 13 12 9 9 18 12 29 11 6 0 10 0 15 1 3 1 9 3 12 3 4 0 7 1 8 1 1 1 31 7 42 9 6 0 16 2 22 3 5 0 16 2 25 2 8 1 19 3 25 3 18 3 31 3 36 1 7 -3 16 -7 21 -12 2 -2 5 -4 6 -4 0 0 2 -1 4 -3 2 -2 8 -7 14 -11 5 -5 14 -13 20 -17 52 -45 103 -82 143 -104 137 -75 241 -98 332 -74 6 2 13 4 17 4 6 1 7 1 15 -1 1 0 1 2 1 7 0 9 1 9 4 1 4 -8 5 -7 8 3 3 8 5 10 5 6 0 -2 0 -2 0 -8 -1 -8 0 -9 8 -2 6 7 10 8 6 3 -3 -4 -7 -14 -7 -14 2 -2 32 -12 36 -12 5 -1 5 1 0 2 -2 1 -10 4 -17 6 -8 3 -14 5 -15 6 -2 0 1 4 8 14 3 4 5 7 4 7 -1 1 -11 -4 -15 -7 -6 -5 -6 -5 -6 8 0 16 -3 15 -7 -2 -3 -10 -4 -11 -8 -4 -1 2 -4 6 -5 7 l-3 4 0 -4 c4 -18 4 -17 -4 -16 -5 0 -10 -1 -22 -4 l-2 0 2 3 c9 10 6 18 -5 15 -8 -2 -17 -1 -21 2 -2 1 -5 2 -6 2 -5 0 -12 17 -19 43 -1 4 -4 13 -6 20 -3 8 -4 14 -4 20 -1 10 -2 13 -11 20 -4 3 -12 10 -18 16 -7 6 -16 13 -20 17 -5 3 -9 6 -9 6 -2 1 9 22 15 29 11 12 12 17 1 6 -8 -9 -9 -10 -15 -22 -4 -10 -5 -10 -9 -7 -2 2 -6 3 -6 1 0 0 7 -7 11 -9 7 -5 16 -12 16 -13 0 -1 -2 -2 -4 -3 -6 -3 -16 -12 -19 -17 -3 -5 -4 -5 -11 0 -3 2 -7 4 -9 4 -9 2 -20 10 -25 18 -6 10 -4 20 7 32 13 14 16 20 20 48 1 10 -5 -8 -7 -19 -1 -10 -4 -14 -12 -23 -10 -10 -13 -16 -14 -25 -1 -9 -2 -12 -13 -23 -3 -4 -7 -9 -8 -11 -1 -1 -4 -5 -7 -9 -6 -8 -4 -8 4 1 8 9 7 9 14 2 4 -3 8 -7 10 -8 4 -3 4 -4 -12 -15 -6 -4 -12 -8 -14 -9 -2 -2 -4 -2 -10 -2 -12 1 -56 -1 -62 -2 -6 -2 -7 -4 -1 -2 3 0 20 0 39 0 l34 1 6 4 c3 3 10 8 16 11 10 6 19 14 28 23 6 6 5 6 15 0 5 -3 10 -5 11 -5 2 0 3 0 4 -1 0 -2 8 -5 20 -10 18 -7 21 -10 22 -22 1 -17 3 -22 13 -36 9 -13 18 -28 19 -32 2 -5 3 -6 6 -6 2 0 2 0 0 1 -1 1 -3 3 -4 7 -2 6 -11 21 -21 36 -8 11 -9 16 -11 30 -2 15 -4 18 -21 25 -16 6 -24 10 -24 12 0 8 21 24 27 21 3 -2 33 -28 34 -30 1 -2 2 -6 3 -12 0 -10 0 -8 4 -23 2 -6 5 -15 6 -20 3 -13 7 -22 12 -32 4 -9 4 -12 -1 -12 0 0 -1 0 -1 -1 0 -2 1 -1 5 1 4 4 4 4 11 0 6 -3 14 -4 21 -2 9 2 11 -2 4 -9 -6 -5 -14 -8 -21 -8 -2 0 -8 -1 -12 -2 -13 -5 -16 -5 -35 -5 -64 0 -138 20 -214 58 -23 11 -21 10 -19 12 1 1 2 3 2 6 0 5 2 8 8 11 3 2 5 3 6 5 0 3 -1 4 -3 1 -1 -1 -4 -3 -6 -4 -5 -3 -8 -8 -9 -13 -1 -6 -4 -6 -7 -2 -4 4 -4 9 0 17 2 5 3 8 3 12 0 6 2 9 6 9 4 1 5 2 2 3 -6 2 -13 -4 -12 -12 1 -3 0 -6 -3 -11 -3 -8 -4 -11 -1 -15 2 -5 -2 -4 -19 6 -47 29 -101 70 -161 122 -6 5 -13 10 -15 11 -2 2 -4 3 -4 4 -2 4 -27 16 -33 16 -4 0 -4 1 -2 10 1 4 3 11 4 15 0 4 2 12 3 19 2 6 5 20 7 32 3 12 6 24 6 28 1 4 4 14 6 24 4 21 4 21 6 22 5 1 8 10 4 15 0 1 -1 3 0 4 0 2 -2 6 -4 6 -2 0 -6 -4 -6 -7 0 -3 -6 -6 -14 -6 -9 0 -25 -3 -24 -4 0 -1 1 -1 2 -1 2 0 9 0 16 1 11 1 14 2 18 4 7 4 12 2 10 -5 -1 -5 -2 -5 -10 -5 -5 0 -8 -1 -15 -3 -9 -4 -19 -7 -26 -9 -7 -1 -11 1 -23 11 -11 11 -14 16 -14 22 0 5 -1 5 -3 1z m20 -29 c12 -11 19 -12 43 0 9 4 10 4 15 4 5 0 5 3 -4 -46 -3 -16 -7 -34 -8 -41 -3 -14 -8 -37 -11 -49 0 -4 -1 -9 -2 -10 0 -3 -1 -3 -7 -4 -7 0 -9 0 -7 2 3 4 -1 8 -8 8 -4 0 -7 1 -9 2 -5 3 -4 6 2 26 3 8 5 17 6 20 0 3 2 8 3 10 3 7 2 13 -2 17 -3 3 -22 18 -28 22 -8 6 -9 7 -7 8 0 1 2 4 2 8 2 7 13 29 14 29 1 0 4 -3 8 -6z m-44 -68 c3 -1 10 -3 17 -5 18 -5 17 -4 13 -15 -2 -6 -2 -9 -2 -22 0 -13 -1 -17 -2 -19 -6 -11 -6 -11 -6 -17 l1 -5 -10 -1 c-15 -2 -27 -4 -47 -7 l-18 -3 -2 2 c-2 2 -4 3 -8 3 -5 1 -7 3 -8 7 -1 2 0 5 14 22 4 5 9 12 10 15 2 3 5 6 7 8 9 6 16 13 32 35 2 2 3 4 3 4 0 0 3 -1 6 -2z m456 -154 c2 -5 11 -13 17 -16 3 -1 6 -3 6 -3 0 -1 -7 -6 -19 -15 -1 -1 -2 0 -4 2 -2 2 -7 6 -10 9 -8 6 -9 9 -3 14 2 2 5 6 6 8 4 6 4 6 7 1z M658 479 c-8 -4 -7 -13 4 -32 5 -8 5 -9 6 -16 1 -10 4 -17 10 -23 l4 -3 -2 -5 c-4 -6 -11 -24 -10 -25 1 -1 3 3 9 15 6 13 6 12 10 7 6 -8 12 -9 12 -2 0 4 -2 7 -11 11 -11 6 -20 17 -17 22 2 4 -1 12 -7 21 -8 11 -11 23 -8 26 8 6 27 -1 42 -16 12 -12 14 -12 8 -4 -6 9 -16 18 -25 22 -8 4 -20 5 -25 2z m36 -78 c3 -2 4 -6 2 -6 -2 0 -7 6 -6 7 0 1 1 1 4 -1z M741 463 c-5 -2 -13 -6 -13 -7 0 -1 1 -1 10 2 12 3 18 2 24 -4 4 -3 5 -2 3 2 -4 8 -14 11 -24 7z M798 456 c-6 -2 -12 -5 -15 -6 -7 -2 -10 -4 -6 -4 2 0 15 4 20 6 2 1 2 1 2 -1 0 -5 3 -7 12 -9 l6 -1 0 -5 c0 -7 -5 -12 -22 -22 -9 -4 -13 -7 -14 -9 -2 -4 1 -3 5 1 3 3 11 7 12 6 0 0 -2 -2 -4 -6 -3 -3 -5 -6 -5 -7 0 -1 -11 -2 -19 0 -15 3 -24 -12 -11 -17 5 -2 14 -4 21 -4 8 -1 9 -2 3 -4 -14 -4 -22 -12 -24 -23 -1 -5 -1 -6 6 -18 2 -5 3 -9 1 -15 -2 -5 -2 -7 0 -7 2 1 5 11 5 16 0 4 -2 8 -6 14 -5 7 -3 15 5 23 8 6 12 8 25 8 15 0 23 3 23 11 0 4 -3 6 -9 6 -5 0 -6 1 -9 3 -2 1 -5 3 -7 4 -3 3 -3 2 8 15 9 9 11 11 13 11 4 -1 6 4 7 19 2 22 -3 25 -23 15z m18 -1 c2 -1 2 -6 1 -8 -3 -3 -16 1 -14 5 2 4 10 6 13 3z m-31 -60 c4 -1 8 -3 10 -4 5 -3 9 -5 12 -5 5 0 8 -2 6 -4 -3 -4 -42 -2 -51 2 -8 4 -7 10 3 11 3 1 6 1 7 1 3 1 3 1 13 -1z m23 -18 c1 -1 -2 -2 -8 -2 -5 0 -7 1 -5 2 1 1 13 1 13 0z M742 443 c-6 -6 -7 -10 0 -10 10 0 14 4 9 9 -3 4 -6 4 -9 1z m5 -4 c0 -1 -2 -2 -3 -2 -2 0 -3 2 -1 3 1 2 4 1 4 -1z M2193 426 c-17 -5 -26 -16 -17 -22 3 -2 3 -2 0 -5 -3 -4 -9 -15 -10 -20 0 -5 -1 -7 -3 -5 -2 1 -3 0 -3 -3 0 -1 -2 -8 -4 -14 -3 -8 -4 -15 -5 -20 l0 -7 3 -1 c4 -2 38 -11 49 -13 7 -1 8 -1 20 2 17 4 26 4 21 -1 -1 -2 -1 -2 0 -4 1 -1 1 -2 -4 -6 -8 -7 -9 -7 -24 -3 -7 2 -8 2 -27 1 -15 -1 -20 0 -21 0 -1 1 -2 1 -5 0 -10 -3 -32 0 -38 6 l-2 3 0 14 c0 10 0 16 2 22 1 7 2 10 1 10 -2 3 -4 -2 -6 -16 -3 -17 -1 -15 -12 -18 -9 -2 -23 -8 -23 -10 0 -1 0 -1 8 3 7 3 22 7 23 6 1 0 1 -3 2 -6 2 -11 5 -14 23 -18 4 0 1 -2 -16 -5 l-17 -4 -2 2 c-4 6 -11 12 -14 14 -3 1 -6 3 -7 4 -1 2 -2 3 -3 3 -1 0 -5 1 -8 3 -3 1 -7 4 -9 5 -3 1 -5 3 -7 8 -5 9 -11 12 -14 7 -3 -6 2 -10 22 -20 23 -12 23 -12 14 -15 -9 -3 -23 -15 -23 -20 0 -5 -1 -5 -7 -4 -3 1 -8 2 -10 2 -8 2 -17 5 -19 6 0 1 -3 2 -6 2 -17 3 -31 15 -33 28 -4 36 81 90 143 90 12 0 32 -4 37 -7 3 -2 4 -2 3 -1 -1 2 -12 7 -20 9 -40 9 -102 -11 -143 -48 -25 -21 -31 -45 -15 -61 4 -4 4 -6 1 -6 0 0 -1 -1 -2 -2 -2 -5 8 -11 18 -11 l4 0 1 -8 c1 -4 1 -9 2 -11 1 -3 0 -3 -4 -8 -2 -2 -7 -7 -10 -11 l-6 -6 -6 2 c-28 11 -66 -6 -91 -42 -24 -34 -27 -72 -7 -90 5 -5 14 -9 18 -9 6 0 0 -3 -12 -6 -17 -4 -35 -9 -59 -15 -23 -7 -26 -7 -27 -6 -1 0 -7 1 -13 1 -9 0 -15 0 -23 2 -16 3 -32 1 -53 -7 -7 -3 -12 -4 -17 -5 -7 0 -9 -2 -5 -2 9 -2 11 -2 26 4 19 8 36 10 53 6 4 -1 10 -2 12 -2 5 0 9 -2 6 -2 -6 -3 -58 -17 -76 -21 -36 -9 -42 -10 -77 -16 -3 -1 -10 -1 -16 -1 -7 0 -9 0 -8 -1 3 -2 22 -1 38 1 15 2 37 7 70 15 25 6 48 13 73 20 l19 5 19 1 c22 0 25 1 10 3 -11 1 -11 1 10 7 7 2 16 4 18 5 14 3 30 8 41 10 6 2 14 4 17 5 7 1 24 9 26 10 0 1 2 3 4 4 9 7 21 18 28 28 6 8 15 24 15 27 0 4 9 6 12 3 13 -10 34 -5 27 6 -1 3 -1 3 1 5 2 2 11 10 21 19 9 8 20 18 23 20 3 3 12 12 21 20 8 8 17 16 19 17 1 1 3 3 3 4 0 2 33 35 34 34 0 -1 -2 -26 -2 -27 -1 -1 -4 -2 -7 -4 -22 -10 -52 -37 -64 -57 -1 -3 -3 -7 -4 -8 -8 -15 -13 -39 -10 -55 2 -11 11 -24 19 -29 3 -2 0 -2 -9 -1 -5 0 -13 1 -19 2 -14 2 -58 2 -62 0 -2 -1 5 -1 22 -1 24 0 25 0 73 -6 29 -3 45 -1 68 11 5 3 12 6 15 8 2 1 5 2 6 2 0 0 4 3 9 5 4 2 8 4 8 5 -1 0 -5 -2 -10 -5 -12 -6 -18 -7 -10 -2 56 42 72 115 29 135 l-7 4 4 2 c2 1 4 2 5 3 0 1 2 1 5 0 5 0 11 2 13 6 1 1 1 1 3 0 4 -3 9 3 9 10 0 2 1 4 1 6 6 10 6 18 2 21 -7 6 -10 6 -35 -1 -7 -2 -19 -1 -24 2 -1 1 -3 2 -4 2 -3 0 -33 7 -35 9 -2 1 0 8 5 24 3 7 5 10 5 6 0 -5 5 -8 12 -7 l7 0 4 -4 c9 -9 16 -8 25 1 3 4 5 5 7 5 2 -1 6 2 6 4 0 0 0 2 0 5 1 5 5 11 8 11 8 0 10 18 5 31 -8 16 -27 24 -45 18z m20 -2 c15 -4 24 -16 24 -30 1 -14 0 -14 -14 -7 -5 2 -12 4 -15 4 -3 0 -6 1 -8 3 -1 2 -6 4 -11 6 -4 2 -9 5 -11 6 l-3 4 2 3 c6 6 9 8 16 6 12 -4 16 -8 18 -16 1 -5 3 -5 3 0 0 6 -6 14 -13 16 -7 2 -8 4 -2 5 5 1 8 1 14 0z m-22 -28 c9 -5 9 -5 3 -8 -11 -6 -22 0 -15 9 2 3 3 3 12 -1z m-13 -11 c4 -4 9 -4 16 -1 2 1 6 2 7 3 1 0 4 0 6 1 2 0 22 -8 22 -10 0 0 -1 -2 -3 -4 -1 -1 -3 -5 -3 -8 -1 -4 -2 -4 -4 -4 -2 0 -5 -2 -9 -7 -9 -8 -12 -8 -19 -1 l-6 5 -6 -1 c-12 -2 -15 1 -10 16 1 4 2 8 3 10 0 5 1 5 6 1z m-125 -52 c5 -5 5 -8 -1 -4 -4 3 -5 4 -5 6 1 2 3 1 6 -2z m198 -19 c1 -1 -1 -5 -2 -9 -2 -4 -3 -9 -3 -12 -1 -4 -2 -6 -4 -6 -2 1 -1 5 1 7 1 2 1 2 0 2 -2 0 -5 -4 -5 -7 -1 -4 -5 -7 -11 -9 -4 0 -4 1 0 6 2 3 3 6 4 8 0 2 2 4 7 6 7 4 11 8 10 13 -1 4 2 4 3 1z m-35 -12 c3 -1 6 -2 6 -3 1 0 3 -1 4 -1 1 0 3 -1 3 -2 0 -2 -7 -10 -10 -12 -2 0 -4 -1 -4 -2 -1 -1 -4 -1 -7 -1 -3 0 -6 0 -6 -1 0 -1 1 -1 2 -1 2 0 4 -2 3 -3 -1 -1 -15 0 -17 2 -3 2 -4 1 -4 -1 0 -2 0 -3 -2 -3 -1 0 -6 -1 -9 -2 -4 -1 -8 -2 -8 -1 -1 1 1 28 2 29 1 0 8 1 17 2 9 1 18 1 19 1 3 1 4 1 11 -1z m-118 -5 c17 -18 13 -25 -26 -51 -42 -28 -50 -35 -50 -47 0 -4 2 -10 5 -12 4 -3 15 -14 14 -16 -1 -3 -14 -3 -19 1 -1 1 -2 2 -3 2 0 0 -4 2 -8 5 -5 3 -11 7 -14 9 -7 4 -8 6 -7 10 1 3 8 10 14 13 6 4 19 18 25 26 11 15 24 28 34 33 11 6 11 12 0 12 -10 0 17 21 28 21 1 0 4 -2 7 -6z m57 -1 c4 -2 4 -1 -12 -17 -9 -8 -24 -22 -34 -32 -23 -23 -33 -33 -51 -48 -5 -4 -11 -10 -14 -12 -6 -6 -6 -6 -8 -3 -2 1 -2 3 -2 8 0 4 0 10 -1 14 l-1 7 4 3 c4 4 8 7 34 24 35 22 41 29 40 42 -1 4 0 5 1 6 3 1 32 8 41 9 0 0 2 -1 3 -1z m-150 -8 c4 -2 7 -3 7 -4 0 -1 -1 -1 -2 -1 -1 0 -5 1 -8 1 -11 1 -16 6 -6 7 1 0 5 -1 9 -3z m19 -7 c5 -1 15 -3 25 -5 3 0 7 -1 8 -2 l3 -1 -4 -3 c-7 -5 -24 -22 -29 -29 -6 -11 -7 -11 -10 4 -2 13 -3 12 8 16 11 3 17 6 17 7 -1 0 -22 -5 -24 -6 -4 -2 -6 5 -6 17 0 1 1 2 3 3 2 0 4 1 4 1 0 0 2 -1 5 -2z m43 -3 c0 -2 -7 -2 -8 0 0 1 1 1 4 1 3 0 4 -1 4 -1z m137 -9 c52 -11 43 -84 -17 -132 -30 -24 -73 -29 -93 -11 -31 28 0 102 57 133 4 2 8 4 9 4 2 0 3 -3 1 -5 -1 -1 -5 -33 -6 -48 0 -7 -1 -13 -1 -16 -2 -5 1 -9 6 -7 6 2 7 10 1 12 -3 2 -3 4 0 24 4 21 4 26 4 34 l1 8 5 2 c13 4 20 5 33 2z m-189 -29 l2 -13 -4 -4 c-3 -4 -7 -5 -7 -3 0 1 -2 5 -5 8 -6 6 -7 7 -5 8 0 0 4 4 7 9 4 4 8 8 8 8 1 0 2 -6 4 -13z m-31 -6 c2 -1 4 -2 4 -2 0 -1 -9 -12 -27 -35 -1 -1 -3 -4 -6 -6 -2 -3 -4 -6 -4 -6 0 0 -2 -2 -3 -4 -2 -2 -4 -4 -5 -4 -3 0 -10 -7 -10 -10 0 -6 6 -8 11 -4 2 1 4 2 6 2 2 0 7 0 11 1 27 4 40 5 40 3 0 -5 -12 -24 -22 -36 -21 -25 -61 -39 -80 -30 -43 20 -18 100 40 128 15 7 35 8 45 3z m13 -8 c5 -6 7 -10 6 -11 0 0 -3 -3 -7 -6 -14 -11 -14 -17 1 -26 11 -6 10 -8 -8 -10 -19 -3 -37 -5 -38 -6 -4 -2 -5 10 -1 15 10 12 41 48 42 48 0 0 3 -2 5 -4z m33 -20 c3 -13 1 -21 -3 -13 -2 4 -2 8 -1 13 2 4 4 4 4 0z m131 -12 c0 -1 0 -2 -1 -3 -2 0 -3 2 -3 3 1 3 4 2 4 0z m-152 -18 c3 0 2 -2 0 -2 -2 0 -3 1 -2 2 0 1 0 1 2 0z m-64 -5 c0 -2 -4 -6 -6 -6 -2 1 -2 4 0 6 3 2 5 2 6 0z M958 423 c-3 -1 -7 -4 -10 -6 -4 -2 -5 -3 -8 -2 -7 0 -12 -4 -22 -18 -18 -27 -46 -49 -89 -71 -12 -6 -15 -7 -11 -6 12 2 -25 -20 -42 -26 -3 -1 -8 -4 -12 -7 -12 -10 -30 -19 -43 -21 l-7 -1 -11 5 c-13 6 -19 7 -21 5 -2 -3 0 -7 8 -10 20 -10 47 -4 75 17 6 4 10 7 11 7 4 0 32 16 49 28 3 2 14 10 24 16 29 19 58 42 65 51 2 3 6 9 9 13 6 9 13 15 16 14 1 -1 0 -2 -3 -4 -8 -5 -12 -14 -9 -19 2 -1 2 -1 8 2 10 4 14 13 11 19 -2 2 0 4 8 10 3 2 4 1 2 -2 -5 -6 -8 -15 -4 -18 4 -5 13 0 17 10 3 6 6 7 6 2 0 -3 -4 -9 -8 -13 -3 -2 -4 -5 -2 -5 1 0 2 2 9 9 2 3 4 3 4 0 0 -3 -4 -7 -9 -9 -6 -2 -6 -4 0 -4 13 1 1 -13 -19 -21 -8 -4 -9 -3 -5 2 8 8 5 19 -4 18 l-2 0 4 -2 c5 -3 5 -8 -1 -15 -3 -2 -5 -5 -5 -6 -1 -1 -3 -3 -6 -4 -10 -6 -44 -33 -59 -49 -6 -6 -18 -18 -27 -27 -41 -42 -63 -53 -89 -45 -28 8 -40 7 -53 -5 -12 -11 -32 -18 -66 -21 -39 -4 -54 -8 -67 -20 -10 -9 -12 -15 -13 -33 -1 -18 -4 -25 -13 -35 -9 -11 -33 -23 -39 -20 -7 3 -21 -10 -21 -19 0 -9 9 -4 12 7 1 5 1 5 -3 0 -4 -6 -7 -8 -6 -2 2 5 7 8 13 7 5 0 6 0 16 4 32 15 42 27 44 57 1 14 2 18 6 25 10 14 33 23 65 25 34 3 53 9 77 25 11 7 11 7 17 7 10 0 17 -2 28 -7 25 -11 62 8 97 50 24 27 40 42 60 57 11 8 28 19 30 19 2 1 5 1 8 2 6 1 19 8 24 12 4 4 5 8 5 13 -1 5 -1 6 1 8 3 3 4 10 2 12 -1 1 -2 3 -2 5 0 11 -9 16 -20 10z m11 -3 c5 -4 -6 -21 -13 -20 -6 1 -2 14 7 20 4 2 4 2 6 0z m-25 -15 c0 -4 -3 -9 -8 -11 -9 -4 -8 1 0 10 4 5 7 5 8 1z m-245 -136 c7 -4 6 -6 -2 -3 -7 1 -10 4 -9 5 0 1 5 0 11 -2z m-195 -166 c-1 -2 -5 -3 -5 -1 0 1 1 2 3 2 1 0 2 -1 2 -1z M3087 412 c-10 -4 -15 -10 -16 -22 -1 -9 -3 -12 -7 -12 -3 0 -4 -1 -3 -3 1 -2 5 0 9 3 3 3 3 3 5 2 2 -3 1 -6 -1 -9 -2 -3 -1 -3 -18 2 -10 3 -12 3 -28 0 -7 -2 -18 -4 -23 -4 -12 -2 -14 -4 -18 -14 -3 -7 -4 -11 -4 -19 -1 -9 -2 -12 -4 -15 -6 -10 2 -18 13 -14 6 3 8 8 4 13 -3 4 -3 4 3 14 4 10 5 11 3 11 -1 0 -11 -18 -11 -21 0 -1 1 -3 2 -4 4 -5 2 -8 -4 -9 -8 -2 -12 3 -8 9 2 3 3 7 3 12 1 9 4 18 8 25 2 6 6 7 22 9 6 1 14 3 19 3 12 3 20 2 30 -3 3 -1 5 -2 6 -1 1 1 1 1 3 0 2 -2 1 -3 -1 -3 -2 0 -2 -1 1 -4 4 -5 7 -7 12 -8 7 0 9 -1 12 -4 4 -3 6 -8 9 -17 2 -9 8 -23 10 -24 2 -1 14 6 18 11 5 4 5 5 4 8 0 2 0 5 1 6 l1 2 2 -2 2 -2 2 3 c4 5 6 4 7 -2 0 -5 -3 -11 -8 -13 -2 -1 -5 -4 -9 -10 -12 -17 -20 -23 -27 -20 -5 2 -5 0 0 -2 8 -5 22 5 31 23 1 3 3 5 6 6 9 5 13 16 8 22 -3 4 -5 4 -8 1 -1 -2 -2 -3 -3 -2 -4 2 -8 -3 -8 -10 0 -3 -1 -4 -2 -6 -4 -3 -16 -10 -17 -9 -2 1 -5 9 -7 18 -4 17 -10 25 -30 37 l-4 3 3 4 c2 3 2 3 1 6 -2 7 -3 7 5 10 7 4 7 4 4 3 -3 0 -6 -1 -7 -2 -7 -3 -9 6 -2 13 9 11 23 11 31 0 3 -4 3 -4 7 -4 4 0 5 -1 2 -2 0 -1 -4 -1 -9 -1 -4 0 -7 0 -7 -1 -1 0 1 -1 4 -1 l5 1 0 -8 c1 -4 0 -8 0 -9 -1 -1 -3 -4 -4 -6 -2 -5 -3 -6 -7 -6 -4 0 -6 0 -7 -2 -3 -2 -2 -4 1 -2 1 2 3 2 6 1 4 0 10 5 10 8 0 1 1 3 3 5 2 3 2 4 1 8 -2 6 -1 8 5 11 9 3 8 7 -1 7 -5 0 -5 0 -8 4 -5 8 -13 11 -23 8z m-4 -54 c2 -1 4 -3 4 -4 0 -3 -11 1 -12 5 0 2 4 1 8 -1z M242 360 c-17 -5 -26 -24 -17 -32 2 -2 4 -5 4 -6 0 -1 2 -4 5 -6 5 -6 5 -9 -3 -13 -5 -2 -17 -13 -28 -23 -7 -7 -16 -21 -16 -26 0 0 -1 -2 -2 -3 -7 -6 -10 -13 -6 -17 2 -3 4 -4 9 -1 4 1 7 5 7 11 0 3 1 5 4 9 4 5 3 7 -1 1 -5 -6 -6 -8 -6 -12 0 -3 -2 -6 -4 -4 -1 1 -2 1 -3 0 -2 -2 -4 0 -4 3 0 2 1 4 3 6 2 1 5 6 7 10 6 13 16 24 37 40 13 10 14 14 7 21 -5 5 -5 8 -1 9 2 0 15 11 16 13 1 3 -9 -3 -13 -7 -6 -7 -12 -5 -12 3 0 18 27 28 37 15 2 -3 2 -3 8 -3 7 1 7 0 1 -3 -5 -2 -6 -3 -5 -5 3 -6 4 -12 3 -15 -4 -10 -5 -11 -10 -12 -4 -1 -5 -3 -3 -5 1 -1 2 -1 4 1 4 1 4 1 0 -4 -5 -7 -5 -14 -1 -18 3 -2 15 -3 17 -1 2 4 28 15 37 16 3 0 7 1 9 2 27 12 33 14 40 11 3 -1 8 -1 11 -1 l6 0 -1 3 c0 3 0 3 4 3 10 0 9 7 -1 11 -5 1 -10 1 -17 -2 -3 0 -11 -2 -18 -2 -17 -1 -27 -3 -40 -7 -5 -2 -11 -3 -13 -3 -3 0 -9 -1 -14 -2 -6 0 -11 -1 -11 -1 0 1 1 4 3 7 3 6 3 7 2 9 -3 6 -4 11 -1 12 1 1 2 1 3 1 2 0 6 6 6 8 -1 1 -2 1 -8 1 -7 -1 -7 -1 -10 2 -5 6 -13 8 -21 6z m139 -34 c4 -2 4 -3 -1 -3 -5 0 -7 -2 -6 -4 0 -3 -5 -3 -11 0 -5 1 -12 1 -16 -1 -13 -6 -32 -12 -34 -12 -2 0 -5 -1 -7 -2 -2 -1 -8 -4 -14 -6 -7 -2 -13 -5 -15 -7 -10 -6 -20 -2 -17 7 3 10 8 13 24 15 12 1 16 2 30 5 3 1 14 3 25 5 11 1 22 3 24 3 6 2 14 2 18 0z M633 351 c-15 -8 -39 -30 -38 -36 1 -2 0 -4 -4 -9 -3 -4 -7 -11 -11 -15 -20 -33 -30 -45 -49 -62 -25 -24 -46 -29 -68 -17 -14 7 -21 18 -20 35 0 12 0 12 -5 7 -14 -14 -12 -39 3 -55 2 -2 3 -4 3 -5 1 -5 15 -11 26 -10 5 0 9 0 9 -1 0 -1 -3 -5 -6 -6 -6 -3 -20 -22 -29 -41 -9 -18 -14 -24 -26 -30 l-9 -5 -6 -13 c-9 -17 -15 -24 -31 -34 -9 -6 -9 -6 -13 -15 -5 -9 -6 -14 -5 -19 3 -6 -11 2 -19 13 -3 3 -8 9 -10 13 -2 4 -9 11 -15 17 -5 5 -10 10 -10 11 0 1 10 10 13 12 5 3 0 4 -9 2 -10 -4 -11 -3 -5 9 7 12 6 15 -1 6 -11 -13 -11 -13 -12 -4 -2 7 -3 7 -6 -3 -3 -10 -3 -10 -7 -7 -2 1 -6 2 -10 4 l-6 2 0 4 c0 4 0 4 -5 7 -11 7 -12 10 -7 22 4 11 13 29 16 36 3 7 4 9 2 16 -1 2 -4 11 -6 20 -3 9 -5 15 -6 15 -1 0 0 -4 6 -24 l5 -19 -5 -11 c-4 -7 -6 -12 -6 -12 0 -1 -2 -5 -4 -10 -11 -22 -10 -28 2 -36 10 -6 3 -8 -11 -2 -3 1 -7 2 -8 2 -7 2 -8 5 -4 11 5 5 7 12 8 23 0 11 2 18 6 24 4 7 4 9 -3 16 -3 4 -7 8 -9 11 -6 6 -7 6 -14 0 -3 -2 -6 -5 -7 -5 -1 -1 -14 5 -18 9 l-2 2 5 8 c3 5 6 10 7 12 8 17 19 20 39 11 17 -8 18 -7 20 4 1 2 2 6 4 10 7 17 14 44 11 44 -1 0 -2 -2 -4 -14 -2 -7 -5 -16 -7 -23 -2 -6 -5 -13 -6 -17 -2 -8 -2 -8 -10 -4 -13 8 -27 11 -33 8 -4 -2 -5 -1 -2 4 8 13 12 24 13 36 0 6 0 7 -1 7 -1 0 -2 -3 -2 -7 -2 -12 -5 -23 -13 -35 -3 -4 -3 -5 -2 -6 1 -2 0 -4 -3 -7 -1 -2 -3 -5 -5 -8 -2 -3 -6 -10 -9 -15 -3 -5 -6 -10 -6 -11 0 -4 -8 -13 -15 -16 -8 -3 -15 -10 -21 -19 -7 -10 -17 -20 -20 -20 -10 0 -13 -14 -5 -22 2 -3 1 -3 -9 -1 -18 3 -29 1 -43 -7 -4 -2 -10 -5 -13 -6 -4 -2 -10 -4 -15 -6 -12 -5 -24 -5 -31 -1 -6 3 -11 4 -11 1 0 -1 3 -2 9 -4 16 -6 29 -3 59 11 22 11 29 12 45 8 3 -1 19 -1 39 -2 37 -1 44 -2 76 -8 11 -2 33 -10 46 -15 4 -2 6 -1 6 4 0 3 2 8 3 8 0 0 1 -2 1 -4 1 -6 3 -6 7 0 5 5 6 5 2 -3 -3 -9 -3 -9 6 -6 9 3 9 2 3 -4 -8 -7 -7 -8 1 -15 8 -6 14 -12 22 -24 12 -16 23 -26 31 -26 1 0 4 -1 6 -2 21 -15 64 -15 117 -2 33 8 54 15 121 38 135 47 191 62 276 73 29 3 90 2 113 -3 39 -9 53 -16 74 -39 4 -5 13 -10 24 -14 7 -2 41 -2 59 0 14 2 24 0 42 -6 24 -7 36 -7 63 3 17 6 21 6 35 0 11 -6 19 -7 28 -5 7 2 7 3 0 2 -8 0 -18 1 -18 2 0 2 10 9 19 15 l6 4 14 0 c8 0 15 0 16 0 5 2 2 0 -9 -9 -11 -9 -11 -10 0 -9 8 0 12 0 21 -3 16 -6 44 -5 61 2 5 2 3 2 -6 1 -28 -6 -34 -6 -53 -1 -12 4 -14 4 -18 4 l-5 0 3 3 c1 1 7 6 12 11 5 5 11 10 14 12 2 2 10 9 16 15 17 17 30 24 42 24 8 1 8 -1 3 -4 -16 -8 -21 -21 -11 -29 11 -9 33 -8 51 1 8 4 8 3 -1 -5 -9 -9 -11 -13 -9 -20 2 -6 5 -7 9 -5 8 5 11 6 19 7 l8 1 6 -6 c9 -10 14 -11 26 -7 l7 2 11 -4 c19 -7 29 -7 51 1 15 5 22 5 39 -1 7 -2 15 -4 18 -5 12 -3 0 -7 -26 -8 -9 -1 -17 -1 -17 -1 0 0 0 -1 0 -2 0 -1 2 -1 16 -1 18 1 26 2 37 8 4 2 7 3 8 3 1 0 1 0 1 1 0 1 -1 1 -3 1 -8 0 -30 6 -41 11 -8 3 -22 1 -36 -4 -12 -4 -13 -4 -24 -4 -14 0 -28 4 -29 8 0 2 -1 3 -3 1 -3 -3 -30 7 -30 11 0 1 -3 2 -3 0 -1 0 -3 -1 -6 0 -11 1 -33 -5 -31 -8 0 -3 -2 -2 -3 1 -3 6 -1 11 7 18 4 4 8 9 9 10 2 2 2 3 7 2 5 0 6 0 8 2 3 4 4 4 8 -1 3 -3 4 -3 9 -3 9 2 10 2 11 2 2 3 12 -1 18 -8 6 -6 9 -15 5 -18 -2 -1 -3 -3 0 -3 3 0 8 7 10 14 5 18 -1 35 -16 41 -3 1 -5 3 -7 3 -9 5 -30 -6 -36 -18 -2 -5 -5 -8 -9 -8 -3 0 -3 1 0 8 2 4 2 8 3 13 0 7 0 8 3 10 4 2 9 9 15 18 16 23 17 24 25 22 4 -2 10 -2 21 -2 22 0 43 -4 50 -9 1 0 4 -4 5 -8 4 -8 19 -23 24 -23 5 0 5 6 0 11 -3 3 -3 4 -2 5 3 1 8 -3 15 -11 10 -11 14 -11 14 -3 0 4 -1 6 -10 16 -3 3 -7 7 -8 9 -6 7 -31 20 -62 33 -29 12 -58 17 -70 11 -13 -8 -36 -31 -53 -56 -3 -4 -8 -9 -12 -12 l-6 -5 -6 1 c-16 3 -28 -3 -51 -25 -26 -25 -35 -29 -51 -26 -10 2 -17 -1 -31 -12 l-11 -9 -8 4 c-11 4 -15 4 -32 -1 -27 -9 -40 -10 -62 -2 -21 6 -30 7 -53 4 -39 -4 -64 2 -76 18 -13 18 -40 32 -72 37 -4 1 -9 2 -11 2 -16 3 -75 3 -103 0 -81 -10 -145 -26 -262 -67 -41 -14 -87 -30 -96 -33 -62 -17 -80 -20 -109 -20 -16 0 -23 1 -35 5 -12 4 -13 5 -4 8 4 1 12 7 14 11 0 1 2 6 4 10 4 11 34 45 47 53 3 2 10 6 16 10 16 9 22 13 34 23 12 10 10 10 15 5 4 -3 6 -3 2 1 -4 3 -4 3 2 7 8 6 12 14 6 14 -3 0 -16 -11 -16 -13 0 -4 -28 -24 -52 -39 -22 -13 -47 -40 -57 -61 -4 -8 -10 -15 -14 -15 -1 0 -4 -1 -6 -3 -12 -9 -7 16 5 26 3 3 8 7 11 10 11 9 19 19 25 31 l6 12 7 3 c11 6 18 14 27 30 9 19 16 29 28 40 9 8 10 10 10 12 -1 5 -3 6 -8 4 -9 -2 -13 -1 -21 3 -15 10 -25 30 -22 45 2 12 7 18 7 8 0 -24 23 -44 50 -42 29 2 59 30 92 84 9 15 21 32 28 39 2 2 4 5 4 7 1 1 2 3 4 4 1 1 5 4 8 6 3 3 9 7 13 9 4 2 7 4 7 5 0 1 -4 -1 -12 -5z m908 -147 c15 -2 28 -6 44 -14 4 -1 12 -5 20 -8 35 -16 38 -18 52 -38 7 -10 2 -11 -6 0 -5 6 -8 8 -12 10 -10 5 -14 1 -7 -7 6 -7 5 -9 -2 -4 -7 4 -12 11 -16 19 -4 8 -9 11 -27 15 -7 1 -42 3 -57 3 -4 0 -10 -6 -16 -16 -6 -10 -11 -16 -19 -24 -5 -5 -6 -6 -5 -9 3 -18 -15 -34 -41 -37 -21 -2 -37 11 -27 21 5 5 19 14 20 12 2 -1 -1 -6 -5 -8 -3 -1 -4 -3 -1 -3 2 0 10 8 10 11 0 1 -1 2 -2 3 -1 2 -1 2 3 5 8 5 11 8 23 23 12 16 40 43 48 47 4 1 12 1 23 -1z m-1315 -19 c2 -3 6 -8 9 -10 6 -6 6 -7 2 -14 -5 -7 -8 -21 -8 -39 0 0 -2 -3 -5 -6 -3 -4 -4 -6 -4 -8 1 -4 0 -4 -5 -3 -8 2 -34 5 -51 6 -15 0 -17 1 -17 2 0 1 -2 3 -4 5 -2 3 -4 5 -4 6 0 2 7 10 11 12 2 1 10 7 17 13 13 10 14 11 19 12 2 1 6 4 9 7 4 3 8 7 11 8 2 2 6 5 9 8 7 7 6 7 11 1z m-31 0 c5 -2 9 -5 9 -5 1 0 -14 -14 -17 -15 -1 0 -4 -1 -5 -1 -3 -1 -10 -6 -34 -26 -10 -8 -14 -4 -5 7 3 4 7 9 8 11 5 6 13 14 17 16 6 3 13 9 16 13 2 5 0 5 11 0z m313 -39 c0 -1 -6 -7 -8 -7 -2 0 -1 2 3 5 3 3 5 4 5 2z m-372 -14 c3 -2 3 -2 2 -5 -3 -4 -1 -8 3 -11 3 -4 2 -5 -5 -4 -6 0 -12 3 -15 8 -3 6 -1 10 7 13 5 2 5 2 8 -1z m1404 -6 c14 -7 21 -23 16 -37 -2 -4 -3 -4 -5 1 -3 7 -17 18 -24 18 -2 0 -4 1 -6 3 -3 3 -4 3 -11 4 l-7 1 4 3 c9 10 23 12 33 7z m-35 -15 c1 -1 1 -1 2 0 2 1 9 1 11 0 5 -4 0 -8 -8 -7 -2 0 -8 6 -7 7 0 1 2 1 2 0z m1 -35 c0 -1 -1 -1 -1 -1 -1 0 -2 0 -2 1 0 0 1 1 2 1 0 0 1 -1 1 -1z m13 -6 c5 -1 9 -2 10 -3 3 -1 -1 -2 -7 -3 -7 0 -7 0 -10 3 -7 7 -5 7 7 3z M3009 349 c-1 0 1 -1 4 -1 6 -1 10 -1 10 0 0 2 -13 3 -14 1z M2621 324 c-1 -1 -1 -1 -1 -2 1 -1 2 1 2 2 -1 1 -1 1 -1 0z M1875 270 c-10 -3 -23 -7 -45 -14 -5 -1 -9 -3 -9 -3 -3 -2 0 -1 32 8 9 2 21 5 27 7 11 3 12 4 11 5 -1 2 -4 1 -16 -3z M1889 253 c-2 -1 -9 -3 -15 -5 -10 -2 -15 -6 -6 -4 6 1 28 7 30 8 6 2 -1 3 -9 1z M1834 238 c-4 -1 -15 -4 -24 -6 -22 -6 -22 -6 -20 -7 1 -1 47 10 54 13 7 3 0 3 -10 0z M1849 225 c-13 -4 -17 -6 -17 -7 0 -1 2 -1 17 3 13 4 17 6 13 7 -1 0 -7 -2 -13 -3z M2929 216 c-7 -2 -30 -11 -30 -12 0 -2 8 0 25 6 5 2 8 2 17 2 9 0 12 1 12 1 -1 3 -17 5 -24 3z M1228 148 c-8 -4 -4 -12 7 -15 3 -1 6 -2 7 -2 1 -3 3 -1 2 3 -1 9 -11 17 -16 14z m9 -7 c6 -6 5 -7 -3 -4 -4 2 -6 5 -6 6 1 3 6 2 9 -2z M1250 109 c-4 -3 0 -8 8 -12 1 -1 4 -2 5 -3 l2 -2 0 2 c0 10 -11 20 -15 15z m8 -4 c4 -5 3 -6 -2 -3 -4 2 -5 4 -5 5 2 2 4 1 7 -2z M1203 105 c-3 -6 3 -10 13 -10 7 0 7 1 1 7 -6 6 -11 7 -14 3z m13 -4 c0 0 0 -1 0 -2 0 -1 -1 -1 -3 -1 -6 2 -7 2 -7 3 0 3 2 3 6 1 2 0 3 -1 4 -1z M1174 39 c-4 -3 15 -10 32 -11 11 0 20 1 40 6 23 5 38 4 48 -4 12 -10 31 -11 56 -5 21 5 34 5 61 -1 l19 -4 20 0 c19 0 20 0 32 3 27 8 33 8 52 6 10 -1 23 0 26 2 4 3 -52 2 -61 -1 -25 -8 -29 -8 -47 -8 -17 0 -24 0 -41 5 -13 3 -24 5 -34 5 -9 0 -14 -1 -37 -6 -16 -4 -28 -2 -43 5 -5 3 -12 5 -14 6 -2 1 -6 2 -7 2 -4 2 -15 1 -34 -3 -30 -6 -45 -6 -61 2 -6 2 -6 2 -7 1z M1606 27 c1 0 3 0 4 0 1 1 0 1 -2 1 -2 0 -3 0 -2 -1z"/> </g>
+      <g transform="translate(0.000000,612.000000) scale(1.000000,-1.000000)" fill="currentColor"><path d="M2572 579c-8 -4 -13 -12 -13 -20 0 -1 -1 -3 -3 -5 -7 -8 -8 -16 -3 -19 3 -1 8 1 8 4 0 1 0 1 -2 0 -3 -3 -6 -2 -6 2 0 4 4 11 6 11 3 -1 8 -13 5 -14 -1 -1 -1 -3 0 -3 3 0 4 7 2 12 -3 7 -3 7 6 9 6 1 13 4 13 6 0 1 0 1 -5 -1 -5 -2 -15 -4 -16 -3 -1 0 -1 6 0 9 6 11 21 14 30 6 3 -4 5 -5 8 -5 5 0 5 -2 1 -3 -5 -1 -7 -7 -4 -13 1 -3 1 -4 -2 -9 -4 -8 -4 -8 -10 -8 -5 0 -6 -1 -6 -4 0 -3 0 -4 -6 -1 -9 3 -21 1 -29 -5 -7 -4 -7 -4 -7 2 0 7 -8 14 -17 14 -7 0 -16 -9 -17 -16 0 -3 -1 -5 -4 -10 -21 -26 -17 -50 9 -49 7 0 7 0 2 -6 -7 -10 -9 -16 -9 -26 1 -7 0 -9 -1 -12 -1 -2 -3 -8 -5 -14 -2 -6 -4 -12 -4 -13 -1 -4 -1 -6 0 -4 1 1 11 27 11 29 0 0 1 2 2 3 2 2 2 3 1 7 -2 9 1 20 9 32 4 5 3 7 -5 7 -23 0 -27 18 -9 45 4 6 5 6 12 2 6 -3 7 -3 13 -3 4 0 7 0 7 0 1 0 -2 -7 -5 -14 -6 -13 -7 -16 -5 -16 1 0 9 17 9 18 0 2 7 15 9 17 9 8 17 10 23 7 3 -1 7 -2 9 -2 8 0 14 -6 20 -17 1 -4 5 -8 5 -7 0 1 -6 15 -8 18 0 1 -3 4 -5 5 -2 2 -3 3 -3 4 1 2 1 3 1 4 0 0 1 1 3 1 5 0 8 2 11 7 1 3 3 7 3 8 1 2 2 3 1 5 -2 7 -1 10 3 12 9 4 8 10 -1 8 -5 0 -5 0 -8 3 -5 8 -14 9 -24 5z M2531 534c9 -7 6 -18 -5 -18 -6 0 -17 6 -17 10 0 8 15 14 22 8z M2573 528c1 -2 1 -2 -1 -2 -3 0 -6 1 -6 2 0 2 4 1 7 0z M1017 572c-25 -7 -45 -14 -62 -20 -38 -15 -92 -45 -82 -45 1 0 7 3 13 7 12 7 32 18 44 23 3 1 10 4 14 6 22 10 50 21 78 29 1 0 2 2 0 2 0 0 -3 -1 -5 -2z M2569 504c-2 -5 0 -10 6 -16 l4 -5 -3 -5 c-5 -7 -11 -21 -12 -27 -1 -3 -2 -6 -2 -7 -1 -2 2 -6 20 -19 18 -14 19 -15 19 -20 0 -3 -6 -24 -12 -39 -8 -24 -7 -29 10 -31 12 -1 5 -6 -12 -8 -22 -1 -23 0 -16 13 4 8 5 14 5 28 0 11 0 13 3 20 5 11 3 13 -20 19 -8 2 -14 4 -15 5 -1 0 -2 1 -3 1 -1 0 -2 1 -2 2 0 1 3 2 4 0 1 -2 2 -1 2 1 0 2 -4 4 -7 2 -4 -2 -6 -5 -4 -7 1 -2 2 -1 -16 -24 -5 -6 -10 -10 -12 -12 -6 -3 -8 -5 -11 -10 -1 -3 -7 -11 -12 -18 -17 -21 -18 -29 -4 -32 6 -1 6 -1 6 -3 -1 -1 -14 -3 -16 -3 -1 1 -6 1 -9 2 -14 2 -14 5 -2 18 4 5 7 12 11 22 4 13 6 17 14 26 10 10 10 11 2 4 -11 -9 -13 -13 -22 -35 -3 -10 -4 -11 -10 -18 -11 -11 -9 -20 5 -20 1 0 3 0 3 -1 0 -2 -5 -2 -13 -2 -11 2 -24 -3 -31 -12 -1 -2 -4 -5 -7 -6 -2 -2 -7 -6 -10 -9 -5 -4 -6 -5 -13 -6 -10 -1 -15 -5 -20 -12 -1 -3 -4 -6 -5 -7 -21 -20 -27 -27 -27 -32 0 -2 0 -3 -3 -3 -2 -1 -5 -3 -7 -5 -2 -2 -4 -3 -7 -3 -8 0 -23 -9 -67 -40 -9 -7 -23 -17 -30 -21 -6 -4 -12 -8 -12 -8 0 -1 1 0 3 1 2 1 3 2 4 2 1 0 15 9 74 48 22 14 27 16 35 13 7 -3 19 -2 19 2 0 3 -2 3 -4 2 -4 -4 -13 -3 -13 0 0 3 5 6 9 6 2 -1 7 -1 11 -2 9 -1 16 -1 17 1 0 1 -1 1 -15 3 -15 1 -15 4 1 19 15 14 15 14 19 13 5 -1 19 -1 20 1 0 0 -4 1 -10 2 -12 1 -12 1 -9 6 6 9 18 13 28 9 7 -2 8 -3 8 0 0 0 -2 2 -3 3 -5 2 -5 2 4 9 4 4 10 9 13 12 9 9 18 12 29 11 6 0 10 0 15 1 3 1 9 3 12 3 4 0 7 1 8 1 1 1 31 7 42 9 6 0 16 2 22 3 5 0 16 2 25 2 8 1 19 3 25 3 18 3 31 3 36 1 7 -3 16 -7 21 -12 2 -2 5 -4 6 -4 0 0 2 -1 4 -3 2 -2 8 -7 14 -11 5 -5 14 -13 20 -17 52 -45 103 -82 143 -104 137 -75 241 -98 332 -74 6 2 13 4 17 4 6 1 7 1 15 -1 1 0 1 2 1 7 0 9 1 9 4 1 4 -8 5 -7 8 3 3 8 5 10 5 6 0 -2 0 -2 0 -8 -1 -8 0 -9 8 -2 6 7 10 8 6 3 -3 -4 -7 -14 -7 -14 2 -2 32 -12 36 -12 5 -1 5 1 0 2 -2 1 -10 4 -17 6 -8 3 -14 5 -15 6 -2 0 1 4 8 14 3 4 5 7 4 7 -1 1 -11 -4 -15 -7 -6 -5 -6 -5 -6 8 0 16 -3 15 -7 -2 -3 -10 -4 -11 -8 -4 -1 2 -4 6 -5 7 l-3 4 0 -4 c4 -18 4 -17 -4 -16 -5 0 -10 -1 -22 -4 l-2 0 2 3 c9 10 6 18 -5 15 -8 -2 -17 -1 -21 2 -2 1 -5 2 -6 2 -5 0 -12 17 -19 43 -1 4 -4 13 -6 20 -3 8 -4 14 -4 20 -1 10 -2 13 -11 20 -4 3 -12 10 -18 16 -7 6 -16 13 -20 17 -5 3 -9 6 -9 6 -2 1 9 22 15 29 11 12 12 17 1 6 -8 -9 -9 -10 -15 -22 -4 -10 -5 -10 -9 -7 -2 2 -6 3 -6 1 0 0 7 -7 11 -9 7 -5 16 -12 16 -13 0 -1 -2 -2 -4 -3 -6 -3 -16 -12 -19 -17 -3 -5 -4 -5 -11 0 -3 2 -7 4 -9 4 -9 2 -20 10 -25 18 -6 10 -4 20 7 32 13 14 16 20 20 48 1 10 -5 -8 -7 -19 -1 -10 -4 -14 -12 -23 -10 -10 -13 -16 -14 -25 -1 -9 -2 -12 -13 -23 -3 -4 -7 -9 -8 -11 -1 -1 -4 -5 -7 -9 -6 -8 -4 -8 4 1 8 9 7 9 14 2 4 -3 8 -7 10 -8 4 -3 4 -4 -12 -15 -6 -4 -12 -8 -14 -9 -2 -2 -4 -2 -10 -2 -12 1 -56 -1 -62 -2 -6 -2 -7 -4 -1 -2 3 0 20 0 39 0 l34 1 6 4 c3 3 10 8 16 11 10 6 19 14 28 23 6 6 5 6 15 0 5 -3 10 -5 11 -5 2 0 3 0 4 -1 0 -2 8 -5 20 -10 18 -7 21 -10 22 -22 1 -17 3 -22 13 -36 9 -13 18 -28 19 -32 2 -5 3 -6 6 -6 2 0 2 0 0 1 -1 1 -3 3 -4 7 -2 6 -11 21 -21 36 -8 11 -9 16 -11 30 -2 15 -4 18 -21 25 -16 6 -24 10 -24 12 0 8 21 24 27 21 3 -2 33 -28 34 -30 1 -2 2 -6 3 -12 0 -10 0 -8 4 -23 2 -6 5 -15 6 -20 3 -13 7 -22 12 -32 4 -9 4 -12 -1 -12 0 0 -1 0 -1 -1 0 -2 1 -1 5 1 4 4 4 4 11 0 6 -3 14 -4 21 -2 9 2 11 -2 4 -9 -6 -5 -14 -8 -21 -8 -2 0 -8 -1 -12 -2 -13 -5 -16 -5 -35 -5 -64 0 -138 20 -214 58 -23 11 -21 10 -19 12 1 1 2 3 2 6 0 5 2 8 8 11 3 2 5 3 6 5 0 3 -1 4 -3 1 -1 -1 -4 -3 -6 -4 -5 -3 -8 -8 -9 -13 -1 -6 -4 -6 -7 -2 -4 4 -4 9 0 17 2 5 3 8 3 12 0 6 2 9 6 9 4 1 5 2 2 3 -6 2 -13 -4 -12 -12 1 -3 0 -6 -3 -11 -3 -8 -4 -11 -1 -15 2 -5 -2 -4 -19 6 -47 29 -101 70 -161 122 -6 5 -13 10 -15 11 -2 2 -4 3 -4 4 -2 4 -27 16 -33 16 -4 0 -4 1 -2 10 1 4 3 11 4 15 0 4 2 12 3 19 2 6 5 20 7 32 3 12 6 24 6 28 1 4 4 14 6 24 4 21 4 21 6 22 5 1 8 10 4 15 0 1 -1 3 0 4 0 2 -2 6 -4 6 -2 0 -6 -4 -6 -7 0 -3 -6 -6 -14 -6 -9 0 -25 -3 -24 -4 0 -1 1 -1 2 -1 2 0 9 0 16 1 11 1 14 2 18 4 7 4 12 2 10 -5 -1 -5 -2 -5 -10 -5 -5 0 -8 -1 -15 -3 -9 -4 -19 -7 -26 -9 -7 -1 -11 1 -23 11 -11 11 -14 16 -14 22 0 5 -1 5 -3 1z M2589 475c12 -11 19 -12 43 0 9 4 10 4 15 4 5 0 5 3 -4 -46 -3 -16 -7 -34 -8 -41 -3 -14 -8 -37 -11 -49 0 -4 -1 -9 -2 -10 0 -3 -1 -3 -7 -4 -7 0 -9 0 -7 2 3 4 -1 8 -8 8 -4 0 -7 1 -9 2 -5 3 -4 6 2 26 3 8 5 17 6 20 0 3 2 8 3 10 3 7 2 13 -2 17 -3 3 -22 18 -28 22 -8 6 -9 7 -7 8 0 1 2 4 2 8 2 7 13 29 14 29 1 0 4 -3 8 -6z M2545 407c3 -1 10 -3 17 -5 18 -5 17 -4 13 -15 -2 -6 -2 -9 -2 -22 0 -13 -1 -17 -2 -19 -6 -11 -6 -11 -6 -17 l1 -5 -10 -1 c-15 -2 -27 -4 -47 -7 l-18 -3 -2 2 c-2 2 -4 3 -8 3 -5 1 -7 3 -8 7 -1 2 0 5 14 22 4 5 9 12 10 15 2 3 5 6 7 8 9 6 16 13 32 35 2 2 3 4 3 4 0 0 3 -1 6 -2z M3001 253c2 -5 11 -13 17 -16 3 -1 6 -3 6 -3 0 -1 -7 -6 -19 -15 -1 -1 -2 0 -4 2 -2 2 -7 6 -10 9 -8 6 -9 9 -3 14 2 2 5 6 6 8 4 6 4 6 7 1z M658 479c-8 -4 -7 -13 4 -32 5 -8 5 -9 6 -16 1 -10 4 -17 10 -23 l4 -3 -2 -5 c-4 -6 -11 -24 -10 -25 1 -1 3 3 9 15 6 13 6 12 10 7 6 -8 12 -9 12 -2 0 4 -2 7 -11 11 -11 6 -20 17 -17 22 2 4 -1 12 -7 21 -8 11 -11 23 -8 26 8 6 27 -1 42 -16 12 -12 14 -12 8 -4 -6 9 -16 18 -25 22 -8 4 -20 5 -25 2z M694 401c3 -2 4 -6 2 -6 -2 0 -7 6 -6 7 0 1 1 1 4 -1z M741 463c-5 -2 -13 -6 -13 -7 0 -1 1 -1 10 2 12 3 18 2 24 -4 4 -3 5 -2 3 2 -4 8 -14 11 -24 7z M798 456c-6 -2 -12 -5 -15 -6 -7 -2 -10 -4 -6 -4 2 0 15 4 20 6 2 1 2 1 2 -1 0 -5 3 -7 12 -9 l6 -1 0 -5 c0 -7 -5 -12 -22 -22 -9 -4 -13 -7 -14 -9 -2 -4 1 -3 5 1 3 3 11 7 12 6 0 0 -2 -2 -4 -6 -3 -3 -5 -6 -5 -7 0 -1 -11 -2 -19 0 -15 3 -24 -12 -11 -17 5 -2 14 -4 21 -4 8 -1 9 -2 3 -4 -14 -4 -22 -12 -24 -23 -1 -5 -1 -6 6 -18 2 -5 3 -9 1 -15 -2 -5 -2 -7 0 -7 2 1 5 11 5 16 0 4 -2 8 -6 14 -5 7 -3 15 5 23 8 6 12 8 25 8 15 0 23 3 23 11 0 4 -3 6 -9 6 -5 0 -6 1 -9 3 -2 1 -5 3 -7 4 -3 3 -3 2 8 15 9 9 11 11 13 11 4 -1 6 4 7 19 2 22 -3 25 -23 15z M816 455c2 -1 2 -6 1 -8 -3 -3 -16 1 -14 5 2 4 10 6 13 3z M785 395c4 -1 8 -3 10 -4 5 -3 9 -5 12 -5 5 0 8 -2 6 -4 -3 -4 -42 -2 -51 2 -8 4 -7 10 3 11 3 1 6 1 7 1 3 1 3 1 13 -1z M808 377c1 -1 -2 -2 -8 -2 -5 0 -7 1 -5 2 1 1 13 1 13 0z M742 443c-6 -6 -7 -10 0 -10 10 0 14 4 9 9 -3 4 -6 4 -9 1z M747 439c0 -1 -2 -2 -3 -2 -2 0 -3 2 -1 3 1 2 4 1 4 -1z M2193 426c-17 -5 -26 -16 -17 -22 3 -2 3 -2 0 -5 -3 -4 -9 -15 -10 -20 0 -5 -1 -7 -3 -5 -2 1 -3 0 -3 -3 0 -1 -2 -8 -4 -14 -3 -8 -4 -15 -5 -20 l0 -7 3 -1 c4 -2 38 -11 49 -13 7 -1 8 -1 20 2 17 4 26 4 21 -1 -1 -2 -1 -2 0 -4 1 -1 1 -2 -4 -6 -8 -7 -9 -7 -24 -3 -7 2 -8 2 -27 1 -15 -1 -20 0 -21 0 -1 1 -2 1 -5 0 -10 -3 -32 0 -38 6 l-2 3 0 14 c0 10 0 16 2 22 1 7 2 10 1 10 -2 3 -4 -2 -6 -16 -3 -17 -1 -15 -12 -18 -9 -2 -23 -8 -23 -10 0 -1 0 -1 8 3 7 3 22 7 23 6 1 0 1 -3 2 -6 2 -11 5 -14 23 -18 4 0 1 -2 -16 -5 l-17 -4 -2 2 c-4 6 -11 12 -14 14 -3 1 -6 3 -7 4 -1 2 -2 3 -3 3 -1 0 -5 1 -8 3 -3 1 -7 4 -9 5 -3 1 -5 3 -7 8 -5 9 -11 12 -14 7 -3 -6 2 -10 22 -20 23 -12 23 -12 14 -15 -9 -3 -23 -15 -23 -20 0 -5 -1 -5 -7 -4 -3 1 -8 2 -10 2 -8 2 -17 5 -19 6 0 1 -3 2 -6 2 -17 3 -31 15 -33 28 -4 36 81 90 143 90 12 0 32 -4 37 -7 3 -2 4 -2 3 -1 -1 2 -12 7 -20 9 -40 9 -102 -11 -143 -48 -25 -21 -31 -45 -15 -61 4 -4 4 -6 1 -6 0 0 -1 -1 -2 -2 -2 -5 8 -11 18 -11 l4 0 1 -8 c1 -4 1 -9 2 -11 1 -3 0 -3 -4 -8 -2 -2 -7 -7 -10 -11 l-6 -6 -6 2 c-28 11 -66 -6 -91 -42 -24 -34 -27 -72 -7 -90 5 -5 14 -9 18 -9 6 0 0 -3 -12 -6 -17 -4 -35 -9 -59 -15 -23 -7 -26 -7 -27 -6 -1 0 -7 1 -13 1 -9 0 -15 0 -23 2 -16 3 -32 1 -53 -7 -7 -3 -12 -4 -17 -5 -7 0 -9 -2 -5 -2 9 -2 11 -2 26 4 19 8 36 10 53 6 4 -1 10 -2 12 -2 5 0 9 -2 6 -2 -6 -3 -58 -17 -76 -21 -36 -9 -42 -10 -77 -16 -3 -1 -10 -1 -16 -1 -7 0 -9 0 -8 -1 3 -2 22 -1 38 1 15 2 37 7 70 15 25 6 48 13 73 20 l19 5 19 1 c22 0 25 1 10 3 -11 1 -11 1 10 7 7 2 16 4 18 5 14 3 30 8 41 10 6 2 14 4 17 5 7 1 24 9 26 10 0 1 2 3 4 4 9 7 21 18 28 28 6 8 15 24 15 27 0 4 9 6 12 3 13 -10 34 -5 27 6 -1 3 -1 3 1 5 2 2 11 10 21 19 9 8 20 18 23 20 3 3 12 12 21 20 8 8 17 16 19 17 1 1 3 3 3 4 0 2 33 35 34 34 0 -1 -2 -26 -2 -27 -1 -1 -4 -2 -7 -4 -22 -10 -52 -37 -64 -57 -1 -3 -3 -7 -4 -8 -8 -15 -13 -39 -10 -55 2 -11 11 -24 19 -29 3 -2 0 -2 -9 -1 -5 0 -13 1 -19 2 -14 2 -58 2 -62 0 -2 -1 5 -1 22 -1 24 0 25 0 73 -6 29 -3 45 -1 68 11 5 3 12 6 15 8 2 1 5 2 6 2 0 0 4 3 9 5 4 2 8 4 8 5 -1 0 -5 -2 -10 -5 -12 -6 -18 -7 -10 -2 56 42 72 115 29 135 l-7 4 4 2 c2 1 4 2 5 3 0 1 2 1 5 0 5 0 11 2 13 6 1 1 1 1 3 0 4 -3 9 3 9 10 0 2 1 4 1 6 6 10 6 18 2 21 -7 6 -10 6 -35 -1 -7 -2 -19 -1 -24 2 -1 1 -3 2 -4 2 -3 0 -33 7 -35 9 -2 1 0 8 5 24 3 7 5 10 5 6 0 -5 5 -8 12 -7 l7 0 4 -4 c9 -9 16 -8 25 1 3 4 5 5 7 5 2 -1 6 2 6 4 0 0 0 2 0 5 1 5 5 11 8 11 8 0 10 18 5 31 -8 16 -27 24 -45 18z M2213 424c15 -4 24 -16 24 -30 1 -14 0 -14 -14 -7 -5 2 -12 4 -15 4 -3 0 -6 1 -8 3 -1 2 -6 4 -11 6 -4 2 -9 5 -11 6 l-3 4 2 3 c6 6 9 8 16 6 12 -4 16 -8 18 -16 1 -5 3 -5 3 0 0 6 -6 14 -13 16 -7 2 -8 4 -2 5 5 1 8 1 14 0z M2191 396c9 -5 9 -5 3 -8 -11 -6 -22 0 -15 9 2 3 3 3 12 -1z M2178 385c4 -4 9 -4 16 -1 2 1 6 2 7 3 1 0 4 0 6 1 2 0 22 -8 22 -10 0 0 -1 -2 -3 -4 -1 -1 -3 -5 -3 -8 -1 -4 -2 -4 -4 -4 -2 0 -5 -2 -9 -7 -9 -8 -12 -8 -19 -1 l-6 5 -6 -1 c-12 -2 -15 1 -10 16 1 4 2 8 3 10 0 5 1 5 6 1z M2053 333c5 -5 5 -8 -1 -4 -4 3 -5 4 -5 6 1 2 3 1 6 -2z M2251 314c1 -1 -1 -5 -2 -9 -2 -4 -3 -9 -3 -12 -1 -4 -2 -6 -4 -6 -2 1 -1 5 1 7 1 2 1 2 0 2 -2 0 -5 -4 -5 -7 -1 -4 -5 -7 -11 -9 -4 0 -4 1 0 6 2 3 3 6 4 8 0 2 2 4 7 6 7 4 11 8 10 13 -1 4 2 4 3 1z M2216 302c3 -1 6 -2 6 -3 1 0 3 -1 4 -1 1 0 3 -1 3 -2 0 -2 -7 -10 -10 -12 -2 0 -4 -1 -4 -2 -1 -1 -4 -1 -7 -1 -3 0 -6 0 -6 -1 0 -1 1 -1 2 -1 2 0 4 -2 3 -3 -1 -1 -15 0 -17 2 -3 2 -4 1 -4 -1 0 -2 0 -3 -2 -3 -1 0 -6 -1 -9 -2 -4 -1 -8 -2 -8 -1 -1 1 1 28 2 29 1 0 8 1 17 2 9 1 18 1 19 1 3 1 4 1 11 -1z M2098 297c17 -18 13 -25 -26 -51 -42 -28 -50 -35 -50 -47 0 -4 2 -10 5 -12 4 -3 15 -14 14 -16 -1 -3 -14 -3 -19 1 -1 1 -2 2 -3 2 0 0 -4 2 -8 5 -5 3 -11 7 -14 9 -7 4 -8 6 -7 10 1 3 8 10 14 13 6 4 19 18 25 26 11 15 24 28 34 33 11 6 11 12 0 12 -10 0 17 21 28 21 1 0 4 -2 7 -6z M2155 296c4 -2 4 -1 -12 -17 -9 -8 -24 -22 -34 -32 -23 -23 -33 -33 -51 -48 -5 -4 -11 -10 -14 -12 -6 -6 -6 -6 -8 -3 -2 1 -2 3 -2 8 0 4 0 10 -1 14 l-1 7 4 3 c4 4 8 7 34 24 35 22 41 29 40 42 -1 4 0 5 1 6 3 1 32 8 41 9 0 0 2 -1 3 -1z M2005 288c4 -2 7 -3 7 -4 0 -1 -1 -1 -2 -1 -1 0 -5 1 -8 1 -11 1 -16 6 -6 7 1 0 5 -1 9 -3z M2024 281c5 -1 15 -3 25 -5 3 0 7 -1 8 -2 l3 -1 -4 -3 c-7 -5 -24 -22 -29 -29 -6 -11 -7 -11 -10 4 -2 13 -3 12 8 16 11 3 17 6 17 7 -1 0 -22 -5 -24 -6 -4 -2 -6 5 -6 17 0 1 1 2 3 3 2 0 4 1 4 1 0 0 2 -1 5 -2z M2067 278c0 -2 -7 -2 -8 0 0 1 1 1 4 1 3 0 4 -1 4 -1z M2204 269c52 -11 43 -84 -17 -132 -30 -24 -73 -29 -93 -11 -31 28 0 102 57 133 4 2 8 4 9 4 2 0 3 -3 1 -5 -1 -1 -5 -33 -6 -48 0 -7 -1 -13 -1 -16 -2 -5 1 -9 6 -7 6 2 7 10 1 12 -3 2 -3 4 0 24 4 21 4 26 4 34 l1 8 5 2 c13 4 20 5 33 2z M2015 240l2 -13 -4 -4 c-3 -4 -7 -5 -7 -3 0 1 -2 5 -5 8 -6 6 -7 7 -5 8 0 0 4 4 7 9 4 4 8 8 8 8 1 0 2 -6 4 -13z M1984 234c2 -1 4 -2 4 -2 0 -1 -9 -12 -27 -35 -1 -1 -3 -4 -6 -6 -2 -3 -4 -6 -4 -6 0 0 -2 -2 -3 -4 -2 -2 -4 -4 -5 -4 -3 0 -10 -7 -10 -10 0 -6 6 -8 11 -4 2 1 4 2 6 2 2 0 7 0 11 1 27 4 40 5 40 3 0 -5 -12 -24 -22 -36 -21 -25 -61 -39 -80 -30 -43 20 -18 100 40 128 15 7 35 8 45 3z M1997 226c5 -6 7 -10 6 -11 0 0 -3 -3 -7 -6 -14 -11 -14 -17 1 -26 11 -6 10 -8 -8 -10 -19 -3 -37 -5 -38 -6 -4 -2 -5 10 -1 15 10 12 41 48 42 48 0 0 3 -2 5 -4z M2030 206c3 -13 1 -21 -3 -13 -2 4 -2 8 -1 13 2 4 4 4 4 0z M2161 194c0 -1 0 -2 -1 -3 -2 0 -3 2 -3 3 1 3 4 2 4 0z M2009 176c3 0 2 -2 0 -2 -2 0 -3 1 -2 2 0 1 0 1 2 0z M1945 171c0 -2 -4 -6 -6 -6 -2 1 -2 4 0 6 3 2 5 2 6 0z M958 423c-3 -1 -7 -4 -10 -6 -4 -2 -5 -3 -8 -2 -7 0 -12 -4 -22 -18 -18 -27 -46 -49 -89 -71 -12 -6 -15 -7 -11 -6 12 2 -25 -20 -42 -26 -3 -1 -8 -4 -12 -7 -12 -10 -30 -19 -43 -21 l-7 -1 -11 5 c-13 6 -19 7 -21 5 -2 -3 0 -7 8 -10 20 -10 47 -4 75 17 6 4 10 7 11 7 4 0 32 16 49 28 3 2 14 10 24 16 29 19 58 42 65 51 2 3 6 9 9 13 6 9 13 15 16 14 1 -1 0 -2 -3 -4 -8 -5 -12 -14 -9 -19 2 -1 2 -1 8 2 10 4 14 13 11 19 -2 2 0 4 8 10 3 2 4 1 2 -2 -5 -6 -8 -15 -4 -18 4 -5 13 0 17 10 3 6 6 7 6 2 0 -3 -4 -9 -8 -13 -3 -2 -4 -5 -2 -5 1 0 2 2 9 9 2 3 4 3 4 0 0 -3 -4 -7 -9 -9 -6 -2 -6 -4 0 -4 13 1 1 -13 -19 -21 -8 -4 -9 -3 -5 2 8 8 5 19 -4 18 l-2 0 4 -2 c5 -3 5 -8 -1 -15 -3 -2 -5 -5 -5 -6 -1 -1 -3 -3 -6 -4 -10 -6 -44 -33 -59 -49 -6 -6 -18 -18 -27 -27 -41 -42 -63 -53 -89 -45 -28 8 -40 7 -53 -5 -12 -11 -32 -18 -66 -21 -39 -4 -54 -8 -67 -20 -10 -9 -12 -15 -13 -33 -1 -18 -4 -25 -13 -35 -9 -11 -33 -23 -39 -20 -7 3 -21 -10 -21 -19 0 -9 9 -4 12 7 1 5 1 5 -3 0 -4 -6 -7 -8 -6 -2 2 5 7 8 13 7 5 0 6 0 16 4 32 15 42 27 44 57 1 14 2 18 6 25 10 14 33 23 65 25 34 3 53 9 77 25 11 7 11 7 17 7 10 0 17 -2 28 -7 25 -11 62 8 97 50 24 27 40 42 60 57 11 8 28 19 30 19 2 1 5 1 8 2 6 1 19 8 24 12 4 4 5 8 5 13 -1 5 -1 6 1 8 3 3 4 10 2 12 -1 1 -2 3 -2 5 0 11 -9 16 -20 10z M969 420c5 -4 -6 -21 -13 -20 -6 1 -2 14 7 20 4 2 4 2 6 0z M944 405c0 -4 -3 -9 -8 -11 -9 -4 -8 1 0 10 4 5 7 5 8 1z M699 269c7 -4 6 -6 -2 -3 -7 1 -10 4 -9 5 0 1 5 0 11 -2z M504 103c-1 -2 -5 -3 -5 -1 0 1 1 2 3 2 1 0 2 -1 2 -1z M3087 412c-10 -4 -15 -10 -16 -22 -1 -9 -3 -12 -7 -12 -3 0 -4 -1 -3 -3 1 -2 5 0 9 3 3 3 3 3 5 2 2 -3 1 -6 -1 -9 -2 -3 -1 -3 -18 2 -10 3 -12 3 -28 0 -7 -2 -18 -4 -23 -4 -12 -2 -14 -4 -18 -14 -3 -7 -4 -11 -4 -19 -1 -9 -2 -12 -4 -15 -6 -10 2 -18 13 -14 6 3 8 8 4 13 -3 4 -3 4 3 14 4 10 5 11 3 11 -1 0 -11 -18 -11 -21 0 -1 1 -3 2 -4 4 -5 2 -8 -4 -9 -8 -2 -12 3 -8 9 2 3 3 7 3 12 1 9 4 18 8 25 2 6 6 7 22 9 6 1 14 3 19 3 12 3 20 2 30 -3 3 -1 5 -2 6 -1 1 1 1 1 3 0 2 -2 1 -3 -1 -3 -2 0 -2 -1 1 -4 4 -5 7 -7 12 -8 7 0 9 -1 12 -4 4 -3 6 -8 9 -17 2 -9 8 -23 10 -24 2 -1 14 6 18 11 5 4 5 5 4 8 0 2 0 5 1 6 l1 2 2 -2 2 -2 2 3 c4 5 6 4 7 -2 0 -5 -3 -11 -8 -13 -2 -1 -5 -4 -9 -10 -12 -17 -20 -23 -27 -20 -5 2 -5 0 0 -2 8 -5 22 5 31 23 1 3 3 5 6 6 9 5 13 16 8 22 -3 4 -5 4 -8 1 -1 -2 -2 -3 -3 -2 -4 2 -8 -3 -8 -10 0 -3 -1 -4 -2 -6 -4 -3 -16 -10 -17 -9 -2 1 -5 9 -7 18 -4 17 -10 25 -30 37 l-4 3 3 4 c2 3 2 3 1 6 -2 7 -3 7 5 10 7 4 7 4 4 3 -3 0 -6 -1 -7 -2 -7 -3 -9 6 -2 13 9 11 23 11 31 0 3 -4 3 -4 7 -4 4 0 5 -1 2 -2 0 -1 -4 -1 -9 -1 -4 0 -7 0 -7 -1 -1 0 1 -1 4 -1 l5 1 0 -8 c1 -4 0 -8 0 -9 -1 -1 -3 -4 -4 -6 -2 -5 -3 -6 -7 -6 -4 0 -6 0 -7 -2 -3 -2 -2 -4 1 -2 1 2 3 2 6 1 4 0 10 5 10 8 0 1 1 3 3 5 2 3 2 4 1 8 -2 6 -1 8 5 11 9 3 8 7 -1 7 -5 0 -5 0 -8 4 -5 8 -13 11 -23 8z M3083 358c2 -1 4 -3 4 -4 0 -3 -11 1 -12 5 0 2 4 1 8 -1z M242 360c-17 -5 -26 -24 -17 -32 2 -2 4 -5 4 -6 0 -1 2 -4 5 -6 5 -6 5 -9 -3 -13 -5 -2 -17 -13 -28 -23 -7 -7 -16 -21 -16 -26 0 0 -1 -2 -2 -3 -7 -6 -10 -13 -6 -17 2 -3 4 -4 9 -1 4 1 7 5 7 11 0 3 1 5 4 9 4 5 3 7 -1 1 -5 -6 -6 -8 -6 -12 0 -3 -2 -6 -4 -4 -1 1 -2 1 -3 0 -2 -2 -4 0 -4 3 0 2 1 4 3 6 2 1 5 6 7 10 6 13 16 24 37 40 13 10 14 14 7 21 -5 5 -5 8 -1 9 2 0 15 11 16 13 1 3 -9 -3 -13 -7 -6 -7 -12 -5 -12 3 0 18 27 28 37 15 2 -3 2 -3 8 -3 7 1 7 0 1 -3 -5 -2 -6 -3 -5 -5 3 -6 4 -12 3 -15 -4 -10 -5 -11 -10 -12 -4 -1 -5 -3 -3 -5 1 -1 2 -1 4 1 4 1 4 1 0 -4 -5 -7 -5 -14 -1 -18 3 -2 15 -3 17 -1 2 4 28 15 37 16 3 0 7 1 9 2 27 12 33 14 40 11 3 -1 8 -1 11 -1 l6 0 -1 3 c0 3 0 3 4 3 10 0 9 7 -1 11 -5 1 -10 1 -17 -2 -3 0 -11 -2 -18 -2 -17 -1 -27 -3 -40 -7 -5 -2 -11 -3 -13 -3 -3 0 -9 -1 -14 -2 -6 0 -11 -1 -11 -1 0 1 1 4 3 7 3 6 3 7 2 9 -3 6 -4 11 -1 12 1 1 2 1 3 1 2 0 6 6 6 8 -1 1 -2 1 -8 1 -7 -1 -7 -1 -10 2 -5 6 -13 8 -21 6z M381 326c4 -2 4 -3 -1 -3 -5 0 -7 -2 -6 -4 0 -3 -5 -3 -11 0 -5 1 -12 1 -16 -1 -13 -6 -32 -12 -34 -12 -2 0 -5 -1 -7 -2 -2 -1 -8 -4 -14 -6 -7 -2 -13 -5 -15 -7 -10 -6 -20 -2 -17 7 3 10 8 13 24 15 12 1 16 2 30 5 3 1 14 3 25 5 11 1 22 3 24 3 6 2 14 2 18 0z M633 351c-15 -8 -39 -30 -38 -36 1 -2 0 -4 -4 -9 -3 -4 -7 -11 -11 -15 -20 -33 -30 -45 -49 -62 -25 -24 -46 -29 -68 -17 -14 7 -21 18 -20 35 0 12 0 12 -5 7 -14 -14 -12 -39 3 -55 2 -2 3 -4 3 -5 1 -5 15 -11 26 -10 5 0 9 0 9 -1 0 -1 -3 -5 -6 -6 -6 -3 -20 -22 -29 -41 -9 -18 -14 -24 -26 -30 l-9 -5 -6 -13 c-9 -17 -15 -24 -31 -34 -9 -6 -9 -6 -13 -15 -5 -9 -6 -14 -5 -19 3 -6 -11 2 -19 13 -3 3 -8 9 -10 13 -2 4 -9 11 -15 17 -5 5 -10 10 -10 11 0 1 10 10 13 12 5 3 0 4 -9 2 -10 -4 -11 -3 -5 9 7 12 6 15 -1 6 -11 -13 -11 -13 -12 -4 -2 7 -3 7 -6 -3 -3 -10 -3 -10 -7 -7 -2 1 -6 2 -10 4 l-6 2 0 4 c0 4 0 4 -5 7 -11 7 -12 10 -7 22 4 11 13 29 16 36 3 7 4 9 2 16 -1 2 -4 11 -6 20 -3 9 -5 15 -6 15 -1 0 0 -4 6 -24 l5 -19 -5 -11 c-4 -7 -6 -12 -6 -12 0 -1 -2 -5 -4 -10 -11 -22 -10 -28 2 -36 10 -6 3 -8 -11 -2 -3 1 -7 2 -8 2 -7 2 -8 5 -4 11 5 5 7 12 8 23 0 11 2 18 6 24 4 7 4 9 -3 16 -3 4 -7 8 -9 11 -6 6 -7 6 -14 0 -3 -2 -6 -5 -7 -5 -1 -1 -14 5 -18 9 l-2 2 5 8 c3 5 6 10 7 12 8 17 19 20 39 11 17 -8 18 -7 20 4 1 2 2 6 4 10 7 17 14 44 11 44 -1 0 -2 -2 -4 -14 -2 -7 -5 -16 -7 -23 -2 -6 -5 -13 -6 -17 -2 -8 -2 -8 -10 -4 -13 8 -27 11 -33 8 -4 -2 -5 -1 -2 4 8 13 12 24 13 36 0 6 0 7 -1 7 -1 0 -2 -3 -2 -7 -2 -12 -5 -23 -13 -35 -3 -4 -3 -5 -2 -6 1 -2 0 -4 -3 -7 -1 -2 -3 -5 -5 -8 -2 -3 -6 -10 -9 -15 -3 -5 -6 -10 -6 -11 0 -4 -8 -13 -15 -16 -8 -3 -15 -10 -21 -19 -7 -10 -17 -20 -20 -20 -10 0 -13 -14 -5 -22 2 -3 1 -3 -9 -1 -18 3 -29 1 -43 -7 -4 -2 -10 -5 -13 -6 -4 -2 -10 -4 -15 -6 -12 -5 -24 -5 -31 -1 -6 3 -11 4 -11 1 0 -1 3 -2 9 -4 16 -6 29 -3 59 11 22 11 29 12 45 8 3 -1 19 -1 39 -2 37 -1 44 -2 76 -8 11 -2 33 -10 46 -15 4 -2 6 -1 6 4 0 3 2 8 3 8 0 0 1 -2 1 -4 1 -6 3 -6 7 0 5 5 6 5 2 -3 -3 -9 -3 -9 6 -6 9 3 9 2 3 -4 -8 -7 -7 -8 1 -15 8 -6 14 -12 22 -24 12 -16 23 -26 31 -26 1 0 4 -1 6 -2 21 -15 64 -15 117 -2 33 8 54 15 121 38 135 47 191 62 276 73 29 3 90 2 113 -3 39 -9 53 -16 74 -39 4 -5 13 -10 24 -14 7 -2 41 -2 59 0 14 2 24 0 42 -6 24 -7 36 -7 63 3 17 6 21 6 35 0 11 -6 19 -7 28 -5 7 2 7 3 0 2 -8 0 -18 1 -18 2 0 2 10 9 19 15 l6 4 14 0 c8 0 15 0 16 0 5 2 2 0 -9 -9 -11 -9 -11 -10 0 -9 8 0 12 0 21 -3 16 -6 44 -5 61 2 5 2 3 2 -6 1 -28 -6 -34 -6 -53 -1 -12 4 -14 4 -18 4 l-5 0 3 3 c1 1 7 6 12 11 5 5 11 10 14 12 2 2 10 9 16 15 17 17 30 24 42 24 8 1 8 -1 3 -4 -16 -8 -21 -21 -11 -29 11 -9 33 -8 51 1 8 4 8 3 -1 -5 -9 -9 -11 -13 -9 -20 2 -6 5 -7 9 -5 8 5 11 6 19 7 l8 1 6 -6 c9 -10 14 -11 26 -7 l7 2 11 -4 c19 -7 29 -7 51 1 15 5 22 5 39 -1 7 -2 15 -4 18 -5 12 -3 0 -7 -26 -8 -9 -1 -17 -1 -17 -1 0 0 0 -1 0 -2 0 -1 2 -1 16 -1 18 1 26 2 37 8 4 2 7 3 8 3 1 0 1 0 1 1 0 1 -1 1 -3 1 -8 0 -30 6 -41 11 -8 3 -22 1 -36 -4 -12 -4 -13 -4 -24 -4 -14 0 -28 4 -29 8 0 2 -1 3 -3 1 -3 -3 -30 7 -30 11 0 1 -3 2 -3 0 -1 0 -3 -1 -6 0 -11 1 -33 -5 -31 -8 0 -3 -2 -2 -3 1 -3 6 -1 11 7 18 4 4 8 9 9 10 2 2 2 3 7 2 5 0 6 0 8 2 3 4 4 4 8 -1 3 -3 4 -3 9 -3 9 2 10 2 11 2 2 3 12 -1 18 -8 6 -6 9 -15 5 -18 -2 -1 -3 -3 0 -3 3 0 8 7 10 14 5 18 -1 35 -16 41 -3 1 -5 3 -7 3 -9 5 -30 -6 -36 -18 -2 -5 -5 -8 -9 -8 -3 0 -3 1 0 8 2 4 2 8 3 13 0 7 0 8 3 10 4 2 9 9 15 18 16 23 17 24 25 22 4 -2 10 -2 21 -2 22 0 43 -4 50 -9 1 0 4 -4 5 -8 4 -8 19 -23 24 -23 5 0 5 6 0 11 -3 3 -3 4 -2 5 3 1 8 -3 15 -11 10 -11 14 -11 14 -3 0 4 -1 6 -10 16 -3 3 -7 7 -8 9 -6 7 -31 20 -62 33 -29 12 -58 17 -70 11 -13 -8 -36 -31 -53 -56 -3 -4 -8 -9 -12 -12 l-6 -5 -6 1 c-16 3 -28 -3 -51 -25 -26 -25 -35 -29 -51 -26 -10 2 -17 -1 -31 -12 l-11 -9 -8 4 c-11 4 -15 4 -32 -1 -27 -9 -40 -10 -62 -2 -21 6 -30 7 -53 4 -39 -4 -64 2 -76 18 -13 18 -40 32 -72 37 -4 1 -9 2 -11 2 -16 3 -75 3 -103 0 -81 -10 -145 -26 -262 -67 -41 -14 -87 -30 -96 -33 -62 -17 -80 -20 -109 -20 -16 0 -23 1 -35 5 -12 4 -13 5 -4 8 4 1 12 7 14 11 0 1 2 6 4 10 4 11 34 45 47 53 3 2 10 6 16 10 16 9 22 13 34 23 12 10 10 10 15 5 4 -3 6 -3 2 1 -4 3 -4 3 2 7 8 6 12 14 6 14 -3 0 -16 -11 -16 -13 0 -4 -28 -24 -52 -39 -22 -13 -47 -40 -57 -61 -4 -8 -10 -15 -14 -15 -1 0 -4 -1 -6 -3 -12 -9 -7 16 5 26 3 3 8 7 11 10 11 9 19 19 25 31 l6 12 7 3 c11 6 18 14 27 30 9 19 16 29 28 40 9 8 10 10 10 12 -1 5 -3 6 -8 4 -9 -2 -13 -1 -21 3 -15 10 -25 30 -22 45 2 12 7 18 7 8 0 -24 23 -44 50 -42 29 2 59 30 92 84 9 15 21 32 28 39 2 2 4 5 4 7 1 1 2 3 4 4 1 1 5 4 8 6 3 3 9 7 13 9 4 2 7 4 7 5 0 1 -4 -1 -12 -5z M1541 204c15 -2 28 -6 44 -14 4 -1 12 -5 20 -8 35 -16 38 -18 52 -38 7 -10 2 -11 -6 0 -5 6 -8 8 -12 10 -10 5 -14 1 -7 -7 6 -7 5 -9 -2 -4 -7 4 -12 11 -16 19 -4 8 -9 11 -27 15 -7 1 -42 3 -57 3 -4 0 -10 -6 -16 -16 -6 -10 -11 -16 -19 -24 -5 -5 -6 -6 -5 -9 3 -18 -15 -34 -41 -37 -21 -2 -37 11 -27 21 5 5 19 14 20 12 2 -1 -1 -6 -5 -8 -3 -1 -4 -3 -1 -3 2 0 10 8 10 11 0 1 -1 2 -2 3 -1 2 -1 2 3 5 8 5 11 8 23 23 12 16 40 43 48 47 4 1 12 1 23 -1z M226 185c2 -3 6 -8 9 -10 6 -6 6 -7 2 -14 -5 -7 -8 -21 -8 -39 0 0 -2 -3 -5 -6 -3 -4 -4 -6 -4 -8 1 -4 0 -4 -5 -3 -8 2 -34 5 -51 6 -15 0 -17 1 -17 2 0 1 -2 3 -4 5 -2 3 -4 5 -4 6 0 2 7 10 11 12 2 1 10 7 17 13 13 10 14 11 19 12 2 1 6 4 9 7 4 3 8 7 11 8 2 2 6 5 9 8 7 7 6 7 11 1z M195 185c5 -2 9 -5 9 -5 1 0 -14 -14 -17 -15 -1 0 -4 -1 -5 -1 -3 -1 -10 -6 -34 -26 -10 -8 -14 -4 -5 7 3 4 7 9 8 11 5 6 13 14 17 16 6 3 13 9 16 13 2 5 0 5 11 0z M508 146c0 -1 -6 -7 -8 -7 -2 0 -1 2 3 5 3 3 5 4 5 2z M136 132c3 -2 3 -2 2 -5 -3 -4 -1 -8 3 -11 3 -4 2 -5 -5 -4 -6 0 -12 3 -15 8 -3 6 -1 10 7 13 5 2 5 2 8 -1z M1540 126c14 -7 21 -23 16 -37 -2 -4 -3 -4 -5 1 -3 7 -17 18 -24 18 -2 0 -4 1 -6 3 -3 3 -4 3 -11 4 l-7 1 4 3 c9 10 23 12 33 7z M1505 111c1 -1 1 -1 2 0 2 1 9 1 11 0 5 -4 0 -8 -8 -7 -2 0 -8 6 -7 7 0 1 2 1 2 0z M1506 76c0 -1 -1 -1 -1 -1 -1 0 -2 0 -2 1 0 0 1 1 2 1 0 0 1 -1 1 -1z M1519 70c5 -1 9 -2 10 -3 3 -1 -1 -2 -7 -3 -7 0 -7 0 -10 3 -7 7 -5 7 7 3z M3009 349c-1 0 1 -1 4 -1 6 -1 10 -1 10 0 0 2 -13 3 -14 1z M2621 324c-1 -1 -1 -1 -1 -2 1 -1 2 1 2 2 -1 1 -1 1 -1 0z M1875 270c-10 -3 -23 -7 -45 -14 -5 -1 -9 -3 -9 -3 -3 -2 0 -1 32 8 9 2 21 5 27 7 11 3 12 4 11 5 -1 2 -4 1 -16 -3z M1889 253c-2 -1 -9 -3 -15 -5 -10 -2 -15 -6 -6 -4 6 1 28 7 30 8 6 2 -1 3 -9 1z M1834 238c-4 -1 -15 -4 -24 -6 -22 -6 -22 -6 -20 -7 1 -1 47 10 54 13 7 3 0 3 -10 0z M1849 225c-13 -4 -17 -6 -17 -7 0 -1 2 -1 17 3 13 4 17 6 13 7 -1 0 -7 -2 -13 -3z M2929 216c-7 -2 -30 -11 -30 -12 0 -2 8 0 25 6 5 2 8 2 17 2 9 0 12 1 12 1 -1 3 -17 5 -24 3z M1228 148c-8 -4 -4 -12 7 -15 3 -1 6 -2 7 -2 1 -3 3 -1 2 3 -1 9 -11 17 -16 14z M1237 141c6 -6 5 -7 -3 -4 -4 2 -6 5 -6 6 1 3 6 2 9 -2z M1250 109c-4 -3 0 -8 8 -12 1 -1 4 -2 5 -3 l2 -2 0 2 c0 10 -11 20 -15 15z M1258 105c4 -5 3 -6 -2 -3 -4 2 -5 4 -5 5 2 2 4 1 7 -2z M1203 105c-3 -6 3 -10 13 -10 7 0 7 1 1 7 -6 6 -11 7 -14 3z M1216 101c0 0 0 -1 0 -2 0 -1 -1 -1 -3 -1 -6 2 -7 2 -7 3 0 3 2 3 6 1 2 0 3 -1 4 -1z M1174 39c-4 -3 15 -10 32 -11 11 0 20 1 40 6 23 5 38 4 48 -4 12 -10 31 -11 56 -5 21 5 34 5 61 -1 l19 -4 20 0 c19 0 20 0 32 3 27 8 33 8 52 6 10 -1 23 0 26 2 4 3 -52 2 -61 -1 -25 -8 -29 -8 -47 -8 -17 0 -24 0 -41 5 -13 3 -24 5 -34 5 -9 0 -14 -1 -37 -6 -16 -4 -28 -2 -43 5 -5 3 -12 5 -14 6 -2 1 -6 2 -7 2 -4 2 -15 1 -34 -3 -30 -6 -45 -6 -61 2 -6 2 -6 2 -7 1z M1606 27c1 0 3 0 4 0 1 1 0 1 -2 1 -2 0 -3 0 -2 -1z"/></g>
+      <g class="landscape__frisbee"><g transform="translate(0.000000,612.000000) scale(1.000000,-1.000000)" fill="currentColor"><path d="M1154 611c-58 -6 -121 -36 -120 -56 1 -6 4 -7 20 -7 45 0 131 33 136 51 2 10 -14 15 -36 12z M1183 605c4 -2 4 -6 -1 -11 -5 -5 -7 -5 -4 0 4 5 4 7 0 10 l-3 3 2 0 c2 0 4 -1 6 -2z M1173 604c5 -2 6 -4 4 -8 -5 -8 -35 -23 -63 -32 -64 -18 -84 -6 -32 20 18 9 40 16 67 21 7 1 21 1 24 -1z M1087 590c-1 -1 -5 -3 -9 -5 -25 -13 -35 -24 -26 -30 2 -1 5 -2 7 -2 4 0 6 -2 3 -3 -10 -2 -25 2 -25 6 0 8 26 27 47 34 3 1 5 1 3 0z"/></g></g>
     </svg>
   </footer>
 
@@ -304,61 +250,21 @@
     if (!root.classList.contains('js-motion')) return;
     window.__motionReady = true;
 
-    var FADE_MS = 480;
-    var DRAW_MS = 800;
-    var STAGGER = 70;
-
-    function strokeables(svg) {
-      return Array.prototype.slice.call(svg.querySelectorAll('path, circle'));
-    }
-
-    // Hide every stroke at its full length, so the icon is blank until it draws.
-    function prep(els) {
-      els.forEach(function (el) {
-        var len = el.getTotalLength();
-        el.style.transition = 'none';
-        el.style.strokeDasharray = len;
-        el.style.strokeDashoffset = len;
-      });
-    }
-
-    function draw(svg) {
-      if (svg.__busy) return;
-      svg.__busy = true;
-      var els = strokeables(svg);
-      prep(els);
-      svg.getBoundingClientRect();
-      requestAnimationFrame(function () {
-        els.forEach(function (el, i) {
-          el.style.transition = 'stroke-dashoffset ' + DRAW_MS + 'ms ease-out ' + (i * STAGGER) + 'ms';
-          el.style.strokeDashoffset = '0';
-        });
-      });
-      setTimeout(function () { svg.__busy = false; }, DRAW_MS + els.length * STAGGER);
-    }
-
-    var icons = document.querySelectorAll('.draw-svg');
-    Array.prototype.forEach.call(icons, function (svg) {
-      prep(strokeables(svg));
-      var item = svg.closest('.help-grid__item');
-      item.addEventListener('mouseenter', function () { if (item.classList.contains('is-visible')) draw(svg); });
-    });
-
-    function onVisible(el) {
-      el.classList.add('is-visible');
-      var svg = el.querySelector('.draw-svg');
-      if (svg) setTimeout(function () { draw(svg); }, FADE_MS * 0.6);
-    }
+    var STAGGER = 60;
 
     // Reveal anything that has entered the view or that is already above it (anchor jumps, fast scrolls).
+    // Items revealed in the same frame settle in one after another.
     var pending = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
     var ticking = false;
     function check() {
       ticking = false;
       var limit = window.innerHeight * 0.92;
+      var n = 0;
       pending = pending.filter(function (el) {
-        if (el.getBoundingClientRect().top < limit) { onVisible(el); return false; }
-        return true;
+        if (el.getBoundingClientRect().top >= limit) return true;
+        el.style.transitionDelay = Math.min(n++, 4) * STAGGER + 'ms';
+        el.classList.add('is-visible');
+        return false;
       });
       if (!pending.length) {
         window.removeEventListener('scroll', schedule);
