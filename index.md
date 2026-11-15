@@ -30,7 +30,7 @@ I led design for CallHub’s volunteer app on Android and iOS. Campaigns, unions
 
 ## Working with AI
 
-In the pod I lead, I set up the BMAD method (a step-by-step way to plan and build with AI agents) and PStack so we can plan, build and ship faster. We also try AI on smaller internal tasks, such as turning field reports into comics that are easier to read.
+In the pod I lead, I set up the BMAD method (a step-by-step way to plan and build with AI agents) and PStack to help us plan, build and ship faster. We also explore other ways to use AI in our work, from rapid prototyping and turning field reports into comics to building an internal library of skills for creating slides, documents, communications and infographics.
 
 **AI Saloon**
 First Sunday of every month
