@@ -30,18 +30,13 @@ I led design for CallHub’s volunteer app on Android and iOS. Campaigns, unions
 
 ## Working with AI
 
-**Field reports anyone can read** — [View the report](images/field-report-jakarta.webp)
-Experiment · Jakarta, October 2026
-We are exploring how to make field reports easy for everyone to read. This one turns notes from our meetings in Jakarta into a one-page comic.
+I use AI to help our team deliver faster and to share our work in new ways. In the pod I lead, I set up the BMAD method and PStack to speed up how we plan, build and ship. I also co-started a monthly AI meetup, and I am testing how to turn field reports into comics that anyone can read.
 
-**Monthly AI hackathon**
-Every month
-We run a monthly AI hackathon. I helped start it.
+**Monthly AI Saloon**
+First Sunday of every month
+Friends, and new people who join, meet once a month. Each of us builds something with AI and demos it. The aim is simple: we learn from each other and stay up to date with building with AI.
 
-**Design Together** — Private repo
-A design tool that questions your brief before it draws two wireframe directions. I made it to test if friction makes design with AI better.
-
-**Comics made with AI** — [Boy in the Graveyard](files/comic-boy-in-the-graveyard.pdf) · [Mahesh and Abin in Wonderland](files/comic-mahesh-and-abin-in-wonderland.pdf)
+**Comics** — [Boy in the Graveyard](files/comic-boy-in-the-graveyard.pdf) · [Mahesh and Abin in Wonderland](files/comic-mahesh-and-abin-in-wonderland.pdf)
 Two short stories, told as comics.
 
 ---
@@ -58,6 +53,9 @@ Two short stories, told as comics.
 
 **Walking for Nothing** — [Live](https://tonyjoyk.github.io/walking-for-nothing/) · [GitHub](https://github.com/tonyjoyk/walking-for-nothing)
 A man walks through a field in Kerala, forever, and the weather changes around him. I drew all of it in code with p5.js.
+
+**Design Together** — Private repo
+A design tool that questions your brief before it draws two wireframe directions. I made it to test if friction makes design with AI better.
 
 **Medicine Tracker** — [Live](https://medicine-tracker-lyart.vercel.app/) · [GitHub](https://github.com/tonyjoyk/medicine-tracker)
 I made it for my mom, to help her track her medicines.

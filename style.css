@@ -126,6 +126,14 @@ a.link-ext:focus-visible .link-ext__arrow {
   margin-bottom: var(--s-4);
 }
 
+/* Short write-up under a section heading. */
+.block__intro {
+  max-width: var(--measure);
+  margin: calc(-1 * var(--s-2)) 0 var(--s-4);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
 /* Mono metadata line: role · scale · place, event names, repo status. */
 .meta {
   font-family: var(--font-mono);
@@ -474,6 +482,59 @@ a.print:focus-visible {
 .prints--fan.prints--portrait > li:nth-child(1) { left: 6%; top: -6%; }
 .prints--fan.prints--portrait > li:nth-child(2) { left: 46%; top: 0; }
 
+a.print {
+  cursor: zoom-in;
+}
+
+/* ---------- Photo viewer ---------- */
+.lightbox {
+  margin: auto;
+  padding: 8px;
+  border: none;
+  background: var(--paper);
+  box-shadow: var(--shadow-print-up);
+  max-width: min(92vw, 1100px);
+  max-height: 90vh;
+  overflow: visible;
+  cursor: zoom-out;
+}
+
+.lightbox::backdrop {
+  background: rgba(31, 29, 26, 0.6);
+}
+
+.lightbox__img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: calc(min(92vw, 1100px) - 16px);
+  max-height: calc(90vh - 16px);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: var(--paper);
+  box-shadow: var(--shadow-print);
+  font: 500 1.25rem/1 var(--font-sans);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.lightbox__close:hover {
+  color: var(--laterite);
+}
+
+.lightbox__close:focus-visible {
+  outline: 2px solid var(--laterite);
+  outline-offset: 2px;
+}
+
 /* ---------- Ways I can help ---------- */
 .help-grid {
   display: grid;
@@ -533,7 +594,7 @@ a.print:focus-visible {
   height: auto;
   margin-inline: auto;
   overflow: visible;
-  color: var(--text);
+  color: var(--laterite);
 }
 
 .landscape__frisbee {
