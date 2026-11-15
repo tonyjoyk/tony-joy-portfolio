@@ -1,15 +1,26 @@
 /* Tony Joy — Portfolio
-   Single grid, quiet type, flat frames. */
+   Single grid, quiet type, flat frames.
+   Brand: calm, not energetic · capable, not clever · playful, not cool.
+   Palette: Kerala, muted. Laterite red for links, focus and small accents only.
+   Light only: there is no dark theme. */
 
 :root {
-  --bg: #FAFAF9;
-  --text: #1A1A1A;
-  --muted: #737373;
-  --hairline: #E5E5E5;
-  --underline: #C4C4C4;
-  --placeholder: #EDE9E3;
+  color-scheme: light;
 
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --bg: #F7F5EF;          /* warm, muted page */
+  --bg-bar: rgba(247, 245, 239, 0.9);
+  --text: #1F1D1A;        /* 15.4:1 on --bg */
+  --muted: #6E6A63;       /* 4.9:1 on --bg */
+  --laterite: #A4553A;    /* 4.9:1 on --bg. Links, hover, focus, small accents. Never large blocks. */
+  --laterite-soft: rgba(164, 85, 58, 0.4);  /* resting link underline */
+  --moss: #5E7D5A;        /* very rare detail only, never text (4.2:1) */
+  --hairline: #E3DED3;
+  --placeholder: #ECE6DA;
+  --paper: #FFFFFF;       /* loose-print border */
+  --shadow-print: 0 1px 2px rgba(31, 29, 26, 0.14), 0 4px 12px rgba(31, 29, 26, 0.08);
+  --shadow-print-up: 0 2px 4px rgba(31, 29, 26, 0.14), 0 10px 22px rgba(31, 29, 26, 0.12);
+
+  --font-sans: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 
   --measure: 552px;
@@ -17,6 +28,8 @@
   --gap: 48px;
   --content-max: 880px;
   --radius: 4px;
+  --hero: 420px;
+  --bar-h: 56px;
 
   --s-1: 8px;
   --s-2: 16px;
@@ -32,7 +45,8 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--s-4);
+  /* Anchor jumps land below the sticky top bar. */
+  scroll-padding-top: calc(var(--bar-h) + var(--s-3));
 }
 
 body {
@@ -55,20 +69,21 @@ img {
 }
 
 /* ---------- Links ---------- */
-/* One hover for every link: the underline darkens from grey to text colour. */
+/* One hover for every link: a soft laterite underline; on hover the link turns laterite. */
 a {
   color: inherit;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
-  text-decoration-color: var(--underline);
+  text-decoration-color: var(--laterite-soft);
   transition: text-decoration-color 150ms ease, color 150ms ease;
 }
 a:hover {
+  color: var(--laterite);
   text-decoration-color: currentColor;
 }
 a:focus-visible {
-  outline: 2px solid var(--text);
+  outline: 2px solid var(--laterite);
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -85,11 +100,15 @@ a.link-ext:focus-visible .link-ext__arrow {
 }
 
 /* ---------- Page shell ---------- */
-.page {
+.page,
+.topbar {
   width: min(var(--content-max), 100% - 2 * var(--s-4));
   max-width: var(--content-max);
   margin-inline: auto;
-  padding: var(--s-4) 0 var(--s-5);
+}
+
+.page {
+  padding: var(--s-6) 0 var(--s-5);
 }
 
 .block + .block {
@@ -102,9 +121,20 @@ a.link-ext:focus-visible .link-ext__arrow {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--muted);
+  color: var(--laterite);
   line-height: 1.2;
   margin-bottom: var(--s-4);
+}
+
+/* A tiny moss dot: the one rare touch of green on the page. */
+.block__new {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-left: 0.6em;
+  vertical-align: 0.15em;
+  border-radius: 50%;
+  background: var(--moss);
 }
 
 /* Mono metadata line: role · scale · place, event names, repo status. */
@@ -116,19 +146,36 @@ a.link-ext:focus-visible .link-ext__arrow {
   color: var(--muted);
 }
 
-/* ---------- Top bar ---------- */
+/* ---------- Top bar (sticky) ---------- */
+.topbar-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg-bar);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 200ms ease;
+}
+
+/* The hairline shows only after the page scrolls. */
+.topbar-wrap.is-scrolled {
+  border-bottom-color: var(--hairline);
+}
+
 .topbar {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
   gap: var(--s-1) var(--s-3);
-  margin-bottom: var(--s-6);
+  min-height: var(--bar-h);
+  padding-block: 15px;
 }
 
 .topbar__name {
   font-size: 0.9375rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.01em;
   text-decoration: none;
 }
@@ -147,7 +194,7 @@ a.link-ext:focus-visible .link-ext__arrow {
 
 .topbar__links a:hover,
 .topbar__links a:focus-visible {
-  color: var(--text);
+  color: var(--laterite);
   text-decoration-color: currentColor;
 }
 
@@ -161,9 +208,36 @@ a.link-ext:focus-visible .link-ext__arrow {
 }
 
 /* ---------- Introduction ---------- */
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--hero);
+  gap: var(--gap);
+  align-items: center;
+}
+
+/* Hero animation slot. Layout only: the hero session (hero/) fills it with a canvas.
+   Until then, and with no script, it shows a still drawing. */
+.hero-animation {
+  position: relative;
+  width: var(--hero);
+  aspect-ratio: 1 / 1;
+  background: url("images/hero-still.svg") center / contain no-repeat;
+}
+
+.hero-animation:has(canvas),
+.hero-animation.is-live {
+  background-image: none;
+}
+
+.hero-animation > canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
 .intro__lede {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 1.2;
   max-width: 18em;
@@ -243,7 +317,7 @@ a.link-ext:focus-visible .link-ext__arrow {
 
 .work-row__title {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.2;
   margin-bottom: var(--s-1);
@@ -254,6 +328,10 @@ a.link-ext:focus-visible .link-ext__arrow {
 }
 
 .work-row__title a:hover {
+  text-decoration-color: currentColor;
+}
+
+.work-row__title a:focus-visible {
   text-decoration-color: currentColor;
 }
 
@@ -310,7 +388,7 @@ a.link-ext:focus-visible .link-ext__arrow {
 
 .media-list__title {
   font-size: 1.0625rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.015em;
   line-height: 1.35;
 }
@@ -333,6 +411,165 @@ a.link-ext:focus-visible .link-ext__arrow {
   font-size: 0.875rem;
 }
 
+/* Media-list thumbnail that holds loose prints instead of one image. */
+.media-list__thumb--prints {
+  overflow: visible;
+  background: none;
+}
+
+.media-list__thumb--prints::after {
+  content: none;
+}
+
+.media-list__note {
+  max-width: 720px;
+  margin-top: var(--s-4);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+
+.media-list__note strong {
+  font-weight: 700;
+}
+
+/* ---------- Loose prints ---------- */
+/* Photos like prints on a table: white border, soft shadow, a small tilt, a little overlap.
+   On hover a print straightens and rises (off for reduced motion). */
+.prints {
+  position: relative;
+}
+
+.print {
+  --r: 0deg;
+  position: relative;
+  display: block;
+  padding: 6px 6px 0;
+  background: var(--paper);
+  box-shadow: var(--shadow-print);
+  transform: rotate(var(--r));
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.print__photo {
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--placeholder);
+}
+
+.print__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.print__caption {
+  display: block;
+  padding: 3px 0 5px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* No caption: keep an even border all round. */
+.print:not(:has(.print__caption)) {
+  padding-bottom: 6px;
+}
+
+a.print:focus-visible {
+  outline-offset: 2px;
+}
+
+/* Four prints in a loose 2 × 2 cluster (work rows). */
+.prints--grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 4px;
+}
+
+/* Prints overlap side by side; rows keep a small gap so every caption shows. */
+.prints--grid {
+  row-gap: 6px;
+}
+
+.prints--grid .print {
+  margin: 0 -4px;
+}
+
+/* Slightly wider photos keep the cluster as tall as the other work images. */
+.prints--grid .print__photo {
+  aspect-ratio: 5 / 3;
+}
+
+.prints--grid .print:nth-child(1) { --r: -3deg; }
+.prints--grid .print:nth-child(2) { --r: 2deg; }
+.prints--grid .print:nth-child(3) { --r: 1.5deg; }
+.prints--grid .print:nth-child(4) { --r: -2deg; }
+
+/* Two or three prints fanned out inside a media-list thumbnail. */
+.prints--fan {
+  width: 100%;
+  height: 100%;
+}
+
+.prints--fan .print {
+  position: absolute;
+  width: 64%;
+}
+
+.prints--fan .print:nth-child(1) { --r: -4deg; left: 0; top: 8%; }
+.prints--fan .print:nth-child(2) { --r: 2deg; left: 18%; top: 0; }
+.prints--fan .print:nth-child(3) { --r: -1deg; left: 36%; top: 14%; }
+
+/* Portrait covers (comics). */
+.prints--fan.prints--portrait .print {
+  width: 46%;
+}
+
+.prints--portrait .print__photo {
+  aspect-ratio: 3 / 4;
+}
+
+.prints--fan.prints--portrait .print:nth-child(1) { left: 6%; top: -6%; }
+.prints--fan.prints--portrait .print:nth-child(2) { left: 46%; top: 0; }
+
+.media-frame--prints {
+  overflow: visible;
+  background: none;
+  border-radius: 0;
+  aspect-ratio: auto;
+}
+
+/* ---------- Placeholders (remove before going live) ---------- */
+/* Striped box or highlighted text: content still to come from Tony. */
+.is-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  background: repeating-linear-gradient(135deg, var(--placeholder) 0 7px, #E3DACB 7px 14px);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text);
+}
+
+.todo {
+  padding: 0 3px;
+  background: #F6E3C8;
+  outline: 1px dashed var(--laterite);
+  outline-offset: -1px;
+}
+
 /* ---------- Ways I can help ---------- */
 .help-grid {
   display: grid;
@@ -352,7 +589,7 @@ a.link-ext:focus-visible .link-ext__arrow {
   width: 28px;
   height: 28px;
   margin-top: -1px;
-  color: var(--text);
+  color: var(--laterite);
 }
 
 .help-grid__text {
@@ -361,7 +598,7 @@ a.link-ext:focus-visible .link-ext__arrow {
 
 .help-grid__title {
   font-size: 1.0625rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.015em;
   margin-bottom: 4px;
 }
@@ -430,17 +667,35 @@ a.link-ext:focus-visible .link-ext__arrow {
 }
 
 @media (hover: hover) {
-  .media-list__item:hover .media-list__thumb img {
+  .media-list__item:hover .media-list__thumb:not(.media-list__thumb--prints) img {
     transform: scale(1.03);
   }
+
+  .print:hover {
+    z-index: 2;
+    transform: rotate(0deg) translateY(-4px);
+    box-shadow: var(--shadow-print-up);
+  }
+}
+
+.print:focus-visible,
+.print:focus-within {
+  z-index: 2;
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: var(--shadow-print-up);
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   a,
   a.link-ext .link-ext__arrow,
-  .media-list__thumb img { transition: none; }
+  .media-list__thumb img,
+  .print,
+  .topbar-wrap { transition: none; }
   .media-list__item:hover .media-list__thumb img { transform: none; }
+  .print:hover,
+  .print:focus-visible,
+  .print:focus-within { transform: rotate(var(--r)); }
 }
 
 /* ---------- Tablet ---------- */
@@ -448,22 +703,38 @@ a.link-ext:focus-visible .link-ext__arrow {
   :root {
     --media: 220px;
     --gap: var(--s-4);
+    --hero: 300px;
   }
 }
 
 /* ---------- Mobile ---------- */
 @media (max-width: 720px) {
+  :root {
+    --bar-h: 96px;  /* name, then two link rows */
+  }
+
   .page {
-    padding-top: var(--s-3);
+    padding-top: var(--s-5);
   }
 
   .topbar {
     flex-direction: column;
-    margin-bottom: var(--s-6);
+    gap: 4px;
+    padding-block: 10px;
+  }
+
+  .intro {
+    grid-template-columns: 1fr;
+    gap: var(--s-4);
+  }
+
+  .hero-animation {
+    width: 100%;
+    max-width: 360px;
   }
 
   .topbar__links {
-    gap: var(--s-1) var(--s-2);
+    gap: 0 var(--s-2);
   }
 
   /* Two rows on phones: sections, then contact links. */
@@ -500,6 +771,10 @@ a.link-ext:focus-visible .link-ext__arrow {
     width: 100%;
     max-width: 280px;
     margin-left: 0;
+  }
+
+  .media-frame--prints {
+    max-width: 320px;
   }
 
   .media-list__item {

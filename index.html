@@ -15,9 +15,11 @@
   <meta property="og:image:height" content="600">
   <meta property="og:image:alt" content="Tony Joy">
   <meta name="twitter:card" content="summary">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#F7F5EF">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script>
   // Hide-before-reveal styles apply only when motion will run (see .js-motion in style.css).
@@ -31,13 +33,13 @@
   </script>
 </head>
 <body>
-  <div class="page">
-
-    <!-- Top bar -->
+  <!-- Top bar (sticky) -->
+  <div class="topbar-wrap" id="topbar">
     <nav class="topbar" aria-label="Main">
       <a class="topbar__name" href="#top">Tony Joy</a>
       <ul class="topbar__links">
         <li><a href="#work">Work</a></li>
+        <li><a href="#ai">AI</a></li>
         <li><a href="#talks">Talks</a></li>
         <li><a href="#projects">Projects</a></li>
         <li class="topbar__break" aria-hidden="true"></li>
@@ -46,11 +48,17 @@
         <li><a href="https://github.com/tonyjoyk" target="_blank" rel="noopener">GitHub</a></li>
       </ul>
     </nav>
+  </div>
 
-    <!-- Introduction -->
+  <div class="page">
+
+    <!-- Introduction, with the hero animation slot on the right (filled by hero/) -->
     <header class="intro block">
-      <h1 class="intro__lede">Hey, I'm Tony, a product designer from Kerala, India.</h1>
-      <p class="intro__bio">I lead design at <a href="https://resolvetosavelives.org" target="_blank" rel="noopener">Resolve to Save Lives</a>, a public health nonprofit where I design tools and services for healthcare staff.</p>
+      <div class="intro__text">
+        <h1 class="intro__lede">Hey, I'm Tony, a product designer from Kerala, India.</h1>
+        <p class="intro__bio">I lead design at <a href="https://resolvetosavelives.org" target="_blank" rel="noopener">Resolve to Save Lives</a>, a public health nonprofit where I design tools and services for healthcare staff.</p>
+      </div>
+      <div id="hero-animation" class="hero-animation" aria-hidden="true"></div>
     </header>
 
     <!-- Work -->
@@ -90,6 +98,23 @@
         </figure>
       </article>
 
+      <!-- Indonesia design sprints (option A). TODO(Tony): sprint photos (lead with people), what the sprints were about, your role. -->
+      <article class="work-row reveal">
+        <div class="work-row__text">
+          <h3 class="work-row__title">Design sprints in Indonesia</h3>
+          <p class="meta">4 sprints in 1 week · Indonesia</p>
+          <p class="work-row__desc">We ran 4 design sprints in 1 week. <span class="todo">[What the sprints were about, who took part, and what came out of them. From Tony.]</span></p>
+        </div>
+        <div class="media-frame media-frame--work media-frame--prints">
+          <ul class="prints prints--grid" aria-label="Photos from the 4 design sprints">
+            <li class="print"><span class="print__photo is-placeholder" role="img" aria-label="Placeholder: Sprint 1 photo">Sprint 1 photo</span><span class="print__caption">Sprint 1</span></li>
+            <li class="print"><span class="print__photo is-placeholder" role="img" aria-label="Placeholder: Sprint 2 photo">Sprint 2 photo</span><span class="print__caption">Sprint 2</span></li>
+            <li class="print"><span class="print__photo is-placeholder" role="img" aria-label="Placeholder: Sprint 3 photo">Sprint 3 photo</span><span class="print__caption">Sprint 3</span></li>
+            <li class="print"><span class="print__photo is-placeholder" role="img" aria-label="Placeholder: Sprint 4 photo">Sprint 4 photo</span><span class="print__caption">Sprint 4</span></li>
+          </ul>
+        </div>
+      </article>
+
       <article class="work-row reveal">
         <div class="work-row__text">
           <h3 class="work-row__title"><a class="link-ext" href="https://callhub.io" target="_blank" rel="noopener">CallHub voter mobilisation<span class="link-ext__arrow" aria-hidden="true">↗</span></a></h3>
@@ -100,6 +125,61 @@
           <img class="media-frame__img" src="images/callhub-app.webp" alt="Three screens from the CallHub volunteer app: campaign list, getting started, and call script" width="280" height="210" loading="lazy">
         </figure>
       </article>
+    </section>
+
+    <!-- Working with AI -->
+    <section class="block" id="ai">
+      <h2 class="block__heading">Working with AI<span class="block__new" aria-hidden="true"></span></h2>
+
+      <ul class="media-list">
+        <!-- TODO(Tony): 2–3 hackathon photos; start date and number of people if you want them stated. -->
+        <li class="media-list__item reveal">
+          <div class="media-list__thumb media-list__thumb--prints">
+            <ul class="prints prints--fan" aria-label="Photos from the AI hackathon">
+              <li class="print"><span class="print__photo is-placeholder" role="img" aria-label="Placeholder: Photo">Photo</span></li>
+              <li class="print"><span class="print__photo is-placeholder" role="img" aria-label="Placeholder: Photo">Photo</span></li>
+              <li class="print"><span class="print__photo is-placeholder" role="img" aria-label="Placeholder: Photo">Photo</span></li>
+            </ul>
+          </div>
+          <div class="media-list__text">
+            <h3 class="media-list__title">Monthly AI hackathon</h3>
+            <p class="meta">Every month <span class="todo">[· since 20XX]</span></p>
+            <p class="media-list__desc">We run a monthly AI hackathon. I helped start it. <span class="todo">[One line on what the teams make. From Tony.]</span></p>
+          </div>
+        </li>
+        <!-- TODO(Tony): the 2 comics (files, or Drive links shared with "anyone with the link"). Each cover opens its comic. -->
+        <li class="media-list__item reveal">
+          <div class="media-list__thumb media-list__thumb--prints">
+            <ul class="prints prints--fan prints--portrait" aria-label="Comic covers">
+              <li class="print"><span class="print__photo is-placeholder" role="img" aria-label="Placeholder: Cover 1">Cover 1</span></li>
+              <li class="print"><span class="print__photo is-placeholder" role="img" aria-label="Placeholder: Cover 2">Cover 2</span></li>
+            </ul>
+          </div>
+          <div class="media-list__text">
+            <h3 class="media-list__title">Comics made with AI</h3>
+            <p class="media-list__desc"><span class="todo">[One line on what the comics are about. From Tony.]</span></p>
+            <p class="media-list__links">
+              <span class="todo">Comic 1 ↗</span>
+              <span class="todo">Comic 2 ↗</span>
+            </p>
+          </div>
+        </li>
+        <!-- TODO(Tony): the AI-made report: title, one line, and a link or PDF. -->
+        <li class="media-list__item reveal">
+          <div class="media-list__thumb">
+            <span class="is-placeholder" role="img" aria-label="Placeholder: report cover" style="height: 100%">Report cover</span>
+          </div>
+          <div class="media-list__text">
+            <h3 class="media-list__title"><span class="todo">[Report title]</span></h3>
+            <p class="meta">A report made with AI</p>
+            <p class="media-list__desc"><span class="todo">[One line on what the report is. From Tony.]</span></p>
+            <p class="media-list__links"><span class="todo">Read the report ↗</span></p>
+          </div>
+        </li>
+      </ul>
+
+      <!-- TODO(Tony): confirm this line, and what "P stack" means before we use that term. -->
+      <p class="media-list__note"><strong>How we build:</strong> we follow the BMAD method and use several AI agents that work together. <span class="todo">[Confirm wording. From Tony.]</span></p>
     </section>
 
     <!-- Talks -->
@@ -243,6 +323,17 @@
       <g class="landscape__frisbee"><g transform="translate(0.000000,612.000000) scale(1.000000,-1.000000)" fill="currentColor"><path d="M1154 611c-58 -6 -121 -36 -120 -56 1 -6 4 -7 20 -7 45 0 131 33 136 51 2 10 -14 15 -36 12z M1183 605c4 -2 4 -6 -1 -11 -5 -5 -7 -5 -4 0 4 5 4 7 0 10 l-3 3 2 0 c2 0 4 -1 6 -2z M1173 604c5 -2 6 -4 4 -8 -5 -8 -35 -23 -63 -32 -64 -18 -84 -6 -32 20 18 9 40 16 67 21 7 1 21 1 24 -1z M1087 590c-1 -1 -5 -3 -9 -5 -25 -13 -35 -24 -26 -30 2 -1 5 -2 7 -2 4 0 6 -2 3 -3 -10 -2 -25 2 -25 6 0 8 26 27 47 34 3 1 5 1 3 0z"/></g></g>
     </svg>
   </footer>
+
+  <script>
+  // Top bar: show its hairline only after the page scrolls.
+  (function () {
+    var bar = document.getElementById('topbar');
+    if (!bar) return;
+    function update() { bar.classList.toggle('is-scrolled', window.scrollY > 4); }
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 
   <script>
   (function () {

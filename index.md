@@ -1,6 +1,6 @@
 # Tony Joy
 
-Work · Talks · Projects · [Email](mailto:tonykokkad@gmail.com) · [LinkedIn](https://www.linkedin.com/in/tony-joy/) · [GitHub](https://github.com/tonyjoyk)
+Work · AI · Talks · Projects · [Email](mailto:tonykokkad@gmail.com) · [LinkedIn](https://www.linkedin.com/in/tony-joy/) · [GitHub](https://github.com/tonyjoyk)
 
 ## Hey, I'm Tony, a product designer from Kerala, India.
 
@@ -22,9 +22,30 @@ I led the redesign of the DHIS2 Android app’s core components, used for progra
 Product and design lead · Indonesia · Philippines
 I lead product and design for HEARTS360, a free, open-source dashboard for hypertension and diabetes programmes. Any EHR system that collects this data can use it to show WHO indicators in less than 2 days. It now monitors 1.5 million patients in Indonesia and is being scaled up nationally in the Philippines.
 
+**Design sprints in Indonesia**
+4 sprints in 1 week · Indonesia
+We ran 4 design sprints in 1 week. [TODO(Tony): what the sprints were about, who took part, and what came out of them.]
+_Photos: 4 loose prints, one per sprint, leading with people. [TODO(Tony): sprint photos.]_
+
 **[CallHub voter mobilisation](https://callhub.io)**
 Design lead
 I led design for CallHub’s volunteer app on Android and iOS. Campaigns, unions and nonprofits use it to call and message voters and supporters. Many volunteers had no training and little time, so the app had to be easy to use on the first try.
+
+---
+
+## Working with AI
+
+**Monthly AI hackathon**
+Every month [TODO(Tony): · since 20XX]
+We run a monthly AI hackathon. I helped start it. [TODO(Tony): one line on what the teams make; 2–3 photos.]
+
+**Comics made with AI** — [TODO(Tony): Comic 1 link] · [TODO(Tony): Comic 2 link]
+[TODO(Tony): one line on what the comics are about.] Each cover opens its comic.
+
+**[TODO(Tony): Report title]** — [TODO(Tony): link or PDF]
+A report made with AI. [TODO(Tony): one line on what the report is.]
+
+**How we build:** we follow the BMAD method and use several AI agents that work together. [TODO(Tony): confirm wording, and what "P stack" means.]
 
 ---
 
