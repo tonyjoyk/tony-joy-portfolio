@@ -235,6 +235,13 @@ a.link-ext:focus-visible .link-ext__arrow {
   object-fit: contain;
 }
 
+/* The video's paper is lighter than the page. Darken keeps whichever is darker,
+   so the page colour shows through the paper and the laterite lines stay as they are. */
+.hero-animation > video,
+.hero-animation > img {
+  mix-blend-mode: darken;
+}
+
 /* Pause control for the looping hero video (WCAG 2.2.2). Quiet until hovered or focused. */
 .intro { position: relative; }
 .hero-animation__pause {
