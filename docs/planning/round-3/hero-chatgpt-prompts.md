@@ -9,7 +9,63 @@ informed_by: draft 2 review against the 12 principles of animation (joins, one T
 
 Draft 2 traced stock footage. The motion inside each clip worked. These went wrong: the joins between scenes, Tony and Juhu staying on model, and the cycling perspective, which felt flat (orthographic). These prompts get ChatGPT to draw the key frames, especially the joins. We then trace them into our pencil line.
 
-## How to use these prompts (read first)
+## Steps (do these first)
+
+Use **one** ChatGPT chat for all the work. ChatGPT keeps the characters and the style from earlier messages in the same chat.
+
+You send the **shared block** only one time, in the first message, **together with** prompt 0. You do not send the shared block alone. In the prompts below, the line "[paste the shared block]" is only for a new chat. In the same chat, you can delete that line.
+
+### Before you start
+1. Get one clear photo of Tony from the side, and one from the front.
+2. Get one clear photo of Juhu from the side.
+3. Make a folder for the images, for example `hero-frames`.
+
+### Step 1: the model sheet
+1. Open a new ChatGPT chat.
+2. Attach the photos of Tony and Juhu.
+3. Copy the shared block. Paste it into the message.
+4. Copy prompt 0. Paste it under the shared block, in the same message.
+5. Send the message.
+6. Look at the result. Make sure that Tony has no cap and that Juhu is a German Shepherd.
+7. If a pose is wrong, write: "Redo only the [pose name]. Keep everything else the same."
+8. Save the image as `model-sheet.png`.
+
+### Step 2: scene 1, sheet A
+1. In the same chat, copy the scene 1 prompt. Paste it into a new message.
+2. At the end of the message, write: "Make sheet A (frames 1-6) only."
+3. Send the message.
+4. Do the checks in the "Checklist for each sheet" section at the end of this file.
+5. If one panel is wrong, write: "Redo only panel N. Keep everything else the same."
+6. Save the image as `scene1-A.png`.
+
+### Step 3: scene 1, sheet B
+1. Write: "Now make sheet B (frames 7-12) of scene 1. Use the same characters, camera and layout."
+2. Send the message.
+3. Do the checks. Save the image as `scene1-B.png`.
+
+### Step 4: the silhouette versions of scene 1
+1. Copy prompt S. Paste it into a new message.
+2. At the end, write: "Do this for sheet A of scene 1."
+3. Send the message. Save the image as `scene1-A-sil.png`.
+4. Copy prompt S again. At the end, write: "Do this for sheet B of scene 1."
+5. Send the message. Save the image as `scene1-B-sil.png`.
+
+### Step 5: scenes 2 to 7
+1. Do steps 2, 3 and 4 again for each scene, in order: 2, 3, 4, 5, 6, 7.
+2. Use the scene number in each file name, for example `scene2-A.png`.
+3. Each scene starts with the last frame of the previous scene. Make sure that frame 1 looks the same as frame 12 of the previous scene.
+
+### If the characters start to change
+In a long chat, ChatGPT can slowly forget the rules. If Tony, Juhu or the line style starts to change:
+1. Attach `model-sheet.png` again.
+2. Paste the shared block again, at the top of your next message.
+3. If this does not help, open a new chat. In the first message, attach `model-sheet.png` and the last sheet that you saved. Then paste the shared block and the next scene prompt.
+
+### When you have all the images
+1. Make sure that you have 29 images: the model sheet, plus 4 images for each of the 7 scenes.
+2. Give the folder to Claude. Claude traces the silhouette images and makes the animation.
+
+## Why the prompts are made this way
 
 **My call as the animator: 1 model sheet + 7 scenes, 12 frames per scene, each scene delivered as two 6-panel sheets.**
 
@@ -20,12 +76,6 @@ Why not 12 panels in one image:
 - Ask for the second sheet (frames 7–12) in the same chat, straight after the first, so ChatGPT keeps the characters and the camera.
 
 Why these joins: the joins failed most in draft 2, so **every scene starts on the last frame of the scene before it**. Frame 1 of each scene repeats frame 12 of the previous one, so the cuts lock together.
-
-**Order**
-1. Run prompt 0 (model sheet) first. Attach a clear photo of Tony (side and front) and a photo of Juhu.
-2. In each scene chat, attach the model sheet and the last sheet of the previous scene.
-3. Run scenes 1–7 in order. For each scene: sheet A, then sheet B, then the silhouette pass (prompt S) on both sheets.
-4. Save the files as `scene{n}-A.png`, `scene{n}-B.png`, `scene{n}-A-sil.png` and `scene{n}-B-sil.png`.
 
 **What we do with the sheets**
 - We cut the panels apart and trace the silhouette versions. These are colour-coded, so tracing is exact.
@@ -81,7 +131,7 @@ Draw a thin horizontal ground line under each row. Label nothing.
 
 ```
 [paste the shared block]
-Attach: model sheet.
+Attach (only in a new chat): model sheet.
 
 SCENE 1, sheet A (frames 1-6). Side view, camera at waist height, locked. Tony jogs in place at the centre of the panel, facing right (the world moves, not Tony). Ground line at 78% of panel height, with three small ground dashes that move a little to the left in each panel to show travel.
 1: Tony, jog contact pose (right heel touching down). Juhu small at the far left edge, galloping in from the left, facing right.
@@ -104,7 +154,7 @@ SCENE 1, sheet B (frames 7-12). Same camera.
 
 ```
 [paste the shared block]
-Attach: model sheet, scene1-B.png.
+Attach (only in a new chat): model sheet, scene1-B.png.
 
 SCENE 2, sheet A (frames 1-6). Start EXACTLY from frame 12 of the attached scene 1 sheet. The camera then sinks: the water surface line moves UP the panel in each frame. This is the only camera move, and it is smooth.
 1: Same as scene 1 frame 12: legs above the surface, splash.
@@ -124,7 +174,7 @@ SCENE 2, sheet B (frames 7-12). Locked camera now.
 
 ```
 [paste the shared block]
-Attach: model sheet, scene2-B.png.
+Attach (only in a new chat): model sheet, scene2-B.png.
 
 SCENE 3, sheet A (frames 1-6). Same underwater camera as scene 2 frame 12.
 1: Same as scene 2 frame 12.
@@ -147,7 +197,7 @@ SCENE 3, sheet B (frames 7-12). The camera follows the ball down into a dry worl
 
 ```
 [paste the shared block]
-Attach: model sheet, scene3-B.png.
+Attach (only in a new chat): model sheet, scene3-B.png.
 
 SCENE 4, sheet A (frames 1-6). Locked side view, ground line at 78%.
 1: Same as scene 3 frame 12.
@@ -170,7 +220,7 @@ SCENE 4, sheet B (frames 7-12). Same camera.
 
 ```
 [paste the shared block]
-Attach: model sheet, scene4-B.png.
+Attach (only in a new chat): model sheet, scene4-B.png.
 
 SCENE 5. STRICT ONE-POINT PERSPECTIVE. This scene must feel DEEP, not flat.
 - One vanishing point at the centre of the setting sun, which sits ON the horizon line.
@@ -188,7 +238,7 @@ Sheet A = frames 1-6, sheet B = frames 7-12, same layout. Frame 1 matches scene 
 
 ```
 [paste the shared block]
-Attach: model sheet, scene5-B.png.
+Attach (only in a new chat): model sheet, scene5-B.png.
 
 SCENE 6, sheet A (frames 1-6). The camera stays on the horizon and sun from scene 5 (horizon at 40%).
 1: Same as scene 5 frame 12: the cyclist is a dot in the sun.
@@ -211,7 +261,7 @@ SCENE 6, sheet B (frames 7-12). Same camera.
 
 ```
 [paste the shared block]
-Attach: model sheet, scene6-B.png and scene1-A.png.
+Attach: scene1-A.png (so that the last frame matches the first frame). In a new chat, also attach the model sheet and scene6-B.png.
 
 SCENE 7, sheet A (frames 1-6). Same beach camera.
 1: Same as scene 6 frame 12.
