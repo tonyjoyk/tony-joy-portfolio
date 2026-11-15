@@ -22,11 +22,6 @@ I led the redesign of the DHIS2 Android app’s core components, used for progra
 Product and design lead · Indonesia · Philippines
 I lead product and design for HEARTS360, a free, open-source dashboard for hypertension and diabetes programmes. Any EHR system that collects this data can use it to show WHO indicators in less than 2 days. It now monitors 1.5 million patients in Indonesia and is being scaled up nationally in the Philippines.
 
-**Design sprints in Indonesia**
-4 sprints in 1 week · Indonesia
-We ran 4 design sprints in 1 week. [TODO(Tony): what the sprints were about, who took part, and what came out of them.]
-_Photos: 4 loose prints, one per sprint, leading with people. [TODO(Tony): sprint photos.]_
-
 **[CallHub voter mobilisation](https://callhub.io)**
 Design lead
 I led design for CallHub’s volunteer app on Android and iOS. Campaigns, unions and nonprofits use it to call and message voters and supporters. Many volunteers had no training and little time, so the app had to be easy to use on the first try.
@@ -35,17 +30,19 @@ I led design for CallHub’s volunteer app on Android and iOS. Campaigns, unions
 
 ## Working with AI
 
+**Field reports anyone can read** — [View the report](images/field-report-jakarta.webp)
+Experiment · Jakarta, October 2026
+We are exploring how to make field reports easy for everyone to read. This one turns notes from our meetings in Jakarta into a one-page comic.
+
 **Monthly AI hackathon**
-Every month [TODO(Tony): · since 20XX]
-We run a monthly AI hackathon. I helped start it. [TODO(Tony): one line on what the teams make; 2–3 photos.]
+Every month
+We run a monthly AI hackathon. I helped start it.
 
-**Comics made with AI** — [TODO(Tony): Comic 1 link] · [TODO(Tony): Comic 2 link]
-[TODO(Tony): one line on what the comics are about.] Each cover opens its comic.
+**Design Together** — Private repo
+A design tool that questions your brief before it draws two wireframe directions. I made it to test if friction makes design with AI better.
 
-**[TODO(Tony): Report title]** — [TODO(Tony): link or PDF]
-A report made with AI. [TODO(Tony): one line on what the report is.]
-
-**How we build:** we follow the BMAD method and use several AI agents that work together. [TODO(Tony): confirm wording, and what "P stack" means.]
+**Comics made with AI** — [Boy in the Graveyard](files/comic-boy-in-the-graveyard.pdf) · [Mahesh and Abin in Wonderland](files/comic-mahesh-and-abin-in-wonderland.pdf)
+Two short stories, told as comics.
 
 ---
 
@@ -62,9 +59,6 @@ A report made with AI. [TODO(Tony): one line on what the report is.]
 **Walking for Nothing** — [Live](https://tonyjoyk.github.io/walking-for-nothing/) · [GitHub](https://github.com/tonyjoyk/walking-for-nothing)
 A man walks through a field in Kerala, forever, and the weather changes around him. I drew all of it in code with p5.js.
 
-**Design Together** — Private repo
-A design tool that questions your brief before it draws two wireframe directions. I made it to test if friction makes design with AI better.
-
 **Medicine Tracker** — [Live](https://medicine-tracker-lyart.vercel.app/) · [GitHub](https://github.com/tonyjoyk/medicine-tracker)
 I made it for my mom, to help her track her medicines.
 
@@ -75,7 +69,7 @@ I tried to capture how a memory feels, and how that feeling changes with time.
 
 ## Ways I can help
 
-- **Running design sprints** — Facilitate 5-day sprints with health experts, designers and engineers to go from a problem statement to a prototype tested with real users.
+- **Running design sprints** — Facilitate design sprints with health experts, designers and engineers to go from a problem statement to a prototype tested with real users. Recent: 4 sprints in 1 week, Indonesia.
 - **Prototyping ideas** — Build realistic prototypes quickly with Figma, ProtoPie and AI tools, so they feel real to end users.
 - **User testing** — Test prototypes with end users, remotely or in the field, to collect feedback for product improvements.
 - **Aligning teams** — Bring product, design, engineering, support and funders together to agree on a product roadmap and launch on time.

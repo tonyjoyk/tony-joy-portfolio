@@ -126,17 +126,6 @@ a.link-ext:focus-visible .link-ext__arrow {
   margin-bottom: var(--s-4);
 }
 
-/* A tiny moss dot: the one rare touch of green on the page. */
-.block__new {
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  margin-left: 0.6em;
-  vertical-align: 0.15em;
-  border-radius: 50%;
-  background: var(--moss);
-}
-
 /* Mono metadata line: role · scale · place, event names, repo status. */
 .meta {
   font-family: var(--font-mono);
@@ -421,17 +410,6 @@ a.link-ext:focus-visible .link-ext__arrow {
   content: none;
 }
 
-.media-list__note {
-  max-width: 720px;
-  margin-top: var(--s-4);
-  font-size: 0.9375rem;
-  line-height: 1.55;
-}
-
-.media-list__note strong {
-  font-weight: 700;
-}
-
 /* ---------- Loose prints ---------- */
 /* Photos like prints on a table: white border, soft shadow, a small tilt, a little overlap.
    On hover a print straightens and rises (off for reduced motion). */
@@ -440,13 +418,12 @@ a.link-ext:focus-visible .link-ext__arrow {
 }
 
 .print {
-  --r: 0deg;
   position: relative;
   display: block;
-  padding: 6px 6px 0;
+  padding: 6px;
   background: var(--paper);
   box-shadow: var(--shadow-print);
-  transform: rotate(var(--r));
+  transform: rotate(var(--r, 0deg));
   transition: transform 220ms ease, box-shadow 220ms ease;
   text-decoration: none;
   color: inherit;
@@ -465,69 +442,28 @@ a.link-ext:focus-visible .link-ext__arrow {
   object-fit: cover;
 }
 
-.print__caption {
-  display: block;
-  padding: 3px 0 5px;
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  line-height: 1.3;
-  text-align: center;
-  color: var(--muted);
-}
-
-/* No caption: keep an even border all round. */
-.print:not(:has(.print__caption)) {
-  padding-bottom: 6px;
-}
-
 a.print:focus-visible {
   outline-offset: 2px;
 }
 
-/* Four prints in a loose 2 × 2 cluster (work rows). */
-.prints--grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  padding: 4px;
-}
-
-/* Prints overlap side by side; rows keep a small gap so every caption shows. */
-.prints--grid {
-  row-gap: 6px;
-}
-
-.prints--grid .print {
-  margin: 0 -4px;
-}
-
-/* Slightly wider photos keep the cluster as tall as the other work images. */
-.prints--grid .print__photo {
-  aspect-ratio: 5 / 3;
-}
-
-.prints--grid .print:nth-child(1) { --r: -3deg; }
-.prints--grid .print:nth-child(2) { --r: 2deg; }
-.prints--grid .print:nth-child(3) { --r: 1.5deg; }
-.prints--grid .print:nth-child(4) { --r: -2deg; }
-
-/* Two or three prints fanned out inside a media-list thumbnail. */
+/* Two or three prints fanned out inside a media-list thumbnail.
+   Each list item is placed; the print is the item itself or a link inside it. */
 .prints--fan {
   width: 100%;
   height: 100%;
 }
 
-.prints--fan .print {
+.prints--fan > li {
   position: absolute;
   width: 64%;
 }
 
-.prints--fan .print:nth-child(1) { --r: -4deg; left: 0; top: 8%; }
-.prints--fan .print:nth-child(2) { --r: 2deg; left: 18%; top: 0; }
-.prints--fan .print:nth-child(3) { --r: -1deg; left: 36%; top: 14%; }
+.prints--fan > li:nth-child(1) { --r: -4deg; left: 0; top: 8%; }
+.prints--fan > li:nth-child(2) { --r: 2deg; left: 18%; top: 0; }
+.prints--fan > li:nth-child(3) { --r: -1deg; left: 36%; top: 14%; }
 
 /* Portrait covers (comics). */
-.prints--fan.prints--portrait .print {
+.prints--fan.prints--portrait > li {
   width: 46%;
 }
 
@@ -535,40 +471,8 @@ a.print:focus-visible {
   aspect-ratio: 3 / 4;
 }
 
-.prints--fan.prints--portrait .print:nth-child(1) { left: 6%; top: -6%; }
-.prints--fan.prints--portrait .print:nth-child(2) { left: 46%; top: 0; }
-
-.media-frame--prints {
-  overflow: visible;
-  background: none;
-  border-radius: 0;
-  aspect-ratio: auto;
-}
-
-/* ---------- Placeholders (remove before going live) ---------- */
-/* Striped box or highlighted text: content still to come from Tony. */
-.is-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4px;
-  background: repeating-linear-gradient(135deg, var(--placeholder) 0 7px, #E3DACB 7px 14px);
-  font-family: var(--font-mono);
-  font-size: 0.625rem;
-  font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-align: center;
-  color: var(--text);
-}
-
-.todo {
-  padding: 0 3px;
-  background: #F6E3C8;
-  outline: 1px dashed var(--laterite);
-  outline-offset: -1px;
-}
+.prints--fan.prints--portrait > li:nth-child(1) { left: 6%; top: -6%; }
+.prints--fan.prints--portrait > li:nth-child(2) { left: 46%; top: 0; }
 
 /* ---------- Ways I can help ---------- */
 .help-grid {
@@ -601,6 +505,10 @@ a.print:focus-visible {
   font-weight: 700;
   letter-spacing: -0.015em;
   margin-bottom: 4px;
+}
+
+.help-grid__meta {
+  margin-top: 6px;
 }
 
 .help-grid__desc {
@@ -695,7 +603,7 @@ a.print:focus-visible {
   .media-list__item:hover .media-list__thumb img { transform: none; }
   .print:hover,
   .print:focus-visible,
-  .print:focus-within { transform: rotate(var(--r)); }
+  .print:focus-within { transform: rotate(var(--r, 0deg)); }
 }
 
 /* ---------- Tablet ---------- */
@@ -771,10 +679,6 @@ a.print:focus-visible {
     width: 100%;
     max-width: 280px;
     margin-left: 0;
-  }
-
-  .media-frame--prints {
-    max-width: 320px;
   }
 
   .media-list__item {
