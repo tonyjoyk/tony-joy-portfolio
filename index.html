@@ -366,5 +366,21 @@
     check();
   })();
   </script>
+  <script>
+  // Hero animation (interim v2 build, see hero-v2/). Loads after the page so nothing waits on p5.js.
+  // The still drawing in the slot shows until the canvas is ready.
+  (function () {
+    var files = ['https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js', 'hero-v2/rig.js', 'hero-v2/act1.js', 'hero-v2/player.js'];
+    function next(i) {
+      if (i >= files.length) return;
+      var s = document.createElement('script');
+      s.src = files[i];
+      s.onload = function () { next(i + 1); };
+      document.body.appendChild(s);
+    }
+    function start() { if (document.getElementById('hero-animation')) next(0); }
+    if (document.readyState === 'complete') start(); else window.addEventListener('load', start);
+  })();
+  </script>
 </body>
 </html>
