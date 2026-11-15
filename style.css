@@ -236,11 +236,11 @@ a.link-ext:focus-visible .link-ext__arrow {
 }
 
 /* The hero video is drawn on white: multiply makes white exactly the page colour on every screen.
-   It is drawn smaller than its slot, centred, so it stays a quiet detail next to the intro. */
+   It is drawn at 60% of its slot, centred, so it stays a quiet detail next to the intro. */
 .hero-animation > video,
 .hero-animation > img {
   mix-blend-mode: multiply;
-  transform: scale(0.72);
+  transform: scale(0.6);
   cursor: pointer;
 }
 
