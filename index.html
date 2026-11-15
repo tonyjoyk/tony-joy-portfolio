@@ -367,10 +367,10 @@
   })();
   </script>
   <script>
-  // Hero animation (interim v2 build, see hero-v2/). Loads after the page so nothing waits on p5.js.
+  // Hero animation (interim: full storyboard from engine v0, see hero-v1/). Loads after the page so nothing waits on p5.js.
   // The still drawing in the slot shows until the canvas is ready.
   (function () {
-    var files = ['https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js', 'hero-v2/rig.js', 'hero-v2/act1.js', 'hero-v2/player.js'];
+    var files = ['https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js', 'hero-v1/player.js'];
     function next(i) {
       if (i >= files.length) return;
       var s = document.createElement('script');
