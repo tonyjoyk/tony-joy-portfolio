@@ -217,7 +217,7 @@ a.link-ext:focus-visible .link-ext__arrow {
 .hero-animation {
   position: relative;
   width: var(--hero);
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;   /* the hero loop is 600 x 450 */
   background: url("images/hero-still.svg") center / contain no-repeat;
 }
 
@@ -233,6 +233,12 @@ a.link-ext:focus-visible .link-ext__arrow {
   width: 100% !important;
   height: 100% !important;
   object-fit: contain;
+}
+
+/* The hero video is drawn on white: multiply makes white exactly the page colour on every screen. */
+.hero-animation > video,
+.hero-animation > img {
+  mix-blend-mode: multiply;
 }
 
 /* Pause control for the looping hero video (WCAG 2.2.2). Quiet until hovered or focused. */
