@@ -368,7 +368,7 @@
   </script>
   <script>
   // Hero animation: a looping video traced from reference footage (pipeline in hero/tools/v3).
-  // Added after the page loads. With reduced motion, a still frame shows instead. A small button pauses it.
+  // Added after the page loads. With reduced motion, a still frame shows instead. A click on it pauses it.
   (function () {
     function start() {
       var slot = document.getElementById('hero-animation');
@@ -389,14 +389,8 @@
         var src = document.createElement('source'); src.src = f[0]; src.type = f[1]; v.appendChild(src);
       });
       slot.appendChild(v);
-      var btn = document.createElement('button');
-      btn.type = 'button'; btn.className = 'hero-animation__pause'; btn.textContent = 'Pause';
-      btn.setAttribute('aria-label', 'Pause the animation');
-      btn.onclick = function () {
-        if (v.paused) { v.play(); btn.textContent = 'Pause'; btn.setAttribute('aria-label', 'Pause the animation'); }
-        else { v.pause(); btn.textContent = 'Play'; btn.setAttribute('aria-label', 'Play the animation'); }
-      };
-      slot.parentNode.insertBefore(btn, slot.nextSibling);
+      // No visible control: a click or tap on the drawing pauses and resumes it.
+      v.addEventListener('click', function () { if (v.paused) v.play(); else v.pause(); });
       var p = v.play(); if (p && p.catch) p.catch(function () {});
     }
     if (document.readyState === 'complete') start(); else window.addEventListener('load', start);
