@@ -1,10 +1,25 @@
 ---
 title: Hero animation — first draft notes and next steps
-status: draft 1 is in the hero slot (local branch, not pushed)
+status: draft 2 is in the hero slot (local branch, not pushed)
 created: 2026-11-15
 ---
 
-# Hero animation: first draft notes
+# Hero animation: draft notes
+
+## Draft 2 (2026-11-15)
+Built by `hero/tools/v3/film2.py`. The source windows are in `hero/tools/v3/work/windows2.json`. The loop is 240 frames, 10 s. Files: WebM 246 KB, MP4 263 KB.
+
+Fixed since draft 1:
+- **Length:** the loop is now 10 s.
+- **Lines through figures:** each figure now hides the world lines and props behind it.
+- **Juhu:** she is a shepherd in every beat. She trots in (Pexels 4166357), jumps up at Tony's back (10665038), bounces on four legs and leaps out (10665038).
+- **Swim:** the swimmer is a freediver with real fins (37236357). The goggles, snorkel and bubbles are drawn in code.
+- **Ball:** it stays in the hand, stays small through the bounces, lands, and then grows into the wheel.
+- **Colour:** the video is tagged with BT.709 colour. Its background is within 1 shade of the page colour.
+
+Still open from the list below: 2 (the throw clip is cut at the knees, so the thrower is a close shot), 5 (Juhu jumps up next to Tony, not onto his back), 7 (smaller), 9 (backpack and beanie), 11 (the thrower's hair is a light mass), 12.
+
+## Draft 1 notes
 
 ## What is in draft 1
 - One loop of 276 frames at 24 fps (11.5 s). The figures change on twos.

@@ -151,7 +151,7 @@ def figure_strokes(tr, fi, place, drawing, hair=True, nmax=10, scale_hint=1.0):
     Returns list of (kind, pts, seed): kind in outline | hair"""
     c, b = tr.outline(fi)
     if c is None: return []
-    out = []
+    out = [("fill", place(c), 0)]
     arcs = [(p, a0 + 31 * k) for arc, a0 in split_contour(c, nmax=nmax, step=4.0 / max(scale_hint, 0.25)) for k, p in enumerate(_off_edge(arc, b.shape, tr.ms))]
     for arc, a0 in arcs:
         arc = place(arc)
@@ -219,6 +219,14 @@ class Canvas:
         """a main stroke plus a faint second pass, like a pencil line gone over twice"""
         self.ribbon(pts, seed, drawing, weight, alpha)
         if second: self.ribbon(np.asarray(pts) + 1.2, 900 + seed, drawing + 50, weight * 0.4, alpha * 0.37)
+
+    def erase(self, poly, alpha=1.0, grow=2.0):
+        """paper over everything inside a closed outline (the figure hides what is behind it)"""
+        import cv2 as _cv
+        m = np.zeros_like(self.ink, dtype=np.uint8)
+        _cv.fillPoly(m, [(np.asarray(poly) * SS).astype(np.int32)], 255, lineType=_cv.LINE_AA)
+        if grow > 0: m = _cv.dilate(m, np.ones((int(grow * SS) * 2 + 1,) * 2, np.uint8))
+        self.ink[:] = self.ink * (1 - m / 255.0 * alpha)
 
     def mass(self, poly, drawing, alpha=0.85):
         poly = resample(np.vstack([poly, poly[:1]]), 3.0); j = np.arange(len(poly))

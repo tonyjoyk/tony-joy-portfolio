@@ -17,3 +17,11 @@ Raw footage lives in `hero/tools/v3/footage/` and is git-ignored. It is traced a
 | Cycle | 4957761 | https://www.pexels.com/video/man-riding-a-bicycle-in-a-road-4957761/ |
 | Juhu bounces on the beach | 10665038 | https://www.pexels.com/video/dog-catching-ball-on-beach-10665038/ |
 | Frisbee throw | 10398430 | https://www.pexels.com/video/man-in-sweater-playing-frisbee-10398430/ |
+
+## Draft 2 references, all Pexels License
+| Beat | Pexels id | Page |
+|---|---|---|
+| Juhu trots in | 4166357 | https://www.pexels.com/video/a-dog-running-around-the-grass-field-4166357/ |
+| Swim with fins | 37236357 | https://www.pexels.com/video/underwater-freediving-in-a-swimming-pool-37236357/ |
+| Frisbee throw | 10398424 | https://www.pexels.com/video/elderly-man-throwing-a-frisbee-10398423/ (sister clip 10398424) |
+Draft 2 also reuses 32115632 (jog), 6629925 (dive), 4957761 (cycle) and 10665038 (Juhu jump and bounce).

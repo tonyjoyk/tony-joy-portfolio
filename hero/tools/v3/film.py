@@ -262,6 +262,7 @@ for f in rng:
         if key not in cache: cache[key] = fig.strokes(f, drawing)
         a_, b_ = fig.progress(f)
         for kind, pts, seed in cache[key]:
+            if kind == "fill": continue
             if kind == "hair":
                 if a_ > 0.6 and b_ < 0.4: cv.mass(pts, drawing)
                 continue
