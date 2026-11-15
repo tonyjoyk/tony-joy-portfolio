@@ -15,9 +15,11 @@
   <meta property="og:image:height" content="600">
   <meta property="og:image:alt" content="Tony Joy">
   <meta name="twitter:card" content="summary">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#F7F5EF">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script>
   // Hide-before-reveal styles apply only when motion will run (see .js-motion in style.css).
@@ -31,13 +33,13 @@
   </script>
 </head>
 <body>
-  <div class="page">
-
-    <!-- Top bar -->
+  <!-- Top bar (sticky) -->
+  <div class="topbar-wrap" id="topbar">
     <nav class="topbar" aria-label="Main">
       <a class="topbar__name" href="#top">Tony Joy</a>
       <ul class="topbar__links">
         <li><a href="#work">Work</a></li>
+        <li><a href="#ai">AI</a></li>
         <li><a href="#talks">Talks</a></li>
         <li><a href="#projects">Projects</a></li>
         <li class="topbar__break" aria-hidden="true"></li>
@@ -46,11 +48,17 @@
         <li><a href="https://github.com/tonyjoyk" target="_blank" rel="noopener">GitHub</a></li>
       </ul>
     </nav>
+  </div>
 
-    <!-- Introduction -->
+  <div class="page">
+
+    <!-- Introduction, with the hero animation slot on the right (filled by hero/) -->
     <header class="intro block">
-      <h1 class="intro__lede">Hey, I'm Tony, a product designer from Kerala, India.</h1>
-      <p class="intro__bio">I lead design at <a href="https://resolvetosavelives.org" target="_blank" rel="noopener">Resolve to Save Lives</a>, a public health nonprofit where I design tools and services for healthcare staff.</p>
+      <div class="intro__text">
+        <h1 class="intro__lede">Hey, I'm Tony, a product designer from Kerala, India.</h1>
+        <p class="intro__bio">I lead design at <a href="https://resolvetosavelives.org" target="_blank" rel="noopener">Resolve to Save Lives</a>, a public health nonprofit where I design tools and services for healthcare staff.</p>
+      </div>
+      <div id="hero-animation" class="hero-animation" aria-hidden="true"></div>
     </header>
 
     <!-- Work -->
@@ -61,7 +69,7 @@
         <div class="work-row__text">
           <h3 class="work-row__title"><a class="link-ext" href="https://simple.org" target="_blank" rel="noopener">Simple<span class="link-ext__arrow" aria-hidden="true">↗</span></a></h3>
           <p class="meta">Design lead · Almost 7 million patients · 5 countries</p>
-          <p class="work-row__desc">I lead design for Simple, a free, open-source app that healthcare staff use to treat hypertension and diabetes. It manages almost 7 million patients in India, Bangladesh, Ethiopia, Sri Lanka and Myanmar.</p>
+          <p class="work-row__desc">Simple is a free, open-source app that healthcare staff use to treat hypertension and diabetes, and I lead its design. It manages nearly 7 million patients in India, Bangladesh, Ethiopia, Sri Lanka and Myanmar.</p>
         </div>
         <figure class="media-frame media-frame--work media-frame--simple">
           <img class="media-frame__img" src="images/simple-app.webp" alt="A member of healthcare staff using the Simple app" width="280" height="210" loading="lazy">
@@ -72,7 +80,7 @@
         <div class="work-row__text">
           <h3 class="work-row__title"><a class="link-ext" href="https://dhis2.org" target="_blank" rel="noopener">DHIS2 Android app<span class="link-ext__arrow" aria-hidden="true">↗</span></a></h3>
           <p class="meta">Design lead · 500,000+ healthcare staff · 60+ countries</p>
-          <p class="work-row__desc">I led the redesign of the DHIS2 Android app’s core components, used for programmes like hypertension, TB, malaria and HIV. I also designed the hypertension and diabetes module currently used in Nigeria to manage 60,000+ patients. Registration time for new patients dropped from 12 to 4 minutes, and follow-up from 4 minutes to 20 seconds.</p>
+          <p class="work-row__desc">I redesigned the core parts of the DHIS2 Android app, used in programmes such as hypertension, TB, malaria and HIV. I also designed the hypertension and diabetes module that Nigeria uses to manage 60,000+ patients. With it, registering a new patient dropped from 12 to 4 minutes, and a follow-up visit from 4 minutes to 20 seconds.</p>
         </div>
         <figure class="media-frame media-frame--work media-frame--dhis2">
           <img class="media-frame__img" src="images/dhis2-app.webp" alt="A member of healthcare staff using the DHIS2 Android app" width="280" height="210" loading="lazy">
@@ -83,7 +91,7 @@
         <div class="work-row__text">
           <h3 class="work-row__title"><a class="link-ext" href="https://hearts360.org" target="_blank" rel="noopener">HEARTS360 Dashboard<span class="link-ext__arrow" aria-hidden="true">↗</span></a></h3>
           <p class="meta">Product and design lead · Indonesia · Philippines</p>
-          <p class="work-row__desc">I lead product and design for HEARTS360, a free, open-source dashboard for hypertension and diabetes programmes. Any EHR system that collects this data can use it to show WHO indicators in less than 2 days. It now monitors 1.5 million patients in Indonesia and is being scaled up nationally in the Philippines.</p>
+          <p class="work-row__desc">HEARTS360 is a free, open-source dashboard for hypertension and diabetes programmes. I’m responsible for both its product and its design. It monitors 1.5 million patients in Indonesia, and the Philippines is now scaling it up nationally. Any electronic health record system that collects this data can connect to it and show WHO indicators in less than 2 days.</p>
         </div>
         <figure class="media-frame media-frame--work media-frame--hearts360">
           <img class="media-frame__img" src="images/hearts360-dashboard.webp" alt="HEARTS360 dashboard on a laptop" width="280" height="210" loading="lazy">
@@ -100,6 +108,47 @@
           <img class="media-frame__img" src="images/callhub-app.webp" alt="Three screens from the CallHub volunteer app: campaign list, getting started, and call script" width="280" height="210" loading="lazy">
         </figure>
       </article>
+    </section>
+
+    <!-- Working with AI -->
+    <section class="block" id="ai">
+      <h2 class="block__heading">Working with AI</h2>
+
+      <p class="block__intro">In the pod I lead, I set up the BMAD method (a step-by-step way to plan and build with AI agents) and PStack to help us plan, build and ship faster. We also explore other ways to use AI in our work, from rapid prototyping and turning field reports into comics to building an internal library of skills for creating slides, documents, communications and infographics.</p>
+
+      <ul class="media-list">
+        <li class="media-list__item reveal">
+          <div class="media-list__thumb media-list__thumb--prints">
+            <ul class="prints prints--fan" aria-label="Photos from the AI Saloon">
+              <li><a class="print" href="images/hackathon-dog-large.webp" data-lightbox aria-label="Open photo: A dog sits between people's feet at the AI Saloon"><span class="print__photo"><img src="images/hackathon-dog.webp" alt="A dog sits between people's feet at the AI Saloon" width="120" height="90" loading="lazy"></span></a></li>
+              <li><a class="print" href="images/hackathon-demo-app-large.webp" data-lightbox aria-label="Open photo: A member demos an app on his laptop at the AI Saloon"><span class="print__photo"><img src="images/hackathon-demo-app.webp" alt="A member demos an app on his laptop at the AI Saloon" width="120" height="90" loading="lazy"></span></a></li>
+              <li><a class="print" href="images/hackathon-demo-device-large.webp" data-lightbox aria-label="Open photo: A member demos a small screen device he built at the AI Saloon"><span class="print__photo"><img src="images/hackathon-demo-device.webp" alt="A member demos a small screen device he built at the AI Saloon" width="120" height="90" loading="lazy"></span></a></li>
+              <li><a class="print" href="images/hackathon-group-large.webp" data-lightbox aria-label="Open photo: People at the AI Saloon watch a demo"><span class="print__photo"><img src="images/hackathon-group.webp" alt="People at the AI Saloon watch a demo" width="120" height="90" loading="lazy"></span></a></li>
+            </ul>
+          </div>
+          <div class="media-list__text">
+            <h3 class="media-list__title">AI Saloon</h3>
+            <p class="meta">First Sunday of every month</p>
+            <p class="media-list__desc">A few friends and I started AI Saloon as a monthly meetup to build things with AI and share what we learn. It has since grown to 18 members, most of whom meet every month to build, experiment and demo their projects.</p>
+          </div>
+        </li>
+        <li class="media-list__item reveal">
+          <div class="media-list__thumb media-list__thumb--prints">
+            <ul class="prints prints--fan prints--portrait">
+              <li><a class="print" href="files/comic-boy-in-the-graveyard.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="print__photo"><img src="images/comic-boy-in-the-graveyard.webp" alt="" width="90" height="120" loading="lazy"></span></a></li>
+              <li><a class="print" href="files/comic-mahesh-and-abin-in-wonderland.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="print__photo"><img src="images/comic-mahesh-and-abin.webp" alt="" width="90" height="120" loading="lazy"></span></a></li>
+            </ul>
+          </div>
+          <div class="media-list__text">
+            <h3 class="media-list__title">Comics</h3>
+            <p class="media-list__desc">Two personal stories told through AI-generated comics.</p>
+            <p class="media-list__links">
+              <a class="link-ext" href="files/comic-boy-in-the-graveyard.pdf" target="_blank" rel="noopener">Boy in the Graveyard<span class="link-ext__arrow" aria-hidden="true">↗</span></a>
+              <a class="link-ext" href="files/comic-mahesh-and-abin-in-wonderland.pdf" target="_blank" rel="noopener">Mahesh and Abin in Wonderland<span class="link-ext__arrow" aria-hidden="true">↗</span></a>
+            </p>
+          </div>
+        </li>
+      </ul>
     </section>
 
     <!-- Talks -->
@@ -203,7 +252,8 @@
           <svg class="help-grid__icon" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M128,42a94,94,0,1,0,94,94A94.11,94.11,0,0,0,128,42Zm0,176a82,82,0,1,1,82-82A82.1,82.1,0,0,1,128,218ZM172.24,91.76a6,6,0,0,1,0,8.48l-40,40a6,6,0,1,1-8.48-8.48l40-40A6,6,0,0,1,172.24,91.76ZM98,16a6,6,0,0,1,6-6h48a6,6,0,0,1,0,12H104A6,6,0,0,1,98,16Z"/></svg>
           <div class="help-grid__text">
             <h3 class="help-grid__title">Running design sprints</h3>
-            <p class="help-grid__desc">Facilitate 5-day sprints with health experts, designers and engineers to go from a problem statement to a prototype tested with real users.</p>
+            <p class="help-grid__desc">Facilitate design sprints with health experts, designers and engineers to go from a problem statement to a prototype tested with real users.</p>
+            <p class="meta help-grid__meta">Recent: 4 sprints in 1 week, Indonesia</p>
           </div>
         </li>
         <li class="help-grid__item reveal">
@@ -232,6 +282,12 @@
 
   </div>
 
+  <!-- Photo viewer for loose prints (links still open the photo if the script does not run) -->
+  <dialog class="lightbox" id="lightbox" aria-label="Photo">
+    <img class="lightbox__img" alt="">
+    <button class="lightbox__close" type="button" aria-label="Close photo">×</button>
+  </dialog>
+
   <!-- Footer landscape: built by scripts/build-footer-svg.py (images/footer-landscape.svg) -->
   <footer class="footer-band reveal reveal--wipe" id="footer">
     <svg class="landscape" viewBox="0 0 3272 612" width="3272" height="612" preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false">
@@ -243,6 +299,37 @@
       <g class="landscape__frisbee"><g transform="translate(0.000000,612.000000) scale(1.000000,-1.000000)" fill="currentColor"><path d="M1154 611c-58 -6 -121 -36 -120 -56 1 -6 4 -7 20 -7 45 0 131 33 136 51 2 10 -14 15 -36 12z M1183 605c4 -2 4 -6 -1 -11 -5 -5 -7 -5 -4 0 4 5 4 7 0 10 l-3 3 2 0 c2 0 4 -1 6 -2z M1173 604c5 -2 6 -4 4 -8 -5 -8 -35 -23 -63 -32 -64 -18 -84 -6 -32 20 18 9 40 16 67 21 7 1 21 1 24 -1z M1087 590c-1 -1 -5 -3 -9 -5 -25 -13 -35 -24 -26 -30 2 -1 5 -2 7 -2 4 0 6 -2 3 -3 -10 -2 -25 2 -25 6 0 8 26 27 47 34 3 1 5 1 3 0z"/></g></g>
     </svg>
   </footer>
+
+  <script>
+  // Loose prints: open the large photo in a dialog. Click anywhere or press Esc to close.
+  (function () {
+    var box = document.getElementById('lightbox');
+    if (!box || typeof box.showModal !== 'function') return;
+    var img = box.querySelector('img');
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('a[data-lightbox]');
+      if (!link) return;
+      e.preventDefault();
+      var thumb = link.querySelector('img');
+      img.src = link.getAttribute('href');
+      img.alt = thumb ? thumb.alt : '';
+      box.showModal();
+    });
+    box.addEventListener('click', function () { box.close(); });
+    box.addEventListener('close', function () { img.removeAttribute('src'); });
+  })();
+  </script>
+
+  <script>
+  // Top bar: show its hairline only after the page scrolls.
+  (function () {
+    var bar = document.getElementById('topbar');
+    if (!bar) return;
+    function update() { bar.classList.toggle('is-scrolled', window.scrollY > 4); }
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 
   <script>
   (function () {
@@ -277,6 +364,22 @@
     window.addEventListener('scroll', schedule, { passive: true });
     window.addEventListener('resize', schedule);
     check();
+  })();
+  </script>
+  <script>
+  // Hero animation (interim: full storyboard from engine v0, see hero-v1/). Loads after the page so nothing waits on p5.js.
+  // The still drawing in the slot shows until the canvas is ready.
+  (function () {
+    var files = ['https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js', 'hero-v1/player.js'];
+    function next(i) {
+      if (i >= files.length) return;
+      var s = document.createElement('script');
+      s.src = files[i];
+      s.onload = function () { next(i + 1); };
+      document.body.appendChild(s);
+    }
+    function start() { if (document.getElementById('hero-animation')) next(0); }
+    if (document.readyState === 'complete') start(); else window.addEventListener('load', start);
   })();
   </script>
 </body>
