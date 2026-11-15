@@ -6,6 +6,8 @@ created: 2026-11-15
 
 # Hero animation: draft notes
 
+**Next step (2026-11-15):** Tony generates key-frame sheets with ChatGPT using [hero-chatgpt-prompts.md](hero-chatgpt-prompts.md). Later sessions trace those sheets instead of stock footage.
+
 ## Draft 2 (2026-11-15)
 Built by `hero/tools/v3/film2.py`. The source windows are in `hero/tools/v3/windows2.json`. The loop is 240 frames, 10 s. Files: WebM 246 KB, MP4 263 KB.
 
