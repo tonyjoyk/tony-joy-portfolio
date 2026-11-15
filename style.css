@@ -470,6 +470,13 @@ a.print:focus-visible {
 .prints--fan > li:nth-child(2) { --r: 2deg; left: 18%; top: 0; }
 .prints--fan > li:nth-child(3) { --r: -1deg; left: 36%; top: 14%; }
 
+/* Four prints: a little narrower, so all four peek out. */
+.prints--fan > li:first-child:nth-last-child(4),
+.prints--fan > li:first-child:nth-last-child(4) ~ li { width: 58%; }
+.prints--fan > li:first-child:nth-last-child(4) ~ li:nth-child(2) { left: 14%; top: 2%; }
+.prints--fan > li:first-child:nth-last-child(4) ~ li:nth-child(3) { left: 28%; top: 10%; }
+.prints--fan > li:nth-child(4) { --r: 3deg; left: 42%; top: 4%; }
+
 /* Portrait covers (comics). */
 .prints--fan.prints--portrait > li {
   width: 46%;
