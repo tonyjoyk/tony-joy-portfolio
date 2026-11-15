@@ -7,3 +7,13 @@
 Reference still for the review page only (not committed, not published): johnmartin.in landing animation, `hero/lab/v3/ref/`.
 
 Raw footage lives in `hero/tools/v3/footage/` and is git-ignored. It is traced as motion reference only; no pixels from it appear in the output.
+
+## Draft 1 (full loop) references, all Pexels License
+| Beat | Pexels id | Page |
+|---|---|---|
+| Juhu runs in, leaps out | 6564851 | https://www.pexels.com/video/dog-playing-with-a-disc-6564851/ |
+| Dive | 6629925 | https://www.pexels.com/video/side-view-of-man-jumping-into-the-swimming-pool-6629925/ |
+| Swim | 8686048 | https://www.pexels.com/video/a-male-swimmer-swimming-underwater-8686048/ |
+| Cycle | 4957761 | https://www.pexels.com/video/man-riding-a-bicycle-in-a-road-4957761/ |
+| Juhu bounces on the beach | 10665038 | https://www.pexels.com/video/dog-catching-ball-on-beach-10665038/ |
+| Frisbee throw | 10398430 | https://www.pexels.com/video/man-in-sweater-playing-frisbee-10398430/ |

@@ -226,11 +226,32 @@ a.link-ext:focus-visible .link-ext__arrow {
   background-image: none;
 }
 
-.hero-animation > canvas {
+.hero-animation > canvas,
+.hero-animation > video,
+.hero-animation > img {
   display: block;
   width: 100% !important;
   height: 100% !important;
+  object-fit: contain;
 }
+
+/* Pause control for the looping hero video (WCAG 2.2.2). Quiet until hovered or focused. */
+.intro { position: relative; }
+.hero-animation__pause {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font: inherit;
+  font-size: 13px;
+  color: var(--muted, #6E6A63);
+  background: transparent;
+  border: 0;
+  padding: 4px 8px;
+  cursor: pointer;
+  opacity: 0.55;
+}
+.hero-animation__pause:hover,
+.hero-animation__pause:focus-visible { opacity: 1; text-decoration: underline; }
 
 .intro__lede {
   font-size: 2rem;

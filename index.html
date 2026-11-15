@@ -367,18 +367,38 @@
   })();
   </script>
   <script>
-  // Hero animation (interim: full storyboard from engine v0, see hero-v1/). Loads after the page so nothing waits on p5.js.
-  // The still drawing in the slot shows until the canvas is ready.
+  // Hero animation: a looping video traced from reference footage (pipeline in hero/tools/v3).
+  // Added after the page loads. With reduced motion, a still frame shows instead. A small button pauses it.
   (function () {
-    var files = ['https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js', 'hero-v1/player.js'];
-    function next(i) {
-      if (i >= files.length) return;
-      var s = document.createElement('script');
-      s.src = files[i];
-      s.onload = function () { next(i + 1); };
-      document.body.appendChild(s);
+    function start() {
+      var slot = document.getElementById('hero-animation');
+      if (!slot) return;
+      var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      slot.classList.add('is-live');
+      if (still) {
+        var img = document.createElement('img');
+        img.src = 'hero/hero-poster.png'; img.alt = '';
+        slot.appendChild(img);
+        return;
+      }
+      var v = document.createElement('video');
+      v.muted = true; v.loop = true; v.autoplay = true; v.playsInline = true;
+      v.setAttribute('muted', ''); v.setAttribute('playsinline', '');
+      v.poster = 'hero/hero-poster.png';
+      [['hero/hero-loop.webm', 'video/webm'], ['hero/hero-loop.mp4', 'video/mp4']].forEach(function (f) {
+        var src = document.createElement('source'); src.src = f[0]; src.type = f[1]; v.appendChild(src);
+      });
+      slot.appendChild(v);
+      var btn = document.createElement('button');
+      btn.type = 'button'; btn.className = 'hero-animation__pause'; btn.textContent = 'Pause';
+      btn.setAttribute('aria-label', 'Pause the animation');
+      btn.onclick = function () {
+        if (v.paused) { v.play(); btn.textContent = 'Pause'; btn.setAttribute('aria-label', 'Pause the animation'); }
+        else { v.pause(); btn.textContent = 'Play'; btn.setAttribute('aria-label', 'Play the animation'); }
+      };
+      slot.parentNode.insertBefore(btn, slot.nextSibling);
+      var p = v.play(); if (p && p.catch) p.catch(function () {});
     }
-    function start() { if (document.getElementById('hero-animation')) next(0); }
     if (document.readyState === 'complete') start(); else window.addEventListener('load', start);
   })();
   </script>
