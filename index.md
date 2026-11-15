@@ -34,10 +34,10 @@ In the pod I lead, I set up the BMAD method (a step-by-step way to plan and buil
 
 **AI Saloon**
 First Sunday of every month
-I co-started it with friends, and new people join each month. Each of us builds something with AI and demos it. We learn from each other and keep up with new AI tools.
+A few friends and I started AI Saloon as a monthly meetup to build things with AI and share what we learn. It has since grown to 18 members, most of whom meet every month to build, experiment and demo their projects.
 
 **Comics** — [Boy in the Graveyard](files/comic-boy-in-the-graveyard.pdf) · [Mahesh and Abin in Wonderland](files/comic-mahesh-and-abin-in-wonderland.pdf)
-Two short personal stories I made with AI.
+Two personal stories told through AI-generated comics.
 
 ---
 
