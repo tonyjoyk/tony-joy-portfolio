@@ -30,14 +30,14 @@ I led design for CallHub’s volunteer app on Android and iOS. Campaigns, unions
 
 ## Working with AI
 
-In the pod I lead, I set up the BMAD method and PStack so we can plan, build and ship faster. We also try AI on smaller internal tasks, such as turning field reports into comics that are easier to read.
+In the pod I lead, I set up the BMAD method (a step-by-step way to plan and build with AI agents) and PStack so we can plan, build and ship faster. We also try AI on smaller internal tasks, such as turning field reports into comics that are easier to read.
 
-**Monthly AI Saloon**
+**AI Saloon**
 First Sunday of every month
-Friends, and new people who join, meet once a month. Each of us builds something with AI and demos it. The aim is simple: we learn from each other and stay up to date with building with AI.
+I co-started it with friends, and new people join each month. Each of us builds something with AI and demos it. We learn from each other and keep up with new AI tools.
 
 **Comics** — [Boy in the Graveyard](files/comic-boy-in-the-graveyard.pdf) · [Mahesh and Abin in Wonderland](files/comic-mahesh-and-abin-in-wonderland.pdf)
-Two short stories, told as comics.
+Two short personal stories I made with AI.
 
 ---
 
