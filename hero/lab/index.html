@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hero animation lab</title>
+<style>
+  :root { --bg: #F6F1E8; --ink: #A4553A; --text: #1F1D1A; --muted: #6E6A63; --line: #E3DED3; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  p { margin: 0 0 16px; color: var(--muted); }
+  #stage { width: 600px; max-width: 100%; aspect-ratio: 1; border: 1px solid var(--line); background: var(--bg); }
+  #stage canvas { width: 100% !important; height: auto !important; display: block; }
+  .controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 12px 0; }
+  button { font: inherit; padding: 6px 12px; border: 1px solid var(--text); background: transparent; border-radius: 6px; cursor: pointer; }
+  input[type=range] { accent-color: var(--ink); }
+  #scrub { flex: 1 1 100%; }
+  .readout { font-family: ui-monospace, Menlo, monospace; font-size: 13px; color: var(--muted); }
+  label { display: inline-flex; gap: 6px; align-items: center; color: var(--muted); }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"></script>
+</head>
+<body>
+<main>
+  <h1>Hero animation lab</h1>
+  <p>Built from the 29 key frames in <code>hero/keyframes/</code>. 24 frames a second, characters on twos, pencil line redrawn every frame.</p>
+  <div id="stage"></div>
+  <div class="controls">
+    <button id="play" type="button">Pause</button>
+    <button id="back" type="button">◀ frame</button>
+    <button id="fwd" type="button">frame ▶</button>
+    <label>Speed <input id="speed" type="range" min="0.1" max="1.5" step="0.1" value="1"></label>
+    <label><input id="keys" type="checkbox"> Show key frames only</label>
+    <input id="scrub" type="range" min="0" max="239" step="1" value="0" aria-label="Time">
+    <span class="readout" id="readout">frame 0</span>
+  </div>
+</main>
+<script src="engine.js"></script>
+</body>
+</html>
