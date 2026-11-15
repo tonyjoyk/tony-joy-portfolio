@@ -6,3 +6,14 @@
 # BMAD tooling (local only, keep out of the public Pages site)
 _bmad/
 .claude/
+
+# Hero v3 pipeline: local tools, raw footage and intermediate frames stay off git
+hero/tools/v3/.venv/
+hero/tools/v3/models/
+hero/tools/v3/footage/
+hero/tools/v3/work/
+hero/tools/v3/out/
+hero/tools/v3/contact/
+hero/lab/v3/ref/
+# processed outputs are committed only after Tony approves them
+hero/lab/v3/media/

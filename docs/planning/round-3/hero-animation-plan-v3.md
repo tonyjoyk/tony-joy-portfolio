@@ -88,3 +88,6 @@ Stock clips: free sources such as Pexels or Pixabay, with licences that allow us
 - **Too much detail from real outlines.** Mitigation: simplify hard, with roughly 8–15 strokes per figure.
 - **Underwater and cycling reference** depends on finding good stock footage.
 - **Effort:** this is more work than v1, but each step produces something you can see and judge.
+
+## 8. Progress
+- **2026-11-15, step 1 (gate) built, waiting for Tony.** Pipeline in `hero/tools/v3/` (MediaPipe pose + mask → contour split at anatomical corners → pencil ribbons → ffmpeg). Prototype source: Pexels 32115632, a slow-motion treadmill run (`hero/tools/v3/SOURCES.md`). Output: two strides, 40 frames at 24 fps, figure on twos, 10–17 strokes per drawing, solid hair mass; MP4 85 KB, WebM 75 KB. Review page: `hero/lab/v3/`. Media is kept out of git until approved.

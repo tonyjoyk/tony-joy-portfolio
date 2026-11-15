@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hero animation lab v3: the gate</title>
+<style>
+  :root { --bg: #F7F5EF; --ink: #A4553A; --text: #1F1D1A; --muted: #6E6A63; --line: #E3DED3; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  main { max-width: 1320px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  h2 { font-size: 16px; margin: 0 0 6px; }
+  p, li { color: var(--muted); }
+  p { margin: 0 0 16px; max-width: 70ch; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+  .cell { display: flex; flex-direction: column; }
+  .frame { width: 100%; aspect-ratio: 1; border: 1px solid var(--line); background: var(--bg); overflow: hidden; }
+  .frame video, .frame img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .frame { position: relative; }
+  .frame iframe { position: absolute; top: 0; left: 0; width: 640px; height: 640px; border: 0; transform-origin: 0 0; }
+  .cell p { font-size: 13px; margin: 8px 0 0; }
+  .controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 10px 0 0; }
+  button { font: inherit; font-size: 14px; padding: 4px 10px; border: 1px solid var(--text); background: transparent; border-radius: 6px; cursor: pointer; }
+  input[type=range] { accent-color: var(--ink); }
+  .readout { font-family: ui-monospace, Menlo, monospace; font-size: 13px; color: var(--muted); }
+  label { display: inline-flex; gap: 6px; align-items: center; color: var(--muted); font-size: 14px; }
+  .question { border-left: 3px solid var(--ink); padding: 8px 14px; margin-top: 28px; color: var(--text); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Gate: one second of real motion, drawn in pencil</h1>
+  <p>The new proof (left) takes every pose from real video: a runner filmed in slow motion, tracked frame by frame, then redrawn as 10–17 laterite pencil strokes. It runs at 24 frames a second, with the figure on twos. The middle panel is the v1 slice, whose poses were typed in by hand. The right panel is a still from John Martin's landing animation, for reference only.</p>
+
+  <div class="grid">
+    <div class="cell">
+      <h2>v3: reference-driven (new)</h2>
+      <div class="frame">
+        <video id="v3" autoplay muted loop playsinline poster="media/jog-poster.png">
+          <source src="media/jog-proof.webm" type="video/webm">
+          <source src="media/jog-proof.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="controls">
+        <button id="play" type="button">Pause</button>
+        <button id="back" type="button">◀ frame</button>
+        <button id="fwd" type="button">frame ▶</button>
+        <label>Speed <input id="speed" type="range" min="0.25" max="1.5" step="0.25" value="1"></label>
+        <span class="readout" id="readout"></span>
+      </div>
+      <p>Two strides, 40 frames (1.67 s), looping. Source: stock clip, see <code>hero/tools/v3/SOURCES.md</code>. A stranger stands in for you until your own clip arrives.</p>
+    </div>
+    <div class="cell">
+      <h2>v1: hand-typed poses</h2>
+      <div class="frame"><iframe id="v1" src="../v1/index.html" title="v1 slice"></iframe></div>
+      <p>The live v1 page, cropped to its stage. <a href="../v1/">Open v1 on its own</a> for its controls.</p>
+    </div>
+    <div class="cell">
+      <h2>Reference: johnmartin.in</h2>
+      <div class="frame"><img src="ref/johnmartin-still.jpg" alt="A still from John Martin's landing animation: a seated figure drawn in a few broken pink strokes, with a solid head of hair."></div>
+      <p>Local reference only, not committed. Bold, broken strokes, a solid mass for the hair, 12 drawings a second.</p>
+    </div>
+  </div>
+
+  <div class="question">
+    <strong>The question for this gate:</strong> does the left panel clearly feel more alive than v1? If yes, next comes your own jog clip and then Juhu. If no, we stop and rethink.
+  </div>
+</main>
+<script>
+  // v1: show only its stage, scaled to the panel
+  const f1 = document.getElementById("v1");
+  const fit = () => { f1.style.transform = `scale(${f1.parentElement.clientWidth / 600})`; };
+  f1.addEventListener("load", () => {
+    const d = f1.contentDocument, st = d.getElementById("stage");
+    d.body.style.overflow = "hidden"; const r = st.getBoundingClientRect();
+    d.documentElement.scrollTo(0, 0); d.querySelector("main").style.cssText += `;margin:0;padding:0;max-width:none`;
+    d.querySelectorAll("main > :not(#stage)").forEach(e => e.style.display = "none"); st.style.border = "0"; fit();
+  });
+  addEventListener("resize", fit);
+  const v = document.getElementById("v3"), FPS = 24, N = 40;
+  const play = document.getElementById("play"), ro = document.getElementById("readout");
+  const frame = () => Math.round(v.currentTime * FPS) % N;
+  const show = () => { ro.textContent = `frame ${frame()} / ${N}`; requestAnimationFrame(show); };
+  show();
+  play.onclick = () => { if (v.paused) { v.play(); play.textContent = "Pause"; } else { v.pause(); play.textContent = "Play"; } };
+  const step = d => { v.pause(); play.textContent = "Play"; v.currentTime = (((frame() + d + N) % N) + 0.5) / FPS; };
+  document.getElementById("back").onclick = () => step(-1);
+  document.getElementById("fwd").onclick = () => step(1);
+  document.getElementById("speed").oninput = e => { v.playbackRate = +e.target.value; };
+</script>
+</body>
+</html>
