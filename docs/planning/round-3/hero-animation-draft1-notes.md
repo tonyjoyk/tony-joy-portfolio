@@ -7,7 +7,7 @@ created: 2026-11-15
 # Hero animation: draft notes
 
 ## Draft 2 (2026-11-15)
-Built by `hero/tools/v3/film2.py`. The source windows are in `hero/tools/v3/work/windows2.json`. The loop is 240 frames, 10 s. Files: WebM 246 KB, MP4 263 KB.
+Built by `hero/tools/v3/film2.py`. The source windows are in `hero/tools/v3/windows2.json`. The loop is 240 frames, 10 s. Files: WebM 246 KB, MP4 263 KB.
 
 Fixed since draft 1:
 - **Length:** the loop is now 10 s.

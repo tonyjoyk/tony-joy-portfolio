@@ -21,7 +21,7 @@ a = ap.parse_args()
 os.makedirs(a.out, exist_ok=True)
 S = a.size; K = S / 600.0
 GY = 470; TORSO = 62; TOTAL = 240
-W = json.load(open("work/windows2.json"))           # source windows picked from the contact sheets
+W = json.load(open("windows2.json"))           # source windows picked from the contact sheets
 
 T = {n: Track(f"work/{n}") for n in ["jog", "dive", "swim2", "cycle2", "dogbeach", "gsd", "throw2"]}
 for n in ("dogbeach", "gsd"): T[n].has_pose = False

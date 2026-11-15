@@ -1,0 +1,3 @@
+{"gsd": {"trot": [57, 105], "speed": 2.0, "flip": false, "len": [66, 100]},
+ "swim": {"src": [0, 90], "flip": true, "len": [0, 90]},
+ "throw": {"src": [96, 176], "release_frac": 0.6, "flip": false, "len": [96, 176], "hand": null}}
