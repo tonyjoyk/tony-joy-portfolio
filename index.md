@@ -12,15 +12,15 @@ I lead design at [Resolve to Save Lives](https://resolvetosavelives.org), a publ
 
 **[Simple](https://simple.org)**
 Design lead · Almost 7 million patients · 5 countries
-I lead design for Simple, a free, open-source app that healthcare staff use to treat hypertension and diabetes. It manages almost 7 million patients in India, Bangladesh, Ethiopia, Sri Lanka and Myanmar.
+Simple is a free, open-source app that healthcare staff use to treat hypertension and diabetes, and I lead its design. It manages nearly 7 million patients in India, Bangladesh, Ethiopia, Sri Lanka and Myanmar.
 
 **[DHIS2 Android app](https://dhis2.org)**
 Design lead · 500,000+ healthcare staff · 60+ countries
-I led the redesign of the DHIS2 Android app’s core components, used for programmes like hypertension, TB, malaria and HIV. I also designed the hypertension and diabetes module currently used in Nigeria to manage 60,000+ patients. Registration time for new patients dropped from 12 to 4 minutes, and follow-up from 4 minutes to 20 seconds.
+I redesigned the core parts of the DHIS2 Android app, used in programmes such as hypertension, TB, malaria and HIV. I also designed the hypertension and diabetes module that Nigeria uses to manage 60,000+ patients. With it, registering a new patient dropped from 12 to 4 minutes, and a follow-up visit from 4 minutes to 20 seconds.
 
 **[HEARTS360 Dashboard](https://hearts360.org)**
 Product and design lead · Indonesia · Philippines
-I lead product and design for HEARTS360, a free, open-source dashboard for hypertension and diabetes programmes. Any EHR system that collects this data can use it to show WHO indicators in less than 2 days. It now monitors 1.5 million patients in Indonesia and is being scaled up nationally in the Philippines.
+HEARTS360 is a free, open-source dashboard for hypertension and diabetes programmes. I’m responsible for both its product and its design. It monitors 1.5 million patients in Indonesia, and the Philippines is now scaling it up nationally. Any electronic health record system that collects this data can connect to it and show WHO indicators in less than 2 days.
 
 **[CallHub voter mobilisation](https://callhub.io)**
 Design lead
@@ -30,7 +30,7 @@ I led design for CallHub’s volunteer app on Android and iOS. Campaigns, unions
 
 ## Working with AI
 
-I use AI to help our team deliver faster and to share our work in new ways. In the pod I lead, I set up the BMAD method and PStack to speed up how we plan, build and ship. I also co-started a monthly AI meetup, and I am testing how to turn field reports into comics that anyone can read.
+In the pod I lead, I set up the BMAD method and PStack so we can plan, build and ship faster. We also try AI on smaller internal tasks, such as turning field reports into comics that are easier to read.
 
 **Monthly AI Saloon**
 First Sunday of every month
