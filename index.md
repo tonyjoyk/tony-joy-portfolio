@@ -1,6 +1,6 @@
 # Tony Joy
 
-Work · AI · Talks · Projects · [Email](mailto:tonykokkad@gmail.com) · [LinkedIn](https://www.linkedin.com/in/tony-joy/) · [GitHub](https://github.com/tonyjoyk)
+Work · AI · Speaking · Projects · [Email](mailto:tonykokkad@gmail.com) · [LinkedIn](https://www.linkedin.com/in/tony-joy/) · [GitHub](https://github.com/tonyjoyk)
 
 ## Hey, I'm Tony, a product designer from Kerala, India.
 
@@ -41,11 +41,12 @@ Two personal stories told through AI-generated comics.
 
 ---
 
-## Talks
+## Speaking and Facilitation
 
 - **Building dashboards for hypertension and diabetes care** — VizChitra conference — [Video on request](mailto:tonykokkad@gmail.com?subject=VizChitra%20talk%20video)
 - **Designing health programmes around end users** — DHIS2 conference — [Watch from 8:40](https://www.youtube.com/watch?v=209jCclCpE0&t=8m40s)
-- **Fast and simple user testing for digital health tools** — [Watch](https://www.youtube.com/watch?v=s0QYzP6Xr6w)
+- **Fast and simple user testing for digital health tools** — [Watch](https://www.youtube.com/watch?v=s0QYzP6Xr6w) — A user testing guide for designers working in healthcare.
+- **Parallel design sprints for public health teams** — RTSL convening, Indonesia — Planned and facilitated four parallel sprints exploring solutions for hypertension and diabetes care.
 
 ---
 
@@ -54,13 +55,13 @@ Two personal stories told through AI-generated comics.
 **Walking for Nothing** — [Live](https://tonyjoyk.github.io/walking-for-nothing/) · [GitHub](https://github.com/tonyjoyk/walking-for-nothing)
 A man walks through a field in Kerala, forever, and the weather changes around him. I drew all of it in code with p5.js.
 
-**Design Together** — Private repo
+**Design Together** — [Live](https://design-together.vercel.app/) · [GitHub](https://github.com/tonyjoyk/design-together)
 A design tool that questions your brief before it draws two wireframe directions. I made it to test if friction makes design with AI better.
 
 **Medicine Tracker** — [Live](https://medicine-tracker-lyart.vercel.app/) · [GitHub](https://github.com/tonyjoyk/medicine-tracker)
 I made it for my mom, to help her track her medicines.
 
-**MemoryMoments** — Private repo
+**MemoryMoments** — [Live](https://memorymoments.lovable.app/) · [GitHub](https://github.com/tonyjoyk/memorymoments)
 I tried to capture how a memory feels, and how that feeling changes with time.
 
 ---
