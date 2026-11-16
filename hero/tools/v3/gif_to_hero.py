@@ -1,6 +1,6 @@
 """Turn Tony's hand-made hero GIF into the site's hero video.
 
-- Flattens the paper texture to white and redraws the lines in laterite, keeping their soft edges.
+- Flattens the paper texture to white and redraws the lines in the --ink colour (default laterite), keeping their soft edges.
   On the page the video uses mix-blend-mode: multiply, so it has no visible box (see style.css).
 - Removes small stray marks near the bottom edge (frame numbers left over from the key-frame sheets).
 - Keeps each frame's own duration (the GIF has holds), and writes WebM + MP4 (BT.709) + a poster.
@@ -14,14 +14,17 @@ from PIL import Image, ImageSequence
 ap = argparse.ArgumentParser()
 ap.add_argument("gif"); ap.add_argument("outdir")
 ap.add_argument("--poster", type=int, default=6, help="frame index for the still (reduced motion and poster)")
+ap.add_argument("--ink", default="#A4553A", help="line colour as it should look on the page, e.g. #3A3632 (muted black)")
 a = ap.parse_args()
 
 # The video is drawn on WHITE and shown with CSS mix-blend-mode: multiply, so white becomes exactly the
 # page colour (#F7F5EF) on every screen. The ink is pre-divided by the page colour, so that after the
 # multiply it lands on laterite (#A4553A).
-PAGE = np.array([247, 245, 239], float); LATERITE = np.array([164, 85, 58], float)
-BG = np.array([255, 255, 255], float); INK = np.clip(LATERITE / (PAGE / 255), 0, 255)
-L_INK = 0.299 * INK[0] + 0.587 * INK[1] + 0.114 * INK[2]
+PAGE = np.array([247, 245, 239], float)
+LINE = np.array([int(a.ink.lstrip("#")[i:i + 2], 16) for i in (0, 2, 4)], float)
+BG = np.array([255, 255, 255], float); INK = np.clip(LINE / (PAGE / 255), 0, 255)
+SRC_INK = np.array([164, 85, 58], float)                 # the GIF's own line colour (laterite), used to read ink amount
+L_INK = 0.299 * SRC_INK[0] + 0.587 * SRC_INK[1] + 0.114 * SRC_INK[2]
 
 def clean(rgb):
     px = rgb.astype(float)
