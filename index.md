@@ -4,7 +4,7 @@ Work · Speaking · AI · Projects · [Email](mailto:tonykokkad@gmail.com) · [L
 
 ## Hey, I'm Tony, a product designer from Kerala, India.
 
-I lead design at [Resolve to Save Lives](https://resolvetosavelives.org), a public health nonprofit where I design tools and services for healthcare staff.
+I'm a design lead at [Resolve to Save Lives](https://resolvetosavelives.org), a public health nonprofit where I design tools and services for healthcare staff.
 
 ---
 
