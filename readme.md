@@ -40,7 +40,7 @@ Open http://localhost:8080.
 | `images/walking-for-nothing.webp`, `medicine-tracker.webp` | Side project thumbnails (captured from the live sites) |
 | `images/design-together.webp`, `memorymoments.webp` | Side project thumbnails (captured from local runs of the private repos) |
 | `images/footer-landscape.svg` | Footer landscape source (the frisbee is its own group, so it can float) |
-| `images/og-image.jpg` | Social preview image (600×600) |
+| `images/og-tony-juhu.jpg` | Social preview image (1200×630): Juhu leaps after the frisbee, a frame of the hero loop |
 | `scripts/optimize-images.py` | Resizes images to 2x display width, saves WebP |
 | `scripts/build-footer-svg.py` | Traces the footer drawing, adds the full-width ground line, splits out the frisbee |
 | `docs/planning/` | BMAD docs: round 1 at the top level, round 2 in `round-2/` |
