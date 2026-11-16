@@ -387,6 +387,7 @@
   // Hero animation: a looping video traced from reference footage (pipeline in hero/tools/v3).
   // Added after the page loads. With reduced motion, a still frame shows instead. A click on it pauses it.
   (function () {
+    var V = '?v=20261116-black';   // change this whenever the hero files change, so browsers fetch the new ones
     function start() {
       var slot = document.getElementById('hero-animation');
       if (!slot) return;
@@ -394,15 +395,15 @@
       slot.classList.add('is-live');
       if (still) {
         var img = document.createElement('img');
-        img.src = 'hero/hero-poster.png'; img.alt = '';
+        img.src = 'hero/hero-poster.png' + V; img.alt = '';
         slot.appendChild(img);
         return;
       }
       var v = document.createElement('video');
       v.muted = true; v.loop = true; v.autoplay = true; v.playsInline = true;
       v.setAttribute('muted', ''); v.setAttribute('playsinline', '');
-      v.poster = 'hero/hero-poster.png';
-      [['hero/hero-loop.webm', 'video/webm'], ['hero/hero-loop.mp4', 'video/mp4']].forEach(function (f) {
+      v.poster = 'hero/hero-poster.png' + V;
+      [['hero/hero-loop.webm' + V, 'video/webm'], ['hero/hero-loop.mp4' + V, 'video/mp4']].forEach(function (f) {
         var src = document.createElement('source'); src.src = f[0]; src.type = f[1]; v.appendChild(src);
       });
       slot.appendChild(v);
