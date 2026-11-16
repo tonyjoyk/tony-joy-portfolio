@@ -16,7 +16,7 @@
   <meta property="og:image:alt" content="Tony Joy">
   <meta name="twitter:card" content="summary">
   <meta name="color-scheme" content="light">
-  <meta name="theme-color" content="#F7F5EF">
+  <meta name="theme-color" content="#F3F5EF">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -413,6 +413,10 @@
     }
     if (document.readyState === 'complete') start(); else window.addEventListener('load', start);
   })();
+  </script>
+  <script>
+  // Dev mode: add ?dev to the URL to try other brand and background colours live (dev-palette.js).
+  if (/[?&]dev(=|&|$)/.test(location.search)) { var d = document.createElement('script'); d.src = 'dev-palette.js'; document.body.appendChild(d); }
   </script>
 </body>
 </html>

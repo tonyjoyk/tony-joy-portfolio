@@ -7,15 +7,17 @@
 :root {
   color-scheme: light;
 
-  --bg: #F7F5EF;          /* warm, muted page */
-  --bg-bar: rgba(247, 245, 239, 0.9);
-  --text: #1F1D1A;        /* 15.4:1 on --bg */
-  --muted: #6E6A63;       /* 4.9:1 on --bg */
-  --laterite: #A4553A;    /* 4.9:1 on --bg. Links, hover, focus, small accents. Never large blocks. */
-  --laterite-soft: rgba(164, 85, 58, 0.4);  /* resting link underline */
+  /* The two brand colours. Everything below derives from them; try others live with ?dev */
+  --bg: #F3F5EF;          /* monsoon mist: a very muted, faintly green paper */
+  --brand: #3D6B4F;       /* monsoon green, 5.6:1 on --bg. Titles, icons, links, focus, footer drawing. Never large blocks. */
+
+  --text: #1F1D1A;        /* 15:1 on --bg */
+  --muted: #6E6A63;       /* 4.7:1 or more on every ?dev background */
+  --bg-bar: color-mix(in srgb, var(--bg) 90%, transparent);
+  --brand-soft: color-mix(in srgb, var(--brand) 40%, transparent);  /* resting link underline */
   --moss: #5E7D5A;        /* very rare detail only, never text (4.2:1) */
-  --hairline: #E3DED3;
-  --placeholder: #ECE6DA;
+  --hairline: color-mix(in srgb, var(--text) 10%, var(--bg));
+  --placeholder: color-mix(in srgb, var(--text) 6%, var(--bg));
   --paper: #FFFFFF;       /* loose-print border */
   --shadow-print: 0 1px 2px rgba(31, 29, 26, 0.14), 0 4px 12px rgba(31, 29, 26, 0.08);
   --shadow-print-up: 0 2px 4px rgba(31, 29, 26, 0.14), 0 10px 22px rgba(31, 29, 26, 0.12);
@@ -69,21 +71,21 @@ img {
 }
 
 /* ---------- Links ---------- */
-/* One hover for every link: a soft laterite underline; on hover the link turns laterite. */
+/* One hover for every link: a soft brand-colour underline; on hover the link turns the brand colour. */
 a {
   color: inherit;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
-  text-decoration-color: var(--laterite-soft);
+  text-decoration-color: var(--brand-soft);
   transition: text-decoration-color 150ms ease, color 150ms ease;
 }
 a:hover {
-  color: var(--laterite);
+  color: var(--brand);
   text-decoration-color: currentColor;
 }
 a:focus-visible {
-  outline: 2px solid var(--laterite);
+  outline: 2px solid var(--brand);
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -121,7 +123,7 @@ a.link-ext:focus-visible .link-ext__arrow {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--laterite);
+  color: var(--brand);
   line-height: 1.2;
   margin-bottom: var(--s-4);
 }
@@ -191,7 +193,7 @@ a.link-ext:focus-visible .link-ext__arrow {
 
 .topbar__links a:hover,
 .topbar__links a:focus-visible {
-  color: var(--laterite);
+  color: var(--brand);
   text-decoration-color: currentColor;
 }
 
@@ -549,11 +551,11 @@ a.media-list__thumb[data-lightbox] {
 }
 
 .lightbox__close:hover {
-  color: var(--laterite);
+  color: var(--brand);
 }
 
 .lightbox__close:focus-visible {
-  outline: 2px solid var(--laterite);
+  outline: 2px solid var(--brand);
   outline-offset: 2px;
 }
 
@@ -576,7 +578,7 @@ a.media-list__thumb[data-lightbox] {
   width: 28px;
   height: 28px;
   margin-top: -1px;
-  color: var(--laterite);
+  color: var(--brand);
 }
 
 .help-grid__text {
@@ -616,7 +618,7 @@ a.media-list__thumb[data-lightbox] {
   height: auto;
   margin-inline: auto;
   overflow: visible;
-  color: var(--laterite);
+  color: var(--brand);
 }
 
 .landscape__frisbee {
