@@ -500,7 +500,8 @@ a.print:focus-visible {
 .prints--fan.prints--portrait > li:nth-child(1) { left: 6%; top: -6%; }
 .prints--fan.prints--portrait > li:nth-child(2) { left: 46%; top: 0; }
 
-a.print {
+a.print,
+a.media-list__thumb[data-lightbox] {
   cursor: zoom-in;
 }
 
