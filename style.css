@@ -781,3 +781,18 @@ a.media-list__thumb[data-lightbox] {
     padding-bottom: var(--s-4);
   }
 }
+
+/* Footer without the landscape drawing (kept in the HTML for later): just white space at the end of the page.
+   Remove the class "footer-band--plain" from the footer in index.html to show the drawing again. */
+.footer-band.footer-band--plain {
+  padding-top: 0;
+  padding-bottom: var(--s-8);
+}
+.footer-band--plain .landscape {
+  display: none;
+}
+@media (max-width: 720px) {
+  .footer-band.footer-band--plain {
+    padding-bottom: var(--s-7);
+  }
+}
