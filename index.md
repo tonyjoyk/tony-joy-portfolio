@@ -1,6 +1,6 @@
 # Tony Joy
 
-Work · AI · Speaking · Projects · [Email](mailto:tonykokkad@gmail.com) · [LinkedIn](https://www.linkedin.com/in/tony-joy/) · [GitHub](https://github.com/tonyjoyk)
+Work · Speaking · AI · Projects · [Email](mailto:tonykokkad@gmail.com) · [LinkedIn](https://www.linkedin.com/in/tony-joy/) · [GitHub](https://github.com/tonyjoyk)
 
 ## Hey, I'm Tony, a product designer from Kerala, India.
 
@@ -28,6 +28,15 @@ I led design for CallHub’s volunteer app on Android and iOS. Campaigns, unions
 
 ---
 
+## Speaking and Facilitation
+
+- **Building dashboards for hypertension and diabetes care** — VizChitra conference — [Video on request](mailto:tonykokkad@gmail.com?subject=VizChitra%20talk%20video)
+- **Designing health programmes around end users** — DHIS2 conference — [Watch from 8:40](https://www.youtube.com/watch?v=209jCclCpE0&t=8m40s)
+- **Fast and simple user testing for digital health tools** — [Watch](https://www.youtube.com/watch?v=s0QYzP6Xr6w) — A user testing guide for designers working in healthcare.
+- **Parallel design sprints for public health teams** — RTSL convening, Indonesia — Planned and facilitated four parallel sprints exploring solutions for hypertension and diabetes care.
+
+---
+
 ## Working with AI
 
 In the pod I lead, I set up the BMAD method (a step-by-step way to plan and build with AI agents) and PStack to help us plan, build and ship faster. We also explore other ways to use AI in our work, from rapid prototyping and turning field reports into comics to building an internal library of skills for creating slides, documents, communications and infographics.
@@ -38,15 +47,6 @@ A few friends and I started AI Saloon as a monthly meetup to build things with A
 
 **Comics** — [Boy in the Graveyard](files/comic-boy-in-the-graveyard.pdf) · [Mahesh and Abin in Wonderland](files/comic-mahesh-and-abin-in-wonderland.pdf)
 Two personal stories told through AI-generated comics.
-
----
-
-## Speaking and Facilitation
-
-- **Building dashboards for hypertension and diabetes care** — VizChitra conference — [Video on request](mailto:tonykokkad@gmail.com?subject=VizChitra%20talk%20video)
-- **Designing health programmes around end users** — DHIS2 conference — [Watch from 8:40](https://www.youtube.com/watch?v=209jCclCpE0&t=8m40s)
-- **Fast and simple user testing for digital health tools** — [Watch](https://www.youtube.com/watch?v=s0QYzP6Xr6w) — A user testing guide for designers working in healthcare.
-- **Parallel design sprints for public health teams** — RTSL convening, Indonesia — Planned and facilitated four parallel sprints exploring solutions for hypertension and diabetes care.
 
 ---
 
