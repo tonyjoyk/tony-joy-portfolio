@@ -45,7 +45,7 @@ Outside work, I enjoy experimenting and building things with AI. A few friends a
 
 **AI Saloon**
 First Sunday of every month
-A few friends and I started AI Saloon as a monthly meetup to build things with AI and share what we learn. It has since grown to 18 members, most of whom meet every month to build, experiment and demo their projects.
+A monthly meetup we started to build with AI, share projects and learn from each other. We've grown to 18 members, most of whom meet regularly.
 
 **Walking for Nothing** — [Live](https://tonyjoyk.github.io/walking-for-nothing/) · [GitHub](https://github.com/tonyjoyk/walking-for-nothing)
 A man walks through a field in Kerala, forever, and the weather changes around him. I drew all of it in code with p5.js.
@@ -66,7 +66,7 @@ Two personal stories told through AI-generated comics.
 
 ## Ways I can help
 
-- **Running design sprints** — Facilitate design sprints with health experts, designers and engineers to go from a problem statement to a prototype tested with real users. Recent: 4 sprints in 1 week, Indonesia.
+- **Running design sprints** — Facilitate design sprints with health experts, designers and engineers to go from a problem statement to a prototype tested with real users.
 - **Prototyping ideas** — Build realistic prototypes quickly with Figma, ProtoPie and AI tools, so they feel real to end users.
 - **User testing** — Test prototypes with end users, remotely or in the field, to collect feedback for product improvements.
 - **Aligning teams** — Bring product, design, engineering, support and funders together to agree on a product roadmap and launch on time.

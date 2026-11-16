@@ -592,10 +592,6 @@ a.media-list__thumb[data-lightbox] {
   margin-bottom: 4px;
 }
 
-.help-grid__meta {
-  margin-top: 6px;
-}
-
 .help-grid__desc {
   font-size: 0.9375rem;
   line-height: 1.55;
