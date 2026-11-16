@@ -8,10 +8,10 @@
   color-scheme: light;
 
   /* The two brand colours. Everything below derives from them; try others live with ?dev */
-  --bg: #F3F5EF;          /* monsoon mist: a very muted, faintly green paper */
-  --brand: #3D6B4F;       /* monsoon green, 5.6:1 on --bg. Titles, icons, links, focus, footer drawing. Never large blocks. */
+  --bg: #FFFFFF;          /* white */
+  --brand: #4394E2;       /* blue, 3.2:1 on white (below the 4.5:1 guideline for small text). Titles, icons, links, focus, footer drawing. */
 
-  --text: #1F1D1A;        /* 15:1 on --bg */
+  --text: #1F1D1A;        /* 17:1 on --bg */
   --muted: #6E6A63;       /* 4.7:1 or more on every ?dev background */
   --bg-bar: color-mix(in srgb, var(--bg) 90%, transparent);
   --brand-soft: color-mix(in srgb, var(--brand) 40%, transparent);  /* resting link underline */
@@ -779,5 +779,20 @@ a.media-list__thumb[data-lightbox] {
   .footer-band {
     margin-top: var(--s-4);
     padding-bottom: var(--s-4);
+  }
+}
+
+/* Footer without the landscape drawing (kept in the HTML for later): just white space at the end of the page.
+   Remove the class "footer-band--plain" from the footer in index.html to show the drawing again. */
+.footer-band.footer-band--plain {
+  padding-top: 0;
+  padding-bottom: var(--s-8);
+}
+.footer-band--plain .landscape {
+  display: none;
+}
+@media (max-width: 720px) {
+  .footer-band.footer-band--plain {
+    padding-bottom: var(--s-7);
   }
 }
