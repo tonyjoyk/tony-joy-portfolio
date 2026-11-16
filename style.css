@@ -283,6 +283,61 @@ a.link-ext:focus-visible .link-ext__arrow {
   margin-left: auto;
 }
 
+/* Work media: the photo, then a row of UI thumbnails. All open in the image viewer. */
+.work-media {
+  width: var(--media);
+  margin-left: auto;
+  display: grid;
+  gap: 8px;
+}
+
+.work-media .media-frame--work {
+  width: 100%;
+  margin-left: 0;
+}
+
+.media-frame__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: zoom-in;
+}
+
+.media-frame__link:focus-visible,
+.work-thumb:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+.work-thumbs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.work-thumb {
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--hairline);
+  cursor: zoom-in;
+}
+
+.work-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 200ms ease;
+}
+
+@media (hover: hover) {
+  .work-thumb:hover img { transform: scale(1.04); }
+}
+
 .media-frame--simple .media-frame__img {
   object-position: 42% 38%;
 }
@@ -559,6 +614,60 @@ a.media-list__thumb[data-lightbox] {
   outline-offset: 2px;
 }
 
+/* Viewer: count and caption under the image; arrows when the image is part of a set. */
+.lightbox__img {
+  max-height: calc(90vh - 56px);
+}
+
+.lightbox__bar {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  max-width: calc(min(92vw, 1100px) - 16px);
+  margin: 8px 4px 2px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.lightbox__count {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text);
+}
+
+.lightbox__count:empty { display: none; }
+
+.lightbox__nav {
+  position: absolute;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  margin-top: -22px;
+  border: none;
+  border-radius: 50%;
+  background: var(--paper);
+  box-shadow: var(--shadow-print);
+  font: 400 1.75rem/1 var(--font-sans);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.lightbox__nav--prev { left: -22px; }
+.lightbox__nav--next { right: -22px; }
+.lightbox__nav:hover { color: var(--brand); }
+.lightbox__nav:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+
+@media (max-width: 720px) {
+  .lightbox__nav--prev { left: 6px; }
+  .lightbox__nav--next { right: 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-thumb img { transition: none; }
+}
+
 /* ---------- Ways I can help ---------- */
 .help-grid {
   display: grid;
@@ -756,7 +865,8 @@ a.media-list__thumb[data-lightbox] {
     padding: var(--s-4) 0;
   }
 
-  .media-frame--work {
+  .media-frame--work,
+  .work-media {
     width: 100%;
     max-width: 280px;
     margin-left: 0;
