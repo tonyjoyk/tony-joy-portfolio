@@ -39,9 +39,9 @@ I led design for CallHub’s volunteer app on Android and iOS. Political campaig
 
 ## Working with AI
 
-I use AI in my work and personal projects. At work, I’ve brought it into our product design and development workflows. We use BMAD to plan and build with AI agents, and PStack to coordinate multiple agents without getting in each other’s way.
+AI is now a regular part of how I work and build personal projects. At work, I use BMAD to plan and build with AI agents, and PStack to coordinate multiple agents across longer tasks. I also turn new workflows into reusable skills so the team can use them again.
 
-Outside work, I enjoy experimenting and building things with AI. A few friends and I also started a monthly AI Saloon to share what we’re making and learn from each other.
+Here are a few things I’ve built with AI:
 
 **AI Saloon**
 First Sunday of every month
