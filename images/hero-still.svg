@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" fill="none" stroke="#A4553A" stroke-linecap="round" stroke-linejoin="round">
-  <!-- Placeholder still for the hero slot: a sun setting over the sea, drawn in laterite.
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" fill="none" stroke="#3A3632" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Placeholder still for the hero slot: a sun setting over the sea, drawn in the hero line colour (muted black).
        The hero animation session replaces this with its own still and the p5.js loop. -->
   <path d="M150 262a60 60 0 0 1 120 0" stroke-width="2.5"/>
   <path d="M40 262h340" stroke-width="2.5"/>
