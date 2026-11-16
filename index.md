@@ -54,13 +54,13 @@ Two personal stories told through AI-generated comics.
 **Walking for Nothing** — [Live](https://tonyjoyk.github.io/walking-for-nothing/) · [GitHub](https://github.com/tonyjoyk/walking-for-nothing)
 A man walks through a field in Kerala, forever, and the weather changes around him. I drew all of it in code with p5.js.
 
-**Design Together** — Private repo
+**Design Together** — [Live](https://design-together.vercel.app/) · [GitHub](https://github.com/tonyjoyk/design-together)
 A design tool that questions your brief before it draws two wireframe directions. I made it to test if friction makes design with AI better.
 
 **Medicine Tracker** — [Live](https://medicine-tracker-lyart.vercel.app/) · [GitHub](https://github.com/tonyjoyk/medicine-tracker)
 I made it for my mom, to help her track her medicines.
 
-**MemoryMoments** — Private repo
+**MemoryMoments** — [Live](https://memorymoments.lovable.app/) · [GitHub](https://github.com/tonyjoyk/memorymoments)
 I tried to capture how a memory feels, and how that feeling changes with time.
 
 ---
