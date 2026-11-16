@@ -4,11 +4,11 @@
    A choice is remembered in this browser, in dev mode only. Normal visits always use the CSS defaults. */
 (function () {
   var BG = [
-    ['Monsoon mist', '#F3F5EF'], ['Warm paper', '#F7F5EF'], ['Rain-washed', '#EEF2EC'], ['Sage paper', '#F1F3EA'],
+    ['White', '#FFFFFF'], ['Monsoon mist', '#F3F5EF'], ['Warm paper', '#F7F5EF'], ['Rain-washed', '#EEF2EC'], ['Sage paper', '#F1F3EA'],
     ['Coconut husk', '#F6F2EA'], ['Cool fog', '#F1F3F2'], ['Laterite dust', '#F6EFE9']
   ];
   var BRAND = [
-    ['Monsoon green', '#3D6B4F'], ['Paddy field', '#2F5D3A'], ['Backwater teal', '#2E6668'], ['Pepper vine', '#4A5D3A'],
+    ['Link blue', '#4394E2'], ['Deep blue', '#2A76C0'], ['Monsoon green', '#3D6B4F'], ['Paddy field', '#2F5D3A'], ['Backwater teal', '#2E6668'], ['Pepper vine', '#4A5D3A'],
     ['Rain forest', '#25483A'], ['Cardamom', '#557346'], ['Laterite', '#A4553A'], ['Kerala ink', '#2B2A28']
   ];
   var KEY = 'tj-dev-palette', root = document.documentElement;
