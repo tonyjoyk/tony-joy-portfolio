@@ -289,8 +289,9 @@ a.link-ext:focus-visible .link-ext__arrow {
   object-position: 58% 42%;
 }
 
+/* Phones on a transparent background: let the page colour show through. */
 .media-frame--callhub {
-  background: #fff;
+  background: transparent;
 }
 
 /* Transparent PNG laptop: show it whole on a light grey. */
