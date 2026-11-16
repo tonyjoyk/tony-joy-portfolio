@@ -1,6 +1,6 @@
 # Tony Joy
 
-Work · AI · Talks · Projects · [Email](mailto:tonykokkad@gmail.com) · [LinkedIn](https://www.linkedin.com/in/tony-joy/) · [GitHub](https://github.com/tonyjoyk)
+Work · AI · Speaking · Projects · [Email](mailto:tonykokkad@gmail.com) · [LinkedIn](https://www.linkedin.com/in/tony-joy/) · [GitHub](https://github.com/tonyjoyk)
 
 ## Hey, I'm Tony, a product designer from Kerala, India.
 
@@ -41,11 +41,12 @@ Two personal stories told through AI-generated comics.
 
 ---
 
-## Talks
+## Speaking and Facilitation
 
 - **Building dashboards for hypertension and diabetes care** — VizChitra conference — [Video on request](mailto:tonykokkad@gmail.com?subject=VizChitra%20talk%20video)
 - **Designing health programmes around end users** — DHIS2 conference — [Watch from 8:40](https://www.youtube.com/watch?v=209jCclCpE0&t=8m40s)
-- **Fast and simple user testing for digital health tools** — [Watch](https://www.youtube.com/watch?v=s0QYzP6Xr6w)
+- **Fast and simple user testing for digital health tools** — [Watch](https://www.youtube.com/watch?v=s0QYzP6Xr6w) — A user testing guide for designers working in healthcare.
+- **Parallel design sprints for public health teams** — RTSL convening, Indonesia — Planned and facilitated four parallel sprints exploring solutions for hypertension and diabetes care.
 
 ---
 
